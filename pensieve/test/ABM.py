@@ -28,7 +28,7 @@ past_bandwidth_ests = []
 
 def estimate_bw(past_bandwidths):
     # first get harmonic mean of last 5 bandwidths
-    curr_error = 0 # defualt assumes that this is the first request so error is 0 since we have never predicted bandwidth
+    curr_error = 0 # default assumes that this is the first request so error is 0 since we have never predicted bandwidth
     if ( len(past_bandwidth_ests) > 0 ):
         curr_error  = abs(past_bandwidth_ests[-1] - past_bandwidths[-1])/float(past_bandwidths[-1])
     past_errors.append(curr_error)

@@ -40,7 +40,7 @@ def test(user_id):
 
     # load the trace
     all_cooked_time, all_cooked_bw, all_file_names = load_trace.load_trace(network_trace_dir)
-    #random_seed 
+    # random_seed
     random_seed = 2
     count = 0
     trace_count = 1
@@ -107,10 +107,10 @@ def test(user_id):
 
         reward_frame = 0
         # input the train steps
-        #if cnt > 5000:
-            #plt.ioff()
+        # if cnt > 5000:
+            # plt.ioff()
         #    break
-        #actions bit_rate  target_buffer
+        # actions bit_rate  target_buffer
         # every steps to call the environment
         # time           : physical time 
         # time_interval  : time duration in this step
