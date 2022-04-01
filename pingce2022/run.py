@@ -76,9 +76,13 @@ def test(user_id):  # 对user_id进行测试
         print('bitrate download:')
         print(bit_rate)
 
-    # wasted_bytes
-    print("sum_wasted_bytes")
-    print(sum_wasted_bytes)
     # QoE
     print("sum_wasted_bytes")
     print(QoE)
+    if QoE >= TOLERANCE:  # QoE在可容忍范围内
+        print("Your QoE meets the standard.")
+        # wasted_bytes
+        print("Your sum of wasted bytes is:")
+        print(sum_wasted_bytes)
+    else:  # QoE超出可容忍范围
+        print("Your QoE is too low!")
