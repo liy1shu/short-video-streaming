@@ -10,7 +10,8 @@ alpha = 0.5
 beta = 0.5
 gamma = 0.5
 ALL_VIDEO_NUM = 9
-TOLERANCE = 1000  # 容忍的QoE最低值
+baseline_QoE = 100  # baseline的QoE
+TOLERANCE = 0.1  # 容忍的QoE降低率
 
 
 def test(user_id):  # 对user_id进行测试
@@ -66,7 +67,7 @@ def test(user_id):  # 对user_id进行测试
             break
 
         # 调用选手算法计算下一步的参数
-        download_video_id, bit_rate, sleep_time = abm.run(delay, rebuf, video_size, end_of_video, play_video_id)
+        download_video_id, bit_rate, sleep_time = abm.run(delay, rebuf, video_size, end_of_video, play_video_id, net_env.players)
 
         print("*****************")
         print('sleep time:')
@@ -79,7 +80,7 @@ def test(user_id):  # 对user_id进行测试
     # QoE
     print("sum_wasted_bytes")
     print(QoE)
-    if QoE >= TOLERANCE:  # QoE在可容忍范围内
+    if QoE >= baseline_QoE * (1-TOLERANCE):  # QoE在可容忍范围内
         print("Your QoE meets the standard.")
         # wasted_bytes
         print("Your sum of wasted bytes is:")
