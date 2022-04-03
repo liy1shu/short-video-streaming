@@ -43,6 +43,9 @@ class Player:
         # initialize the buffer
         self.buffer_size = 0  # ms
         
+        # initialize preload size
+        self.preload_size = 0 # B
+
         # initialize corresponding user watch time
         user_time = []
         user_retent_rate = []
@@ -62,7 +65,12 @@ class Player:
     def get_video_size(self, quality):
         print('video chunk counter %d' % self.video_chunk_counter)
         video_chunk_size = self.video_size[quality][self.video_chunk_counter]
+        self.preload_size += video_chunk_size
         return video_chunk_size
+
+    # get size of all preloaded chunks
+    def get_preload_size(self):
+        return self.preload_size
     
     def get_future_video_size(self, P):
         interval = 1
