@@ -16,11 +16,14 @@ TOLERANCE = 0.1  # 容忍的QoE降低率
 
 def test(user_id):  # 对user_id进行测试
     # 引入选手的决策算法函数 ABM 并初始化
-    sys.path.append(u'/root/mmgc/team/' + user_id + u'/submit/')  # 服务器上的选手代码摆放路径（？）
-    import ABM
-    sys.path.remove(u'/root/mmgc/team/' + user_id + u'/submit/')
+    # sys.path.append(u'/root/mmgc/team/' + user_id + u'/submit/')  # 服务器上的选手代码摆放路径（？）
+    # import ABM
+    # sys.path.remove(u'/root/mmgc/team/' + user_id + u'/submit/')
+    sys.path.append('./baseline/')
+    import no_preload as ABM
+    sys.path.remove('./baseline/')
     abm = ABM.Algorithm()
-    abm.Initailize()
+    abm.Initialize()
 
     all_cooked_time, all_cooked_bw = short_video_load_trace.load_trace()
 
@@ -87,3 +90,6 @@ def test(user_id):  # 对user_id进行测试
         print(sum_wasted_bytes)
     else:  # QoE超出可容忍范围
         print("Your QoE is too low!")
+
+
+test(1)

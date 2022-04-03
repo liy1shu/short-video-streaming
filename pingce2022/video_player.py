@@ -63,7 +63,11 @@ class Player:
         return self.video_len
 
     def get_video_size(self, quality):
-        print('video chunk counter %d' % self.video_chunk_counter)
+        # print('video chunk counter %d' % self.video_chunk_counter)
+        print("lys test: video size!!!", self.video_size[quality])
+        print("lys test: length of video size!!!", len(self.video_size[quality]))
+        print("lys test: chunk_counter!!! ", self.video_chunk_counter)
+        print("lys test: chunk_num!!! ", self.chunk_num)
         video_chunk_size = self.video_size[quality][self.video_chunk_counter]
         self.preload_size += video_chunk_size
         return video_chunk_size
@@ -77,14 +81,14 @@ class Player:
         chunk_playing = self.get_play_chunk()
         if chunk_playing % 1 == 0:        # Check whether it is an integer
                 interval = 0
-        print(chunk_playing)
-        print(interval)
+        # print(chunk_playing)
+        # print(interval)
                 
         future_videosize = []
         for i in range(BITRATE_LEVELS):
             size_in_level = []
             for k in range(P):
-                print(int(chunk_playing+interval+k))
+                # print(int(chunk_playing+interval+k))
                 size_in_level.append(self.video_size[i][int(chunk_playing+interval+k)])
             future_videosize.append(size_in_level)
         return future_videosize
@@ -102,8 +106,8 @@ class Player:
         return self.chunk_num
 
     def get_buffer_size(self):
-        print('get buffer size')
-        print(self.buffer_size)
+        # print('get buffer size')
+        # print(self.buffer_size)
         return self.buffer_size
     
     def record_download_bitrate(self, bit_rate):
@@ -125,12 +129,12 @@ class Player:
     # download the video, buffer increase.
     def video_download(self, download_len):  # ms
         self.buffer_size += download_len
-        print('chunk %2d download over' % self.video_chunk_counter)
+        # print('chunk %2d download over' % self.video_chunk_counter)
         self.video_chunk_counter += 1
         end_of_video = False
         if self.video_chunk_counter >= self.chunk_num:
             end_of_video = True
-            print('end of video: %d' % end_of_video)
+            # print('end of video: %d' % end_of_video)
         return end_of_video
 
     # play the video, buffer decrease. Return the remaining buffer, negative number means rebuf
@@ -138,17 +142,17 @@ class Player:
         buffer = self.buffer_size - play_time
         self.play_timeline += np.minimum(self.buffer_size, play_time)   # rebuffering time is not included in timeline
         
-        print('buffer size:')
-        print(self.buffer_size)
-        print('expected play time:')
-        print(play_time)
-        print('play_timeline:')
-        print(self.play_timeline)
-        print(self.buffer_size - play_time)
+        # print('buffer size:')
+        # print(self.buffer_size)
+        # print('expected play time:')
+        # print(play_time)
+        # print('play_timeline:')
+        # print(self.play_timeline)
+        # print(self.buffer_size - play_time)
         self.buffer_size = np.maximum(self.buffer_size - play_time, 0.0)
-        print(np.maximum(self.buffer_size - play_time, 0.0))
-        print('in video play')
-        print(self.buffer_size)
+        # print(np.maximum(self.buffer_size - play_time, 0.0))
+        # print('in video play')
+        # print(self.buffer_size)
         return self.play_timeline, buffer
 
 
