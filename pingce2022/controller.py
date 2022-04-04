@@ -65,7 +65,7 @@ class Environment:
             # print('sleep_time')
             # print(sleep_time)
             play_timeline, buffer = self.players[self.play_video_id - self.start_video_id].video_play(sleep_time)
-            end_of_video = self.players[download_video_id-self.start_video_id].video_download(VIDEO_CHUNCK_LEN)  
+            end_of_video = (self.players[download_video_id-self.start_video_id].get_remain_video_num() == 0)
         else:
             # print("download...")
             # print('download video id %d' % download_video_id)
@@ -98,7 +98,8 @@ class Environment:
             
             # print('play a video over')
             # Sum up the wasted bytes. The first video is the video played over.
-            wasted_bytes += self.players[0].bandwidth_waste() 
+            wasted_bytes += self.players[0].bandwidth_waste()
+            print("lys test::::wasted!!!!", wasted_bytes)
             self.player_op(DEL)
             self.start_video_id += 1
             # print(self.start_video_id)
