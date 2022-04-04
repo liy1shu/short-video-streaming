@@ -173,7 +173,7 @@ def mpc(past_bandwidth, past_bandwidth_ests, past_errors, all_future_chunks_size
 
     # all possible combinations of 5 chunk bitrates (9^5 options)
     # iterate over list and for each, compute reward and store max reward combination
-    max_reward = -100000000
+    max_reward = float('-inf')
     best_combo = ()
     start_buffer = buffer_size
     #start = time.time()

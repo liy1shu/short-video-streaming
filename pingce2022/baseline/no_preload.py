@@ -18,6 +18,8 @@ class Algorithm:
         self.past_bandwidth_ests = []
         self.past_errors = []
         self.sleep_time = 0
+        self.bit_rate = 0
+        self.download_video_id = 0
 
     # Intial
     def Initialize(self):
@@ -25,8 +27,8 @@ class Algorithm:
         # past bandwidth record
         self.past_bandwidth = np.zeros(PAST_BW_LEN)
 
-    def estimate_bw(self):
-        for _ in range(MPC_FUTURE_CHUNK_COUNT):
+    def estimate_bw(self, P):
+        for _ in range(P):
             # first get harmonic mean of last 5 bandwidths
             curr_error = 0  # default assumes that this is the first request so error is 0 since we have never predicted bandwidth
             if len(self.past_bandwidth_ests) > 0 and self.past_bandwidth[-1] != 0:
@@ -70,7 +72,6 @@ class Algorithm:
         all_future_chunks_size = []
         future_chunks_highest_size = []
         # print("Recommend queue:\n", RECOMMEND_QUEUE)
-        download_video_id_relative = -1
         for i in range(RECOMMEND_QUEUE):
             if Players[i].get_remain_video_num() == 0:      # download over
                 # print('no remaining chunks to be downloaded')
@@ -79,9 +80,7 @@ class Algorithm:
                 future_chunks_highest_size.append([0])
                 continue
 
-            if download_video_id_relative == -1:
-                download_video_id_relative = i
-            P.append(MPC_FUTURE_CHUNK_COUNT)
+            P.append(min(MPC_FUTURE_CHUNK_COUNT, Players[i].get_remain_video_num()))
             # print("Recommend queue:\n", RECOMMEND_QUEUE)
             # print("P[-1] player:::\n", Players[i].get_future_video_size(P[-1]))
             all_future_chunks_size.append(Players[i].get_future_video_size(P[-1]))
@@ -89,23 +88,23 @@ class Algorithm:
             future_chunks_highest_size.append(all_future_chunks_size[-1][BITRATE_LEVELS-1])
         
         # update past_errors and past_bandwidth_ests
-        self.estimate_bw()
+        self.estimate_bw(P[0])
         
         # download the playing video if downloading hasn't finished 
-        if end_of_video or download_video_id_relative == -1:
+        if end_of_video:
             self.sleep_time = TAU
             self.bit_rate = 0
-            self.download_video_id = 0
+            self.download_video_id = play_video_id
         else:
             self.buffer_size = Players[0].get_buffer_size()  # ms
-            self.video_chunk_remain = Players[0].get_remain_video_num()
-            self.chunk_sum = Players[0].get_chunk_sum()
-            self.download_chunk_bitrate = Players[0].get_downloaded_bitrate()
-            self.last_quality = DEFAULT_QUALITY
-            if len(self.download_chunk_bitrate) > 0:
-                self.last_quality = self.download_chunk_bitrate[-1]
-            self.download_video_id = play_video_id + download_video_id_relative
+            video_chunk_remain = Players[0].get_remain_video_num()
+            chunk_sum = Players[0].get_chunk_sum()
+            download_chunk_bitrate = Players[0].get_downloaded_bitrate()
+            last_quality = DEFAULT_QUALITY
+            if len(download_chunk_bitrate) > 0:
+                last_quality = download_chunk_bitrate[-1]
+            self.download_video_id = play_video_id
             # print("download_video_seq::::::!!!!", all_future_chunks_size)
-            self.bit_rate = mpc_module.mpc(self.past_bandwidth, self.past_bandwidth_ests, self.past_errors, all_future_chunks_size[download_video_id_relative], MPC_FUTURE_CHUNK_COUNT, self.buffer_size, self.chunk_sum, self.video_chunk_remain, self.last_quality)
+            self.bit_rate = mpc_module.mpc(self.past_bandwidth, self.past_bandwidth_ests, self.past_errors, all_future_chunks_size[0], P[0], self.buffer_size, chunk_sum, video_chunk_remain, last_quality)
             self.sleep_time = 0.0
         return self.download_video_id, self.bit_rate, self.sleep_time

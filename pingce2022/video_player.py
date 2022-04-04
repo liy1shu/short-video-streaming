@@ -64,10 +64,10 @@ class Player:
 
     def get_video_size(self, quality):
         # print('video chunk counter %d' % self.video_chunk_counter)
-        print("lys test: video size!!!", self.video_size[quality])
-        print("lys test: length of video size!!!", len(self.video_size[quality]))
-        print("lys test: chunk_counter!!! ", self.video_chunk_counter)
-        print("lys test: chunk_num!!! ", self.chunk_num)
+        # print("lys test: video size!!!", self.video_size[quality])
+        # print("lys test: length of video size!!!", len(self.video_size[quality]))
+        # print("lys test: chunk_counter!!! ", self.video_chunk_counter)
+        # print("lys test: chunk_num!!! ", self.chunk_num)
         video_chunk_size = self.video_size[quality][self.video_chunk_counter]
         self.preload_size += video_chunk_size
         return video_chunk_size
@@ -99,6 +99,8 @@ class Player:
         return self.play_timeline / VIDEO_CHUNCK_LEN
     
     def get_remain_video_num(self):
+        # print("xmh test: chunk_num!!! ", self.chunk_num)
+        # print("xmh test: video_chunk_counter!!! ", self.video_chunk_counter)
         self.video_chunk_remain = self.chunk_num - self.video_chunk_counter
         return self.video_chunk_remain
     

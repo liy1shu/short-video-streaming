@@ -20,7 +20,8 @@ def test(user_id):  # 对user_id进行测试
     # import ABM
     # sys.path.remove(u'/root/mmgc/team/' + user_id + u'/submit/')
     sys.path.append('./baseline/')
-    import no_preload as ABM
+    # import no_preload as ABM
+    import fix_preload as ABM
     sys.path.remove('./baseline/')
     abm = ABM.Algorithm()
     abm.Initialize()

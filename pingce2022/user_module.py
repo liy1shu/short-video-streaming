@@ -16,7 +16,7 @@ class Retention:
         
     
     def get_ret_duration(self): # ms
-        print('sample playback duration %d' % self.sample_playback_duration)
+        # print('sample playback duration %d' % self.sample_playback_duration)
         return self.sample_playback_duration
         
     def conditional_p(self, start_chunk, interval):
