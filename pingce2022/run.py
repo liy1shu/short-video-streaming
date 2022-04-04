@@ -12,6 +12,7 @@ gamma = 0.5
 ALL_VIDEO_NUM = 9
 baseline_QoE = 100  # baseline的QoE
 TOLERANCE = 0.1  # 容忍的QoE降低率
+MIN_QOE = -1e9
 
 
 def test(user_id):  # 对user_id进行测试
@@ -61,6 +62,11 @@ def test(user_id):  # 对user_id进行测试
         else:
             smooth = bit_rate - last_bitrate  # 记录质量差
         QoE += alpha * bit_rate - beta * rebuf - gamma * abs(smooth)
+
+        if QoE < MIN_QOE:  # 防止死循环
+            print('Your QoE is too low...(Your video seems to have stuck forever) Please check for errors!')
+            return
+
         if end_of_video:  # 如果切换视频，则last_bitrate = 0
             last_bitrate = 0
         else:
