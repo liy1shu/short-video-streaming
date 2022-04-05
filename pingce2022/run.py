@@ -5,15 +5,13 @@ import controller as env
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument('--baseline', type=str, default='',
-	help='Is testing baseline')
-parser.add_argument('--user', type=str, default='./',
-	help='The relative path of your file dir, default is current dir')
+parser.add_argument('--baseline', type=str, default='', help='Is testing baseline')
+parser.add_argument('--user', type=str, default='./', help='The relative path of your file dir, default is current dir')
 args = parser.parse_args()
 
 
 SUMMARY_DIR = './ABM_results'
-LOG_FILE = './ABM_results/log_sim_abm'
+LOG_FILE = './ABM_results/log.txt'
 
 # QoE参数(？)
 alpha = 0.5
@@ -50,7 +48,7 @@ def test(isBaseline, user_id, trace_id):  # 对user_id进行测试
     net_env = env.Environment(all_cooked_time[trace_id], all_cooked_bw[trace_id])
 
     # log待增加
-    log_file = open(LOG_FILE, 'wb')
+    log_file = open(LOG_FILE, 'w')
 
     # Decision variables
     download_video_id = 0
@@ -60,25 +58,36 @@ def test(isBaseline, user_id, trace_id):  # 对user_id进行测试
     # sum of wasted bytes for a user
     sum_wasted_bytes = 0
     QoE = 0
-    last_bitrate = 0  # 维护本视频上一个chunk的bitrate，用于计算QoE
+    last_bitrate = -1  # 维护本视频上一个chunk的bitrate，用于计算QoE
 
     while True:
         delay, rebuf, video_size, end_of_video, \
         play_video_id, waste_bytes = net_env.buffer_management(download_video_id, bit_rate, sleep_time)
 
         # 更新带宽浪费
-        print("waste_bytes:::::!", waste_bytes)
         sum_wasted_bytes += waste_bytes  # 累加带宽浪费
 
         # 更新QoE值
         # qoe = alpha * VIDEO_BIT_RATE[bit_rate] \
         #           - beta * rebuf \
         #           - gamma * np.abs(VIDEO_BIT_RATE[bit_rate] - VIDEO_BIT_RATE[last_bit_rate])
-        if last_bitrate == 0:  # 是该视频块的第一块
+        if last_bitrate == -1:  # 是该视频块的第一块
             smooth = 0
         else:
             smooth = bit_rate - last_bitrate  # 记录质量差
         QoE += alpha * bit_rate - beta * rebuf - gamma * abs(smooth)
+
+        # print log info of the last operation
+        # the operation results
+        print("Playing Video ", play_video_id, " chunk (", net_env.players[0].get_play_chunk(), " / ", net_env.players[0].get_chunk_sum(), ") with bitrate ", bit_rate, file=log_file)
+        if rebuf != 0:
+            print("You caused rebuf for Video ", play_video_id, " of ", rebuf, " ms", file=log_file)
+        if last_bitrate != -1:
+            if smooth == 0:
+                print("Your bitrate is stable and smooth. ", file=log_file)
+            else:
+                print("Your bitrate changes from ", last_bitrate, " to ", bit_rate, ".",  file=log_file)
+        print("*****************", file=log_file)
 
         if QoE < MIN_QOE:  # 防止死循环
             print('Your QoE is too low...(Your video seems to have stuck forever) Please check for errors!')
@@ -91,19 +100,21 @@ def test(isBaseline, user_id, trace_id):  # 对user_id进行测试
 
         # play over all videos
         if play_video_id >= ALL_VIDEO_NUM:
+            print("The user leaves.", file=log_file)
             print("The user leaves.")
             break
 
         # 调用选手算法计算下一步的参数
         download_video_id, bit_rate, sleep_time = abm.run(delay, rebuf, video_size, end_of_video, play_video_id, net_env.players)
 
-        print("*****************")
-        print('sleep time:')
-        print(sleep_time)
-        print('downlad video ID')
-        print(download_video_id)
-        print('bitrate download:')
-        print(bit_rate)
+        # print log info of the last operation
+        print("\n\n*****************", file=log_file)
+        # the operation detail
+        if sleep_time != 0:
+            print("You choose to sleep for ", sleep_time, " ms", file=log_file)
+        else:
+            print("Download Video ", download_video_id, " chunk (", net_env.players[download_video_id - play_video_id].get_chunk_counter() + 1, " / ",
+                  net_env.players[download_video_id - play_video_id].get_chunk_sum(), ") with bitrate ", bit_rate, file=log_file)
 
     # QoE
     print("Your QoE is: ")

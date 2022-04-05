@@ -107,6 +107,9 @@ class Player:
     def get_chunk_sum(self):
         return self.chunk_num
 
+    def get_chunk_counter(self):
+        return self.video_chunk_counter
+
     def get_buffer_size(self):
         # print('get buffer size')
         # print(self.buffer_size)
@@ -143,6 +146,9 @@ class Player:
     # play the video, buffer decrease. Return the remaining buffer, negative number means rebuf
     def video_play(self, play_time):  # ms
         buffer = self.buffer_size - play_time
+        # print(self.video_chunk_counter, self.chunk_num)
+        # print(self.buffer_size, play_time)
+        # print(buffer)
         self.play_timeline += np.minimum(self.buffer_size, play_time)   # rebuffering time is not included in timeline
         
         # print('buffer size:')

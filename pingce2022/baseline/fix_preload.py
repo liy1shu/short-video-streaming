@@ -68,7 +68,7 @@ class Algorithm:
         future_chunks_highest_size = []
         for i in range(RECOMMEND_QUEUE):
             if Players[i].get_remain_video_num() == 0:      # download over
-                print('no remaining chunks to be downloaded for Player: ', i+play_video_id)
+                # print('no remaining chunks to be downloaded for Player: ', i+play_video_id)
                 P.append(0)
                 all_future_chunks_size.append([0])
                 future_chunks_highest_size.append([0])
@@ -81,13 +81,15 @@ class Algorithm:
 
         download_video_id = -1
         if rebuf > 0 and Players[0].get_remain_video_num() != 0:  # 如果正在播放的视频需要预缓冲，则必须下载当前视频
-            print("needs rebuf of ", play_video_id)
+            # print("needs rebuf of ", play_video_id)
+            # print("download ", play_video_id, " because of rebuf")
             download_video_id = play_video_id
         else:
             # download the playing video if downloading hasn't finished
             # otherwise preloads the videos on the recommendation queue in order
             if self.last_download_video_id == play_video_id and not end_of_video:  # the downloading video is the playing video & its not fully downloaded
                 # print("last_download_video_id == play_video_id!!!!!")
+                # print("download ", play_video_id, " because of unfinished")
                 download_video_id = play_video_id
             else:
                 for seq in range(RECOMMEND_QUEUE):
@@ -95,6 +97,7 @@ class Algorithm:
                         continue
                     else:
                         download_video_id = play_video_id + seq
+                        # print("download ", download_video_id, " because of fixed_preload: preload_size ",  Players[seq].get_preload_size(), " <= ",  MAX_PROLOAD_SIZE)
                         break
             # self.last_download_video_id = download_video_id
 
