@@ -1,6 +1,7 @@
 # Simulate the user watch pattern
 import numpy as np
-RANDOM_SEED = 42 
+RANDOM_SEED = 42
+np.random.seed(RANDOM_SEED)
 
 # Rt simulate
 class Retention:

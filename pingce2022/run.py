@@ -1,6 +1,16 @@
 import sys
+import argparse
 import short_video_load_trace
 import controller as env
+
+parser = argparse.ArgumentParser()
+
+parser.add_argument('--baseline', type=str, default='',
+	help='Is testing baseline')
+parser.add_argument('--user', type=str, default='./',
+	help='The relative path of your file dir, default is current dir')
+args = parser.parse_args()
+
 
 SUMMARY_DIR = './ABM_results'
 LOG_FILE = './ABM_results/log_sim_abm'
@@ -15,22 +25,29 @@ TOLERANCE = 0.1  # 容忍的QoE降低率
 MIN_QOE = -1e9
 
 
-def test(user_id):  # 对user_id进行测试
+def test(isBaseline, user_id, trace_id):  # 对user_id进行测试
     # 引入选手的决策算法函数 ABM 并初始化
     # sys.path.append(u'/root/mmgc/team/' + user_id + u'/submit/')  # 服务器上的选手代码摆放路径（？）
     # import ABM
     # sys.path.remove(u'/root/mmgc/team/' + user_id + u'/submit/')
-    sys.path.append('./baseline/')
-    # import no_preload as ABM
-    import fix_preload as ABM
-    sys.path.remove('./baseline/')
+    if isBaseline:  # 测试baseline
+        sys.path.append('./baseline/')
+        if user_id == 'fixed_preload':
+            import fix_preload as ABM
+        else:
+            import no_preload as ABM
+        sys.path.remove('./baseline/')
+    else:  # 测试选手自身代码
+        sys.path.append(user_id)
+        import ABM
+        sys.path.remove(user_id)
     abm = ABM.Algorithm()
     abm.Initialize()
 
     all_cooked_time, all_cooked_bw = short_video_load_trace.load_trace()
 
     # 目前的env是单trace，待修改成多trace，才可以测试
-    net_env = env.Environment(all_cooked_time[0], all_cooked_bw[0])
+    net_env = env.Environment(all_cooked_time[trace_id], all_cooked_bw[trace_id])
 
     # log待增加
     log_file = open(LOG_FILE, 'wb')
@@ -100,4 +117,8 @@ def test(user_id):  # 对user_id进行测试
         print("Your QoE is too low!")
 
 
-test(1)
+if __name__ == '__main__':
+    if args.baseline == '':
+        test(False, args.user, 0)
+    else:
+        test(True, args.baseline, 0)
