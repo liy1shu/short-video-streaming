@@ -126,6 +126,7 @@ class Player:
             download_bitrate = self.download_chunk_bitrate[i]
             download_size = self.video_size[download_bitrate][i]
             sum_waste_each_video += download_size
+        # print("waste_start_chunk: ", waste_start_chunk ,"download_len: ",download_len ," bandwidth_waste:", sum_waste_each_video)
         return sum_waste_each_video
             
     # download the video, buffer increase.

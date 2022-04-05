@@ -30,9 +30,9 @@ class Algorithm:
     def estimate_bw(self, P):
         for _ in range(P):
             # first get harmonic mean of last 5 bandwidths
-            curr_error = 0 # default assumes that this is the first request so error is 0 since we have never predicted bandwidth
+            curr_error = 0  # default assumes that this is the first request so error is 0 since we have never predicted bandwidth
             if (len(self.past_bandwidth_ests) > 0) and self.past_bandwidth[-1] != 0:
-                curr_error  = abs(self.past_bandwidth_ests[-1] - self.past_bandwidth[-1])/float(self.past_bandwidth[-1])
+                curr_error = abs(self.past_bandwidth_ests[-1] - self.past_bandwidth[-1])/float(self.past_bandwidth[-1])
             self.past_errors.append(curr_error)
             while self.past_bandwidth[0] == 0.0 and self.past_bandwidth[0] == 0.0:
                 self.past_bandwidth = self.past_bandwidth[1:]

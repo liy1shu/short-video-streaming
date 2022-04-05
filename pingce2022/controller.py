@@ -71,6 +71,7 @@ class Environment:
             # print('download video id %d' % download_video_id)
             # print('start video id %d' % self.start_video_id)
             video_size = self.players[download_video_id-self.start_video_id].get_video_size(bitrate)
+            self.players[download_video_id - self.start_video_id].record_download_bitrate(bitrate)
             delay = self.network.network_simu(video_size)  # ms
             play_timeline, buffer = self.players[self.play_video_id - self.start_video_id].video_play(delay)
             end_of_video = self.players[download_video_id-self.start_video_id].video_download(VIDEO_CHUNCK_LEN)

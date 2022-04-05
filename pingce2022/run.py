@@ -50,7 +50,7 @@ def test(user_id):  # 对user_id进行测试
         play_video_id, waste_bytes = net_env.buffer_management(download_video_id, bit_rate, sleep_time)
 
         # 更新带宽浪费
-        print(waste_bytes)
+        print("waste_bytes:::::!", waste_bytes)
         sum_wasted_bytes += waste_bytes  # 累加带宽浪费
 
         # 更新QoE值
