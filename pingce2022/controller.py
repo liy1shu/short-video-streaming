@@ -20,7 +20,7 @@ RECOMMEND_QUEUE = 5
 
 class Environment:
     def __init__(self, all_cooked_time, all_cooked_bw):
-        self.players = []   
+        self.players = []
         self.video_num = 0
         self.play_video_id = 0
         self.network = Network(all_cooked_time, all_cooked_bw)
