@@ -108,8 +108,9 @@ class Algorithm:
         else:
             download_video_seq = download_video_id - play_video_id
             # update past_errors and past_bandwidth_ests
-            for k in range(download_video_seq + 1):
-                self.estimate_bw(P[k])
+            # for k in range(download_video_seq + 1):
+            #     self.estimate_bw(P[k])
+            self.estimate_bw(P[download_video_seq])
             # print("download_video_seq", download_video_seq)
             buffer_size = Players[download_video_seq].get_buffer_size()  # ms
             video_chunk_remain = Players[download_video_seq].get_remain_video_num()
