@@ -6,6 +6,7 @@ import numpy as np
 import math
 from numpy.lib.utils import _split_line
 from video_player import Player, VIDEO_CHUNCK_LEN
+from user_module import Retention
 from network_module import Network
 
 USER_FILE = './sample_user/user.txt'
@@ -21,6 +22,7 @@ RECOMMEND_QUEUE = 5
 class Environment:
     def __init__(self, all_cooked_time, all_cooked_bw):
         self.players = []
+        self.user_models = []  # 和players同步更新，存储该视频的用户行为(Retention类)
         self.video_num = 0
         self.play_video_id = 0
         self.network = Network(all_cooked_time, all_cooked_bw)
@@ -30,8 +32,11 @@ class Environment:
         for p in range(RECOMMEND_QUEUE):
             # self.download_permit.add(p)
             self.players.append(Player(p))
+            user_time, user_retent_rate = self.players[-1].get_user_model()
+            self.user_models.append(Retention(user_time, user_retent_rate))
             self.video_num += 1
-            user_file.write((str(self.players[-1].get_watch_duration()) + '\n').encode())
+            # user_file.write((str(self.players[-1].get_watch_duration()) + '\n').encode())
+            user_file.write((str(self.user_models[-1].get_ret_duration()) + '\n').encode())
             user_file.flush()
         
         self.start_video_id = 0
@@ -41,13 +46,17 @@ class Environment:
         if operation == NEW:
             # print('--------------ADD--------------')
             self.players.append(Player(self.video_num))
+            user_time, user_retent_rate = self.players[-1].get_user_model()
+            self.user_models.append(Retention(user_time, user_retent_rate))
             self.video_num += 1
             # record the user retention rate
-            user_file.write((str(self.players[-1].get_watch_duration()) + '\n').encode())
+            # user_file.write((str(self.players[-1].get_watch_duration()) + '\n').encode())
+            user_file.write((str(self.user_models[-1].get_ret_duration()) + '\n').encode())
             user_file.flush()
         else:
             # print('--------------DEL--------------')
             self.players.remove(self.players[0])
+            self.user_models.remove(self.user_models[0])
     
     def get_start_video_id(self):
         return self.start_video_id
@@ -57,9 +66,9 @@ class Environment:
         wasted_bd = 0
         play_tm, buffer = self.players[0].video_play(time_len)
         # print(self.start_video_id, time_len, play_tm, buffer)
-        while time_len > 0 and play_tm >= min(self.players[0].get_video_len(), self.players[0].get_watch_duration()):  # 如果时间没过完就结束播放
-            time_len = play_tm - min(self.players[0].get_video_len(), self.players[0].get_watch_duration())
-            wasted_bd += self.players[0].bandwidth_waste()
+        while time_len > 0 and play_tm >= min(self.players[0].get_video_len(), self.user_models[0].get_ret_duration()):  # 如果时间没过完就结束播放
+            time_len = play_tm - min(self.players[0].get_video_len(), self.user_models[0].get_ret_duration())
+            wasted_bd += self.players[0].bandwidth_waste(self.user_models[0])  # 传入用户留存率
 
             # 窗口往前滑动
             self.player_op(DEL)

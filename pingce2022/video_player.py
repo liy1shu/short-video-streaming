@@ -47,17 +47,23 @@ class Player:
         self.preload_size = 0 # B
 
         # initialize corresponding user watch time
-        user_time = []
-        user_retent_rate = []
-        with open(USER_RET + str(video_num%DISTINCT_VIDEO_NUM)) as file:
+        self.user_time = []  # 选手可以访问的user_model
+        self.user_retent_rate = []
+        with open(USER_RET + str(video_num % DISTINCT_VIDEO_NUM)) as file:
             for line in file:
-                user_time.append(float(line.split()[0]) * MILLISECONDS_IN_SECOND)
-                user_retent_rate.append(line.split()[1])
-        self.user_ret = Retention(user_time, user_retent_rate)
-        
-    def get_watch_duration(self):
-        watch_duration = self.user_ret.get_ret_duration()
-        return watch_duration
+                self.user_time.append(float(line.split()[0]) * MILLISECONDS_IN_SECOND)
+                self.user_retent_rate.append(line.split()[1])
+
+        # user_ret 选手不可直接访问，因为包含watch_duration
+        # self.user_ret = Retention(self.user_time, self.user_retent_rate)
+
+    def get_user_model(self):
+        return self.user_time, self.user_retent_rate
+
+    # 禁用此函数
+    # def get_watch_duration(self):
+    #     watch_duration = self.user_ret.get_ret_duration()
+    #     return watch_duration
     
     def get_video_len(self):
         return self.video_len
@@ -121,9 +127,9 @@ class Player:
     def get_downloaded_bitrate(self):
         return self.download_chunk_bitrate
     
-    def bandwidth_waste(self):
+    def bandwidth_waste(self, user_ret):
         download_len = len(self.download_chunk_bitrate)
-        waste_start_chunk = int(self.get_watch_duration() / VIDEO_CHUNCK_LEN)
+        waste_start_chunk = int(user_ret.get_ret_duration() / VIDEO_CHUNCK_LEN)
         sum_waste_each_video = 0
         for i in range(waste_start_chunk, download_len):
             download_bitrate = self.download_chunk_bitrate[i]
