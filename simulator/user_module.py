@@ -1,5 +1,6 @@
 # Simulate the user watch pattern
 import numpy as np
+import random
 RANDOM_SEED = 42
 np.random.seed(RANDOM_SEED)
 
@@ -12,11 +13,14 @@ class Retention:
         self.user_retent_rate = user_retent_rate
         self.user_churn_rate = 1.0 - np.array(user_retent_rate).astype('float64')
         self.prop = np.diff(self.user_churn_rate).ravel()
-        
-        self.sample_playback_duration = np.random.choice(self.user_time[1:], p=self.prop)  # ms
-        
-    
-    def get_ret_duration(self): # ms
+
+        interval = np.random.choice(self.user_time[:-1], p=self.prop)  # ms
+        if interval == self.user_time[-2]:  # if a user proceeds to the end
+            self.sample_playback_duration = interval
+        else:  # uniform distribute over the second
+            self.sample_playback_duration = random.uniform(interval, interval+1)
+
+    def get_ret_duration(self):  # ms
         # print('sample playback duration %d' % self.sample_playback_duration)
         return self.sample_playback_duration
         

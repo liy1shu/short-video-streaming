@@ -9,7 +9,7 @@ from video_player import Player, VIDEO_CHUNCK_LEN
 from user_module import Retention
 from network_module import Network
 
-USER_FILE = '../logs/sample_user/user.txt'
+USER_FILE = 'logs/sample_user/user.txt'
 user_file = open(USER_FILE, 'wb')
 LOG_FILE = 'logs/log.txt'
 log_file = open(LOG_FILE, 'a')
@@ -32,6 +32,7 @@ class Environment:
         for p in range(RECOMMEND_QUEUE):
             # self.download_permit.add(p)
             self.players.append(Player(p))
+            # print(self.players[-1].get_video_len())
             user_time, user_retent_rate = self.players[-1].get_user_model()
             self.user_models.append(Retention(user_time, user_retent_rate))
             self.video_num += 1
@@ -68,6 +69,9 @@ class Environment:
         # print(self.start_video_id, time_len, play_tm, buffer)
         while time_len > 0 and play_tm >= min(self.players[0].get_video_len(), self.user_models[0].get_ret_duration()):  # 如果时间没过完就结束播放
             time_len = play_tm - min(self.players[0].get_video_len(), self.user_models[0].get_ret_duration())
+            # 放完当前视频：输出当前视频下载了多少秒，共多少秒，用户在第几秒离开
+            print("User stopped watching Video ", self.start_video_id, "( ", self.players[0].get_video_len(), " ms ) :")
+            print("User watched for ", self.user_models[0].get_ret_duration(), " ms, you downloaded ", self.players[0].get_chunk_counter()*VIDEO_CHUNCK_LEN, " sec. \n")
             wasted_bd += self.players[0].bandwidth_waste(self.user_models[0])  # 传入用户留存率
 
             # 窗口往前滑动
@@ -111,6 +115,8 @@ class Environment:
             # play_timeline, buffer = self.players[self.play_video_id - self.start_video_id].video_play(delay)
             play_timeline, buffer, wasted = self.play_videos(delay)
             if download_video_id < self.start_video_id:  # 用户已经切掉该视频，因此该视频player已经被摧毁，只需要累计wasted
+                print("Extra chunk downloaded for Video ", download_video_id,
+                      " which the user already finished watching.\n")
                 wasted += video_size  # 因为已经播放完，所以说明下载一定是多余的
                 end_of_video = True
             else:
@@ -126,7 +132,8 @@ class Environment:
 
         # while True:
         #     # print('play_video_id: %2d' % self.play_video_id)
-        #     watch_duration = np.minimum(self.players[self.play_video_id - self.start_video_id].get_watch_duration(), self.players[self.play_video_id - self.start_video_id].get_video_len())
+        #     watch_duration = np.minimum(self.players[self.play_video_id - self.start_video_id].get_watch_duration(),
+        #                                 self.players[self.play_video_id - self.start_video_id].get_video_len())
         #     # print(self.play_video_id - self.start_video_id)
         #     # print('watch duration')
         #     # print(watch_duration)

@@ -64,9 +64,9 @@ class Algorithm:
         if self.sleep_time == 0:
             self.past_bandwidth = np.roll(self.past_bandwidth, -1)
             self.past_bandwidth[-1] = float(video_size)/float(delay)  # B / ms
-            print("float(video_size):::\n", float(video_size))
-            print("float(delay):::\n", float(delay))
-            print("past_bandwith::::", self.past_bandwidth)
+            # print("float(video_size):::\n", float(video_size))
+            # print("float(delay):::\n", float(delay))
+            # print("past_bandwith::::", self.past_bandwidth)
         
         P = []
         all_future_chunks_size = []

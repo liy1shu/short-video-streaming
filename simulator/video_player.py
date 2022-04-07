@@ -7,7 +7,7 @@ VIDEO_CHUNCK_LEN = 1000.0
 MILLISECONDS_IN_SECOND = 1000.0
 VIDEO_SIZE_FILE = 'data/short_video_size/video_size_'
 VIDEO_SIZE_SCALE = 4.0  # 4s->1s chunk size
-USER_RET = './user_ret/user_ret_'
+USER_RET = './data/user_ret/user_ret_'
 
 DISTINCT_VIDEO_NUM = 9
 

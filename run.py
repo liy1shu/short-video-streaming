@@ -1,4 +1,5 @@
 import sys
+sys.path.append('./simulator/')
 import argparse
 from simulator import controller as env, short_video_load_trace
 
@@ -13,11 +14,11 @@ SUMMARY_DIR = 'logs'
 LOG_FILE = 'logs/log.txt'
 
 # QoE参数(？)
-alpha = 0.5
-beta = 0.5
-gamma = 0.5
+alpha = 1
+beta = 4.3
+gamma = 1
 ALL_VIDEO_NUM = 9
-baseline_QoE = 100  # baseline的QoE
+baseline_QoE = 600  # baseline的QoE
 TOLERANCE = 0.1  # 容忍的QoE降低率
 MIN_QOE = -1e9
 
@@ -31,13 +32,16 @@ def test(isBaseline, user_id, trace_id):  # 对user_id进行测试
         sys.path.append('./baseline/')
         if user_id == 'fixed_preload':
             import fix_preload as ABM
+            LOG_FILE = 'logs/log_fixpreload.txt'
         else:
             import no_preload as ABM
+            LOG_FILE = 'logs/log_nopreload.txt'
         sys.path.remove('./baseline/')
     else:  # 测试选手自身代码
         sys.path.append(user_id)
         import ABM
         sys.path.remove(user_id)
+        LOG_FILE = 'logs/log.txt'
     abm = ABM.Algorithm()
     abm.Initialize()
 
