@@ -3,6 +3,7 @@ import numpy as np
 import random
 RANDOM_SEED = 42
 np.random.seed(RANDOM_SEED)
+random.seed(RANDOM_SEED)
 
 # Rt simulate
 class Retention:

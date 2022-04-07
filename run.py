@@ -69,7 +69,9 @@ def test(isBaseline, user_id, trace_id):
         # qoe = alpha * VIDEO_BIT_RATE[bit_rate] \
         #           - beta * rebuf \
         #           - gamma * np.abs(VIDEO_BIT_RATE[bit_rate] - VIDEO_BIT_RATE[last_bit_rate])
-        if last_bitrate == -1:  # If its the
+        if sleep_time != 0:  # If it chose to sleep
+            smooth = 0
+        elif last_bitrate == -1:  # If its the first chunk of a video
             smooth = 0
         else:
             smooth = bit_rate - last_bitrate  # Record the change of video quality

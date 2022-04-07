@@ -75,6 +75,7 @@ class Algorithm:
             
             P.append(min(MPC_FUTURE_CHUNK_COUNT, Players[i].get_remain_video_num()))
             # P.append(Players[i].get_remain_video_num())
+            # print("P:", P, P[-1])
             all_future_chunks_size.append(Players[i].get_future_video_size(P[-1]))
             future_chunks_highest_size.append(all_future_chunks_size[-1][BITRATE_LEVELS-1])
 
@@ -100,7 +101,9 @@ class Algorithm:
                         download_video_id = play_video_id + seq
                         break
 
+        self.last_download_video_id = download_video_id
         if download_video_id == -1:  # no need to download
+            print("lys test:::choose to sleep")
             self.sleep_time = TAU
             bit_rate = 0
             download_video_id = play_video_id
@@ -117,6 +120,5 @@ class Algorithm:
                 last_quality = download_chunk_bitrate[-1]
             bit_rate = mpc_module.mpc(self.past_bandwidth, self.past_bandwidth_ests, self.past_errors, all_future_chunks_size[download_video_seq], P[download_video_seq], buffer_size, chunk_sum, video_chunk_remain, last_quality)
             self.sleep_time = 0.0
-        self.last_download_video_id = download_video_id
 
         return download_video_id, bit_rate, self.sleep_time

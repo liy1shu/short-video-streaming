@@ -71,7 +71,8 @@ class Player:
     
     def get_future_video_size(self, P):
         interval = 1
-        chunk_playing = self.get_play_chunk()
+        # chunk_playing = self.get_play_chunk()
+        chunk_playing = self.get_chunk_counter()
         if chunk_playing % 1 == 0:        # Check whether it is an integer
                 interval = 0
                 
@@ -79,6 +80,9 @@ class Player:
         for i in range(BITRATE_LEVELS):
             size_in_level = []
             for k in range(P):
+                # print(chunk_playing, interval, k)
+                # print('have ', len(self.video_size[i]))
+                # print('want', int(chunk_playing+interval+k))
                 size_in_level.append(self.video_size[i][int(chunk_playing+interval+k)])
             future_videosize.append(size_in_level)
         return future_videosize
