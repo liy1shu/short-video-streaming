@@ -5,7 +5,7 @@
 #### 0. 数据
 
 - /short_video_size：视频大小
-- /short_video_traces：网络模型
+- /network_traces：网络模型
 - /user_ret：用户留存率的模型
 
 #### 1. 仿真器

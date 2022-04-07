@@ -2,8 +2,8 @@
 import numpy as np
 import sys
 sys.path.append("..")
-from video_player import VIDEO_CHUNCK_LEN, BITRATE_LEVELS
-import mpc_module
+from simulator.video_player import BITRATE_LEVELS
+from simulator import mpc_module
 
 MPC_FUTURE_CHUNK_COUNT = 5     # MPC 
 PAST_BW_LEN = 5

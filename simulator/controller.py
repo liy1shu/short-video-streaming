@@ -9,9 +9,9 @@ from video_player import Player, VIDEO_CHUNCK_LEN
 from user_module import Retention
 from network_module import Network
 
-USER_FILE = './sample_user/user.txt'
+USER_FILE = '../logs/sample_user/user.txt'
 user_file = open(USER_FILE, 'wb')
-LOG_FILE = './ABM_results/log.txt'
+LOG_FILE = 'logs/log.txt'
 log_file = open(LOG_FILE, 'a')
 
 NEW = 0

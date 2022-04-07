@@ -1,7 +1,6 @@
 import sys
 import argparse
-import short_video_load_trace
-import controller as env
+from simulator import controller as env, short_video_load_trace
 
 parser = argparse.ArgumentParser()
 
@@ -10,8 +9,8 @@ parser.add_argument('--user', type=str, default='./', help='The relative path of
 args = parser.parse_args()
 
 
-SUMMARY_DIR = './ABM_results'
-LOG_FILE = './ABM_results/log.txt'
+SUMMARY_DIR = 'logs'
+LOG_FILE = 'logs/log.txt'
 
 # QoE参数(？)
 alpha = 0.5

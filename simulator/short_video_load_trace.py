@@ -1,7 +1,7 @@
 import os
 
 
-COOKED_TRACE_FOLDER = './short_video_traces/'
+COOKED_TRACE_FOLDER = './network_traces/'
 BW_ADJUST_PARA = 10
 
 def load_trace(cooked_trace_folder=COOKED_TRACE_FOLDER):

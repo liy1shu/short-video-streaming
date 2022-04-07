@@ -1,3 +1,4 @@
+from simulator.video_player import Player
 class Algorithm:
     def __init__(self):
         # fill your self params

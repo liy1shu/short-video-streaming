@@ -1,12 +1,11 @@
 # multi-video play
-from user_module import Retention 
 import numpy as np
 
 BITRATE_LEVELS = 6
 VIDEO_BIT_RATE = [300,750,1200,1850,2850,4300]  # Kbps
 VIDEO_CHUNCK_LEN = 1000.0
 MILLISECONDS_IN_SECOND = 1000.0
-VIDEO_SIZE_FILE = './short_video_size/video_size_'
+VIDEO_SIZE_FILE = 'data/short_video_size/video_size_'
 VIDEO_SIZE_SCALE = 4.0  # 4s->1s chunk size
 USER_RET = './user_ret/user_ret_'
 
