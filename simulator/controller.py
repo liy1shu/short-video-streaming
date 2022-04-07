@@ -79,6 +79,7 @@ class Environment:
             # Output: the downloaded time length, the total time length, the watch duration
             print("User stopped watching Video ", self.start_video_id, "( ", self.players[0].get_video_len(), " ms ) :")
             print("User watched for ", self.user_models[0].get_ret_duration(), " ms, you downloaded ", self.players[0].get_chunk_counter()*VIDEO_CHUNCK_LEN, " sec. \n")
+            print("lys test:::: The bandwidth_waste is:")
             self.total_downloaded_len += self.players[0].get_chunk_counter()*VIDEO_CHUNCK_LEN  # sum up the total downloaded time
             wasted_bd += self.players[0].bandwidth_waste(self.user_models[0])  # use watch duration as an arg
 

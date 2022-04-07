@@ -80,17 +80,23 @@ class Algorithm:
 
         download_video_id = -1
         if rebuf > 0 and Players[0].get_remain_video_num() != 0:  # If the current video needs rebuf，download it
+            print("lys test:::forced to download video ", play_video_id)
             download_video_id = play_video_id
         else:
             # download the playing video if downloading hasn't finished
             # otherwise preloads the videos on the recommendation queue in order
             if self.last_download_video_id == play_video_id and not end_of_video:  # the downloading video is the playing video & its not fully downloaded
+                print("lys test:::downloading current video(not end)", play_video_id)
                 download_video_id = play_video_id
             else:
                 for seq in range(RECOMMEND_QUEUE):
                     if Players[seq].get_preload_size() > MAX_PROLOAD_SIZE or Players[seq].get_remain_video_num() <= 0:
                         continue
                     else:
+                        print("lys test:::downloading video ", play_video_id + seq, "because: ")
+                        print(Players[seq].get_preload_size(), " <= ", MAX_PROLOAD_SIZE)
+                        print(Players[seq].get_remain_video_num(), " > ", 0)
+
                         download_video_id = play_video_id + seq
                         break
 
