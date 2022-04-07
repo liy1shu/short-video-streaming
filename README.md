@@ -75,8 +75,7 @@ You can evaluate your program with our simulator by simply running the `run.py` 
 ##### The args:
 
 - `--baseline`, `--user`：choose the algorithm you are evaluating
-- `--trace`: (optional) choose the trace_id you are evaluating (among 1 to 20)
-- `--random`: (optional) choose a random seed for your watch duration generation to make debugging more convenient
+- `--trace`: (optional) choose the trace_id you are evaluating (currently fixed to zero, will change if we add dataset)
 
 1）Run a baseline algorithm
 

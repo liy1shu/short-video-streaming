@@ -7,6 +7,7 @@ parser = argparse.ArgumentParser()
 
 parser.add_argument('--baseline', type=str, default='', help='Is testing baseline')
 parser.add_argument('--user', type=str, default='./', help='The relative path of your file dir, default is current dir')
+parser.add_argument('--trace', type=int, default=0, help='The network trace you are testing')
 args = parser.parse_args()
 
 
