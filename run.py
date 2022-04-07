@@ -131,6 +131,6 @@ def test(isBaseline, user_id, trace_id):
 
 if __name__ == '__main__':
     if args.baseline == '':
-        test(False, args.user, 0)
+        test(False, args.user, args.trace)
     else:
-        test(True, args.baseline, 0)
+        test(True, args.baseline, args.trace)
