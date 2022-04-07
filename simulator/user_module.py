@@ -18,7 +18,7 @@ class Retention:
         if interval == self.user_time[-2]:  # if a user proceeds to the end
             self.sample_playback_duration = interval
         else:  # uniform distribute over the second
-            self.sample_playback_duration = random.uniform(interval, interval+1)
+            self.sample_playback_duration = random.uniform(interval, interval+1000)
 
     def get_ret_duration(self):  # ms
         # print('sample playback duration %d' % self.sample_playback_duration)

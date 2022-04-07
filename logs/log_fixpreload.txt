@@ -194,2198 +194,2324 @@ Your bitrate is stable and smooth.
 
 *****************
 Download Video  1  chunk ( 13  /  17 ) with bitrate  5
-Playing Video  1  chunk ( 0.13143277299711645  /  17 ) with bitrate  5
+Playing Video  0  chunk ( 5.132072622512221  /  16 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  1  chunk ( 14  /  17 ) with bitrate  5
-Playing Video  1  chunk ( 0.32667169861484296  /  17 ) with bitrate  5
+Playing Video  0  chunk ( 5.3273115481299484  /  16 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  1  chunk ( 15  /  17 ) with bitrate  5
-Playing Video  1  chunk ( 0.5074799373643732  /  17 ) with bitrate  5
-Your bitrate is stable and smooth. 
-*****************
-
-
-*****************
-Download Video  1  chunk ( 16  /  17 ) with bitrate  5
-Playing Video  1  chunk ( 0.6956818563681749  /  17 ) with bitrate  5
-Your bitrate is stable and smooth. 
-*****************
-
-
-*****************
-Download Video  1  chunk ( 17  /  17 ) with bitrate  5
-Playing Video  1  chunk ( 0.8907809041757051  /  17 ) with bitrate  5
+Playing Video  0  chunk ( 5.508119786879479  /  16 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  2  chunk ( 1  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 1.0897335592504658  /  17 ) with bitrate  5
-Your bitrate changes from  0  to  5 .
+Playing Video  1  chunk ( 0.12768486259204473  /  17 ) with bitrate  5
+Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  2  chunk ( 2  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 1.2844429759758054  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 0.31440798522288843  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  2  chunk ( 3  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 1.4820704504047493  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 0.5038937057177865  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  2  chunk ( 4  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 1.6788228533152592  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 0.7006461086282963  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  2  chunk ( 5  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 1.8794750948976033  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 0.9012983502106408  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  2  chunk ( 6  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 2.070286326314761  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 1.0862045453809899  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  2  chunk ( 7  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 2.2742593356080425  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 1.2827763796934135  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  2  chunk ( 8  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 2.485853731360238  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 1.492438627959712  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  2  chunk ( 9  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 2.6839619787068862  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 1.6905468753063608  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  2  chunk ( 10  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 2.887464716604284  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 1.8951902186273244  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  2  chunk ( 11  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 3.090891257789606  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 2.100081848707555  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  2  chunk ( 12  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 3.290281987843483  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 2.2998611844162156  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  2  chunk ( 13  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 3.4939525814564765  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 2.505328686455277  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  2  chunk ( 14  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 3.6964087594799513  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 2.714539152038829  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  2  chunk ( 15  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 3.8843353162125958  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 2.9071007761015113  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  3  chunk ( 1  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 4.0910644279008155  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 3.1138298877897306  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  3  chunk ( 2  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 4.285199918816737  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 3.308088992920227  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  3  chunk ( 3  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 4.478698169451088  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 3.5052547004156476  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  3  chunk ( 4  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 4.671352067292827  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 3.70154877163677  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  3  chunk ( 5  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 4.8677689029104405  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 3.89801756349104  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  3  chunk ( 6  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 5.0489924452022805  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 4.079241105782881  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  3  chunk ( 7  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 5.234794611106638  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 4.271720773751014  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  3  chunk ( 8  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 5.426224310652193  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 4.4711152615113114  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  3  chunk ( 9  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 5.606234394215873  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 4.6519320949530485  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  3  chunk ( 10  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 5.791778176815571  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 4.837475877552746  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  3  chunk ( 11  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 5.977846797007412  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 5.023229901012841  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  3  chunk ( 12  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 6.160629310408867  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 5.205525970770462  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  3  chunk ( 13  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 6.3486432676395275  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 5.393313184468097  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  3  chunk ( 14  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 6.540079218454136  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 5.584549428726395  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  3  chunk ( 15  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 6.720419093692939  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 5.762587314772194  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  4  chunk ( 1  /  40 ) with bitrate  5
-Playing Video  1  chunk ( 6.9182398010413655  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 5.957810567058818  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  4  chunk ( 2  /  40 ) with bitrate  5
-Playing Video  1  chunk ( 7.104467079116137  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 6.14403784513359  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  4  chunk ( 3  /  40 ) with bitrate  5
-Playing Video  1  chunk ( 7.29338872392953  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 6.3329674063858725  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  4  chunk ( 4  /  40 ) with bitrate  5
-Playing Video  1  chunk ( 7.481084667705984  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 6.521086602908061  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  4  chunk ( 5  /  40 ) with bitrate  5
-Playing Video  1  chunk ( 7.672377940495537  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 6.7128172662031265  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  4  chunk ( 6  /  40 ) with bitrate  5
-Playing Video  1  chunk ( 7.849146584354005  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 6.889587442235098  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  4  chunk ( 7  /  40 ) with bitrate  5
-Playing Video  1  chunk ( 8.035645422751378  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 7.077116824081325  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  4  chunk ( 8  /  40 ) with bitrate  5
-Playing Video  1  chunk ( 8.225136317038205  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 7.271256701062017  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  4  chunk ( 9  /  40 ) with bitrate  5
-Playing Video  1  chunk ( 8.40340628933236  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 7.452864627451256  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  4  chunk ( 10  /  40 ) with bitrate  5
-Playing Video  1  chunk ( 8.587113677850722  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 7.636572015969621  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  4  chunk ( 11  /  40 ) with bitrate  5
-Playing Video  1  chunk ( 8.770440739441623  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 7.82048598729234  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  4  chunk ( 12  /  40 ) with bitrate  5
-Playing Video  1  chunk ( 8.94795519441335  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 8.00100217108776  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  4  chunk ( 13  /  40 ) with bitrate  5
-Playing Video  1  chunk ( 9.130432958578806  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 8.186233508425827  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  4  chunk ( 14  /  40 ) with bitrate  5
-Playing Video  1  chunk ( 9.315952579892521  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 8.37176840315624  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  4  chunk ( 15  /  40 ) with bitrate  5
-Playing Video  1  chunk ( 9.488656311622888  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 8.544781413910275  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  5  chunk ( 1  /  47 ) with bitrate  5
-Playing Video  1  chunk ( 9.677510535532534  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 8.733996171299676  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  5  chunk ( 2  /  47 ) with bitrate  5
-Playing Video  1  chunk ( 9.855653622372675  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 8.912139258139815  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  5  chunk ( 3  /  47 ) with bitrate  5
-Playing Video  1  chunk ( 10.036293341126612  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 9.092778976893753  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  5  chunk ( 4  /  47 ) with bitrate  5
-Playing Video  1  chunk ( 10.215380145546662  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 9.272670001926835  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  5  chunk ( 5  /  47 ) with bitrate  5
-Playing Video  1  chunk ( 10.397326854275374  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 9.455897651069417  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  5  chunk ( 6  /  47 ) with bitrate  5
-Playing Video  1  chunk ( 10.56596873264089  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 9.625002516613971  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  5  chunk ( 7  /  47 ) with bitrate  5
-Playing Video  1  chunk ( 10.745000403942635  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 9.803501431203216  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  5  chunk ( 8  /  47 ) with bitrate  5
-Playing Video  1  chunk ( 10.930437505145779  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 9.988055682338276  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  5  chunk ( 9  /  47 ) with bitrate  5
-Playing Video  1  chunk ( 11.105069127998965  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 10.162390476463864  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  5  chunk ( 10  /  47 ) with bitrate  5
-Playing Video  1  chunk ( 11.284836024269849  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 10.342258200533044  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  5  chunk ( 11  /  47 ) with bitrate  5
-Playing Video  1  chunk ( 11.464158752118463  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 10.522324858880653  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  5  chunk ( 12  /  47 ) with bitrate  5
-Playing Video  1  chunk ( 11.640233817294142  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 10.699075586179257  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  5  chunk ( 13  /  47 ) with bitrate  5
-Playing Video  1  chunk ( 11.821198929329162  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 10.880040698214277  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  5  chunk ( 14  /  47 ) with bitrate  5
-Playing Video  1  chunk ( 12.005257589216962  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 11.064017815170658  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  5  chunk ( 15  /  47 ) with bitrate  5
-Playing Video  1  chunk ( 12.178863335926273  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 11.23565788097394  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  1  chunk ( 12.678863335926273  /  17 ) with bitrate  0
+Playing Video  1  chunk ( 11.73565788097394  /  17 ) with bitrate  0
 Your bitrate changes from  5  to  0 .
 *****************
 
 
 *****************
-You choose to sleep for  500.0  ms
-Playing Video  1  chunk ( 13.178863335926273  /  17 ) with bitrate  0
+Download Video  1  chunk ( 16  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 11.914019196482947  /  17 ) with bitrate  5
+Your bitrate changes from  0  to  5 .
+*****************
+
+
+*****************
+Download Video  1  chunk ( 17  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 12.100697593782161  /  17 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  1  chunk ( 13.678863335926273  /  17 ) with bitrate  0
+Playing Video  1  chunk ( 12.600697593782161  /  17 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  1  chunk ( 14.178863335926273  /  17 ) with bitrate  0
+Playing Video  1  chunk ( 13.100697593782161  /  17 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  1  chunk ( 14.678863335926273  /  17 ) with bitrate  0
+Playing Video  1  chunk ( 13.600697593782161  /  17 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  1  chunk ( 15.178863335926273  /  17 ) with bitrate  0
+Playing Video  1  chunk ( 14.100697593782161  /  17 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  1  chunk ( 15.678863335926273  /  17 ) with bitrate  0
+Playing Video  1  chunk ( 14.600697593782161  /  17 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  1  chunk ( 16.178863335926273  /  17 ) with bitrate  0
+Playing Video  1  chunk ( 15.100697593782161  /  17 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  1  chunk ( 16.678863335926273  /  17 ) with bitrate  0
+Playing Video  1  chunk ( 15.600697593782161  /  17 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 3.637978807091713e-15  /  26 ) with bitrate  0
+Playing Video  1  chunk ( 16.10069759378216  /  17 ) with bitrate  0
+Your bitrate is stable and smooth. 
+*****************
+
+
+*****************
+You choose to sleep for  500.0  ms
+Playing Video  1  chunk ( 16.60069759378216  /  17 ) with bitrate  0
+Your bitrate is stable and smooth. 
+*****************
+
+
+*****************
+You choose to sleep for  500.0  ms
+Playing Video  2  chunk ( 7.275957614183426e-15  /  26 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  6  chunk ( 1  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 0.1899133845135981  /  26 ) with bitrate  5
+Playing Video  2  chunk ( 0.18991338451360174  /  26 ) with bitrate  5
 Your bitrate changes from  0  to  5 .
 *****************
 
 
 *****************
 Download Video  6  chunk ( 2  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 0.3690114117078888  /  26 ) with bitrate  5
+Playing Video  2  chunk ( 0.3690114117078925  /  26 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  6  chunk ( 3  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 0.550630363251038  /  26 ) with bitrate  5
+Playing Video  2  chunk ( 0.5506303632510416  /  26 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  6  chunk ( 4  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 0.7314660608991855  /  26 ) with bitrate  5
+Playing Video  2  chunk ( 0.7314660608991892  /  26 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  6  chunk ( 5  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 0.9156569106954447  /  26 ) with bitrate  5
+Playing Video  2  chunk ( 0.9156569106954483  /  26 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  6  chunk ( 6  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 1.0862500524418504  /  26 ) with bitrate  5
+Playing Video  2  chunk ( 1.086250052441854  /  26 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  6  chunk ( 7  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 1.2669172122063936  /  26 ) with bitrate  5
+Playing Video  2  chunk ( 1.2669172122063974  /  26 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  6  chunk ( 8  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 1.453089739360928  /  26 ) with bitrate  5
+Playing Video  2  chunk ( 1.4530897393609317  /  26 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  6  chunk ( 9  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 1.6279250176847437  /  26 ) with bitrate  5
+Playing Video  2  chunk ( 1.6279250176847475  /  26 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  6  chunk ( 10  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 1.8080076657690982  /  26 ) with bitrate  5
+Playing Video  2  chunk ( 1.8080076657691018  /  26 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  6  chunk ( 11  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 1.9882896762557252  /  26 ) with bitrate  5
+Playing Video  2  chunk ( 1.988289676255729  /  26 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  6  chunk ( 12  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 2.164753453100608  /  26 ) with bitrate  5
+Playing Video  2  chunk ( 2.1647534531006114  /  26 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  6  chunk ( 13  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 2.3456523105201783  /  26 ) with bitrate  5
+Playing Video  2  chunk ( 2.345652310520182  /  26 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  6  chunk ( 14  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 2.5295611963444316  /  26 ) with bitrate  5
+Playing Video  2  chunk ( 2.529561196344435  /  26 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  6  chunk ( 15  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 2.7014060047816715  /  26 ) with bitrate  5
+Playing Video  2  chunk ( 2.701406004781675  /  26 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 3.2014060047816715  /  26 ) with bitrate  0
+Playing Video  2  chunk ( 3.201406004781675  /  26 ) with bitrate  0
 Your bitrate changes from  5  to  0 .
 *****************
 
 
 *****************
 Download Video  2  chunk ( 16  /  26 ) with bitrate  5
-Playing Video  2  chunk ( 3.3800821516127386  /  26 ) with bitrate  5
+Playing Video  2  chunk ( 3.380082151612742  /  26 ) with bitrate  5
 Your bitrate changes from  0  to  5 .
 *****************
 
 
 *****************
 Download Video  2  chunk ( 17  /  26 ) with bitrate  5
-Playing Video  2  chunk ( 3.5650482247299147  /  26 ) with bitrate  5
+Playing Video  2  chunk ( 3.5650482247299182  /  26 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  2  chunk ( 18  /  26 ) with bitrate  5
-Playing Video  2  chunk ( 3.7394623076807876  /  26 ) with bitrate  5
+Playing Video  2  chunk ( 3.739462307680791  /  26 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  2  chunk ( 19  /  26 ) with bitrate  5
-Playing Video  2  chunk ( 3.9333509000577176  /  26 ) with bitrate  5
+Playing Video  2  chunk ( 3.933350900057722  /  26 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  2  chunk ( 20  /  26 ) with bitrate  5
-Playing Video  2  chunk ( 4.153769739708922  /  26 ) with bitrate  5
+Playing Video  2  chunk ( 4.153769739708927  /  26 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  2  chunk ( 21  /  26 ) with bitrate  5
-Playing Video  2  chunk ( 4.366573887940739  /  26 ) with bitrate  5
+Playing Video  2  chunk ( 4.366573887940744  /  26 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  2  chunk ( 22  /  26 ) with bitrate  5
-Playing Video  2  chunk ( 4.588277946038358  /  26 ) with bitrate  5
+Playing Video  2  chunk ( 4.588277946038362  /  26 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  2  chunk ( 23  /  26 ) with bitrate  5
-Playing Video  2  chunk ( 4.8127292676212265  /  26 ) with bitrate  5
+Playing Video  2  chunk ( 4.812729267621231  /  26 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  2  chunk ( 24  /  26 ) with bitrate  5
-Playing Video  2  chunk ( 5.024606964792557  /  26 ) with bitrate  5
+Playing Video  2  chunk ( 5.024606964792562  /  26 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  2  chunk ( 25  /  26 ) with bitrate  5
-Playing Video  2  chunk ( 5.245692213326635  /  26 ) with bitrate  5
+Playing Video  2  chunk ( 5.245692213326639  /  26 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  2  chunk ( 26  /  26 ) with bitrate  5
-Playing Video  2  chunk ( 5.461515515452875  /  26 ) with bitrate  5
+Playing Video  2  chunk ( 5.46151551545288  /  26 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 5.961515515452875  /  26 ) with bitrate  0
+Playing Video  2  chunk ( 5.96151551545288  /  26 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 6.461515515452875  /  26 ) with bitrate  0
+Playing Video  2  chunk ( 6.46151551545288  /  26 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 6.961515515452875  /  26 ) with bitrate  0
+Playing Video  2  chunk ( 6.96151551545288  /  26 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 7.461515515452875  /  26 ) with bitrate  0
+Playing Video  2  chunk ( 7.46151551545288  /  26 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 7.961515515452875  /  26 ) with bitrate  0
+Playing Video  2  chunk ( 7.96151551545288  /  26 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 8.461515515452877  /  26 ) with bitrate  0
+Playing Video  2  chunk ( 8.46151551545288  /  26 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 8.961515515452877  /  26 ) with bitrate  0
+Playing Video  2  chunk ( 8.96151551545288  /  26 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 9.461515515452877  /  26 ) with bitrate  0
+Playing Video  2  chunk ( 9.46151551545288  /  26 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 9.961515515452877  /  26 ) with bitrate  0
+Playing Video  2  chunk ( 9.96151551545288  /  26 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 10.461515515452877  /  26 ) with bitrate  0
+Playing Video  2  chunk ( 10.46151551545288  /  26 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 10.961515515452877  /  26 ) with bitrate  0
+Playing Video  2  chunk ( 10.96151551545288  /  26 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 11.461515515452877  /  26 ) with bitrate  0
+Playing Video  2  chunk ( 11.46151551545288  /  26 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 11.961515515452877  /  26 ) with bitrate  0
+Playing Video  2  chunk ( 11.96151551545288  /  26 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 12.461515515452877  /  26 ) with bitrate  0
+Playing Video  2  chunk ( 12.46151551545288  /  26 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 12.961515515452877  /  26 ) with bitrate  0
+Playing Video  2  chunk ( 12.96151551545288  /  26 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 13.461515515452877  /  26 ) with bitrate  0
+Playing Video  2  chunk ( 13.46151551545288  /  26 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 13.961515515452877  /  26 ) with bitrate  0
+Playing Video  2  chunk ( 13.96151551545288  /  26 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 14.461515515452877  /  26 ) with bitrate  0
+Playing Video  2  chunk ( 14.46151551545288  /  26 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 14.961515515452877  /  26 ) with bitrate  0
+Playing Video  2  chunk ( 14.96151551545288  /  26 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 15.461515515452877  /  26 ) with bitrate  0
+Playing Video  2  chunk ( 15.46151551545288  /  26 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 15.961515515452877  /  26 ) with bitrate  0
+Playing Video  2  chunk ( 15.96151551545288  /  26 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 16.461515515452877  /  26 ) with bitrate  0
+Playing Video  2  chunk ( 16.46151551545288  /  26 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 16.961515515452877  /  26 ) with bitrate  0
+Playing Video  2  chunk ( 16.96151551545288  /  26 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 17.461515515452877  /  26 ) with bitrate  0
+Playing Video  2  chunk ( 17.46151551545288  /  26 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 17.961515515452877  /  26 ) with bitrate  0
+Playing Video  2  chunk ( 17.96151551545288  /  26 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 18.461515515452877  /  26 ) with bitrate  0
+Playing Video  2  chunk ( 18.46151551545288  /  26 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 18.961515515452877  /  26 ) with bitrate  0
+Playing Video  2  chunk ( 18.96151551545288  /  26 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 19.461515515452877  /  26 ) with bitrate  0
+Playing Video  2  chunk ( 19.46151551545288  /  26 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 19.961515515452877  /  26 ) with bitrate  0
+Playing Video  2  chunk ( 19.96151551545288  /  26 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 20.461515515452877  /  26 ) with bitrate  0
+Playing Video  2  chunk ( 20.46151551545288  /  26 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 20.961515515452877  /  26 ) with bitrate  0
+Playing Video  2  chunk ( 20.96151551545288  /  26 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 21.461515515452877  /  26 ) with bitrate  0
+Playing Video  2  chunk ( 21.46151551545288  /  26 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 21.961515515452877  /  26 ) with bitrate  0
+Playing Video  2  chunk ( 21.96151551545288  /  26 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 22.461515515452877  /  26 ) with bitrate  0
+Playing Video  2  chunk ( 22.46151551545288  /  26 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 22.961515515452877  /  26 ) with bitrate  0
+Playing Video  2  chunk ( 22.96151551545288  /  26 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 23.461515515452877  /  26 ) with bitrate  0
+Playing Video  2  chunk ( 23.46151551545288  /  26 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 23.961515515452877  /  26 ) with bitrate  0
+Playing Video  2  chunk ( 23.96151551545288  /  26 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 0.4609884957806971  /  37 ) with bitrate  0
+Playing Video  2  chunk ( 24.46151551545288  /  26 ) with bitrate  0
+Your bitrate is stable and smooth. 
+*****************
+
+
+*****************
+You choose to sleep for  500.0  ms
+Playing Video  3  chunk ( 0.08723752807555502  /  37 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  7  chunk ( 1  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 0.6914912831633419  /  37 ) with bitrate  5
+Playing Video  3  chunk ( 0.3177403154581998  /  37 ) with bitrate  5
 Your bitrate changes from  0  to  5 .
 *****************
 
 
 *****************
 Download Video  7  chunk ( 2  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 0.9063258308100216  /  37 ) with bitrate  5
+Playing Video  3  chunk ( 0.5325748631048794  /  37 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  7  chunk ( 3  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 1.124590393199209  /  37 ) with bitrate  5
+Playing Video  3  chunk ( 0.7508394254940668  /  37 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  7  chunk ( 4  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 1.3415448054884254  /  37 ) with bitrate  5
+Playing Video  3  chunk ( 0.9677938377832832  /  37 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  7  chunk ( 5  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 1.562563694446721  /  37 ) with bitrate  5
+Playing Video  3  chunk ( 1.188812726741579  /  37 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  7  chunk ( 6  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 1.765178532710361  /  37 ) with bitrate  5
+Playing Video  3  chunk ( 1.3914275650052188  /  37 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  7  chunk ( 7  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 1.9814282230847344  /  37 ) with bitrate  5
+Playing Video  3  chunk ( 1.6076772553795922  /  37 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  7  chunk ( 8  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 2.1906528038312763  /  37 ) with bitrate  5
+Playing Video  3  chunk ( 1.8169018361261338  /  37 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  7  chunk ( 9  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 2.3692544344892603  /  37 ) with bitrate  5
+Playing Video  3  chunk ( 1.9955034667841176  /  37 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  7  chunk ( 10  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 2.553311832496688  /  37 ) with bitrate  5
+Playing Video  3  chunk ( 2.179560864791545  /  37 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  7  chunk ( 11  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 2.7375765105195637  /  37 ) with bitrate  5
+Playing Video  3  chunk ( 2.363825542814421  /  37 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  7  chunk ( 12  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 2.9188696427345926  /  37 ) with bitrate  5
+Playing Video  3  chunk ( 2.5451186750294497  /  37 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  7  chunk ( 13  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 3.105857225304704  /  37 ) with bitrate  5
+Playing Video  3  chunk ( 2.732106257599561  /  37 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  7  chunk ( 14  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 3.2960364759543186  /  37 ) with bitrate  5
+Playing Video  3  chunk ( 2.9222855082491757  /  37 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  7  chunk ( 15  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 3.4731427823729  /  37 ) with bitrate  5
+Playing Video  3  chunk ( 3.099391814667757  /  37 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 3.9731427823729  /  37 ) with bitrate  0
+Playing Video  3  chunk ( 3.599391814667757  /  37 ) with bitrate  0
 Your bitrate changes from  5  to  0 .
 *****************
 
 
 *****************
 Download Video  3  chunk ( 16  /  37 ) with bitrate  5
-Playing Video  3  chunk ( 4.157371254491809  /  37 ) with bitrate  5
+Playing Video  3  chunk ( 3.783620286786666  /  37 ) with bitrate  5
 Your bitrate changes from  0  to  5 .
 *****************
 
 
 *****************
 Download Video  3  chunk ( 17  /  37 ) with bitrate  5
-Playing Video  3  chunk ( 4.349780462970926  /  37 ) with bitrate  5
+Playing Video  3  chunk ( 3.9760294952657826  /  37 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  3  chunk ( 18  /  37 ) with bitrate  5
-Playing Video  3  chunk ( 4.5310992949060545  /  37 ) with bitrate  5
+Playing Video  3  chunk ( 4.1573483272009115  /  37 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  3  chunk ( 19  /  37 ) with bitrate  5
-Playing Video  3  chunk ( 4.720349138737006  /  37 ) with bitrate  5
+Playing Video  3  chunk ( 4.346598171031863  /  37 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  3  chunk ( 20  /  37 ) with bitrate  5
-Playing Video  3  chunk ( 4.906472677341536  /  37 ) with bitrate  5
+Playing Video  3  chunk ( 4.532721709636393  /  37 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  3  chunk ( 21  /  37 ) with bitrate  5
-Playing Video  3  chunk ( 5.087316110361017  /  37 ) with bitrate  5
+Playing Video  3  chunk ( 4.713565142655874  /  37 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  3  chunk ( 22  /  37 ) with bitrate  5
-Playing Video  3  chunk ( 5.2749175963207175  /  37 ) with bitrate  5
+Playing Video  3  chunk ( 4.901166628615574  /  37 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  3  chunk ( 23  /  37 ) with bitrate  5
-Playing Video  3  chunk ( 5.464745646556393  /  37 ) with bitrate  5
+Playing Video  3  chunk ( 5.09099467885125  /  37 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  3  chunk ( 24  /  37 ) with bitrate  5
-Playing Video  3  chunk ( 5.646961405629682  /  37 ) with bitrate  5
+Playing Video  3  chunk ( 5.27321043792454  /  37 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  3  chunk ( 25  /  37 ) with bitrate  5
-Playing Video  3  chunk ( 5.8441462714264825  /  37 ) with bitrate  5
+Playing Video  3  chunk ( 5.47039530372134  /  37 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  3  chunk ( 26  /  37 ) with bitrate  5
-Playing Video  3  chunk ( 6.036960584737895  /  37 ) with bitrate  5
+Playing Video  3  chunk ( 5.663209617032753  /  37 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  3  chunk ( 27  /  37 ) with bitrate  5
-Playing Video  3  chunk ( 6.245334437867106  /  37 ) with bitrate  5
+Playing Video  3  chunk ( 5.871583470161963  /  37 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  3  chunk ( 28  /  37 ) with bitrate  5
-Playing Video  3  chunk ( 6.432753421059737  /  37 ) with bitrate  5
+Playing Video  3  chunk ( 6.059002453354595  /  37 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  3  chunk ( 29  /  37 ) with bitrate  5
-Playing Video  3  chunk ( 6.637612395568691  /  37 ) with bitrate  5
+Playing Video  3  chunk ( 6.263861427863549  /  37 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  3  chunk ( 30  /  37 ) with bitrate  5
-Playing Video  3  chunk ( 6.844198420533304  /  37 ) with bitrate  5
+Playing Video  3  chunk ( 6.470447452828162  /  37 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  3  chunk ( 31  /  37 ) with bitrate  5
-Playing Video  3  chunk ( 7.047804426546336  /  37 ) with bitrate  5
+Playing Video  3  chunk ( 6.674053458841194  /  37 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  3  chunk ( 32  /  37 ) with bitrate  5
-Playing Video  3  chunk ( 7.252298706368452  /  37 ) with bitrate  5
+Playing Video  3  chunk ( 6.87854773866331  /  37 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  3  chunk ( 33  /  37 ) with bitrate  5
-Playing Video  3  chunk ( 7.45762308918961  /  37 ) with bitrate  5
+Playing Video  3  chunk ( 7.083872121484468  /  37 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  3  chunk ( 34  /  37 ) with bitrate  5
-Playing Video  3  chunk ( 7.668420547871743  /  37 ) with bitrate  5
+Playing Video  3  chunk ( 7.294669580166601  /  37 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  3  chunk ( 35  /  37 ) with bitrate  5
-Playing Video  3  chunk ( 7.880420645293232  /  37 ) with bitrate  5
+Playing Video  3  chunk ( 7.50666967758809  /  37 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  3  chunk ( 36  /  37 ) with bitrate  5
-Playing Video  3  chunk ( 8.079120620407021  /  37 ) with bitrate  5
+Playing Video  3  chunk ( 7.70536965270188  /  37 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  3  chunk ( 37  /  37 ) with bitrate  5
-Playing Video  3  chunk ( 8.26285690562296  /  37 ) with bitrate  5
+Playing Video  3  chunk ( 7.88910593791782  /  37 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 8.76285690562296  /  37 ) with bitrate  0
+Playing Video  3  chunk ( 8.389105937917819  /  37 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 9.26285690562296  /  37 ) with bitrate  0
+Playing Video  3  chunk ( 8.889105937917819  /  37 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 9.76285690562296  /  37 ) with bitrate  0
+Playing Video  3  chunk ( 9.389105937917819  /  37 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 10.26285690562296  /  37 ) with bitrate  0
+Playing Video  3  chunk ( 9.889105937917819  /  37 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 10.76285690562296  /  37 ) with bitrate  0
+Playing Video  3  chunk ( 10.389105937917819  /  37 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 11.26285690562296  /  37 ) with bitrate  0
+Playing Video  3  chunk ( 10.889105937917819  /  37 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 11.76285690562296  /  37 ) with bitrate  0
+Playing Video  3  chunk ( 11.389105937917819  /  37 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 12.26285690562296  /  37 ) with bitrate  0
+Playing Video  3  chunk ( 11.889105937917819  /  37 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 12.76285690562296  /  37 ) with bitrate  0
+Playing Video  3  chunk ( 12.389105937917819  /  37 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 13.26285690562296  /  37 ) with bitrate  0
+Playing Video  3  chunk ( 12.889105937917819  /  37 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 13.76285690562296  /  37 ) with bitrate  0
+Playing Video  3  chunk ( 13.389105937917819  /  37 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 14.26285690562296  /  37 ) with bitrate  0
+Playing Video  3  chunk ( 13.889105937917819  /  37 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 14.76285690562296  /  37 ) with bitrate  0
+Playing Video  3  chunk ( 14.389105937917819  /  37 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 15.26285690562296  /  37 ) with bitrate  0
+Playing Video  3  chunk ( 14.889105937917819  /  37 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 15.76285690562296  /  37 ) with bitrate  0
+Playing Video  3  chunk ( 15.389105937917819  /  37 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 16.26285690562296  /  37 ) with bitrate  0
+Playing Video  3  chunk ( 15.889105937917819  /  37 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 16.76285690562296  /  37 ) with bitrate  0
+Playing Video  3  chunk ( 16.38910593791782  /  37 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 17.26285690562296  /  37 ) with bitrate  0
+Playing Video  3  chunk ( 16.88910593791782  /  37 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 17.76285690562296  /  37 ) with bitrate  0
+Playing Video  3  chunk ( 17.38910593791782  /  37 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 18.26285690562296  /  37 ) with bitrate  0
+Playing Video  3  chunk ( 17.88910593791782  /  37 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 18.76285690562296  /  37 ) with bitrate  0
+Playing Video  3  chunk ( 18.38910593791782  /  37 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 19.26285690562296  /  37 ) with bitrate  0
+Playing Video  3  chunk ( 18.88910593791782  /  37 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 19.76285690562296  /  37 ) with bitrate  0
+Playing Video  3  chunk ( 19.38910593791782  /  37 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  4  chunk ( 0.26247833038988394  /  40 ) with bitrate  0
+Playing Video  3  chunk ( 19.88910593791782  /  37 ) with bitrate  0
+Your bitrate is stable and smooth. 
+*****************
+
+
+*****************
+You choose to sleep for  500.0  ms
+Playing Video  3  chunk ( 20.38910593791782  /  37 ) with bitrate  0
+Your bitrate is stable and smooth. 
+*****************
+
+
+*****************
+You choose to sleep for  500.0  ms
+Playing Video  3  chunk ( 20.88910593791782  /  37 ) with bitrate  0
+Your bitrate is stable and smooth. 
+*****************
+
+
+*****************
+You choose to sleep for  500.0  ms
+Playing Video  4  chunk ( 0.4282397267161432  /  40 ) with bitrate  0
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  8  chunk ( 1  /  93 ) with bitrate  5
-Playing Video  4  chunk ( 0.4697195624942271  /  40 ) with bitrate  5
+Playing Video  4  chunk ( 0.6354809588204864  /  40 ) with bitrate  5
 Your bitrate changes from  0  to  5 .
 *****************
 
 
 *****************
 Download Video  8  chunk ( 2  /  93 ) with bitrate  5
-Playing Video  4  chunk ( 0.6644359306571109  /  40 ) with bitrate  5
+Playing Video  4  chunk ( 0.8301973269833702  /  40 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  8  chunk ( 3  /  93 ) with bitrate  5
-Playing Video  4  chunk ( 0.8618898150835056  /  40 ) with bitrate  5
+Playing Video  4  chunk ( 1.027651211409765  /  40 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  8  chunk ( 4  /  93 ) with bitrate  5
-Playing Video  5  chunk ( 0.05834794516252111  /  47 ) with bitrate  5
+Playing Video  4  chunk ( 1.2242313157138718  /  40 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  8  chunk ( 5  /  93 ) with bitrate  5
-Playing Video  5  chunk ( 0.2588221329098623  /  47 ) with bitrate  5
+Playing Video  5  chunk ( 0.09449028857102212  /  47 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  8  chunk ( 6  /  93 ) with bitrate  5
-Playing Video  5  chunk ( 0.4435735116414889  /  47 ) with bitrate  5
+Playing Video  5  chunk ( 0.27924166730264877  /  47 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  8  chunk ( 7  /  93 ) with bitrate  5
-Playing Video  5  chunk ( 0.6347393197814415  /  47 ) with bitrate  5
+Playing Video  5  chunk ( 0.47040747544260114  /  47 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  8  chunk ( 8  /  93 ) with bitrate  5
-Playing Video  5  chunk ( 0.8288528061184063  /  47 ) with bitrate  5
+Playing Video  5  chunk ( 0.6645209617795661  /  47 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  8  chunk ( 9  /  93 ) with bitrate  5
-Playing Video  7  chunk ( 0.01086266684438249  /  58 ) with bitrate  5
+Playing Video  5  chunk ( 0.8469397904297962  /  47 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  8  chunk ( 10  /  93 ) with bitrate  5
-Playing Video  7  chunk ( 0.19894847379496547  /  58 ) with bitrate  5
+Playing Video  5  chunk ( 1.0350255973803792  /  47 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  8  chunk ( 11  /  93 ) with bitrate  5
-Playing Video  7  chunk ( 0.38777404911289814  /  58 ) with bitrate  5
+Playing Video  5  chunk ( 1.2238511726983117  /  47 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  8  chunk ( 12  /  93 ) with bitrate  5
-Playing Video  7  chunk ( 0.5733641873819556  /  58 ) with bitrate  5
+Playing Video  5  chunk ( 1.4094413109673691  /  47 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  8  chunk ( 13  /  93 ) with bitrate  5
-Playing Video  7  chunk ( 0.7643286725023611  /  58 ) with bitrate  5
+Playing Video  6  chunk ( 0.14789681025565118  /  49 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  8  chunk ( 14  /  93 ) with bitrate  5
-Playing Video  7  chunk ( 0.9586034651987438  /  58 ) with bitrate  5
+Playing Video  6  chunk ( 0.34217160295203386  /  49 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  8  chunk ( 15  /  93 ) with bitrate  5
-Playing Video  7  chunk ( 1.1456559086633984  /  58 ) with bitrate  5
+Playing Video  6  chunk ( 0.5292240464166886  /  49 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  9  chunk ( 1  /  16 ) with bitrate  5
-Playing Video  7  chunk ( 1.3548988043993941  /  58 ) with bitrate  5
+Playing Video  6  chunk ( 0.7384669421526844  /  49 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  9  chunk ( 2  /  16 ) with bitrate  5
-Playing Video  7  chunk ( 1.5514243399653602  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 0.17357766069743286  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  9  chunk ( 3  /  16 ) with bitrate  5
-Playing Video  7  chunk ( 1.7509141329256348  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 0.37306745365770727  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  9  chunk ( 4  /  16 ) with bitrate  5
-Playing Video  7  chunk ( 1.948970032849682  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 0.5711233535817546  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  9  chunk ( 5  /  16 ) with bitrate  5
-Playing Video  7  chunk ( 2.150916545160971  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 0.7730698658930437  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  9  chunk ( 6  /  16 ) with bitrate  5
-Playing Video  7  chunk ( 2.33694809876572  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 0.9591014194977928  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  9  chunk ( 7  /  16 ) with bitrate  5
-Playing Video  7  chunk ( 2.535332645408983  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 1.1574859661410566  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  9  chunk ( 8  /  16 ) with bitrate  5
-Playing Video  7  chunk ( 2.7594231540693195  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 1.3815764748013932  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  9  chunk ( 9  /  16 ) with bitrate  5
-Playing Video  7  chunk ( 2.9687468789884757  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 1.5909001997205492  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  9  chunk ( 10  /  16 ) with bitrate  5
-Playing Video  7  chunk ( 3.185226268080872  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 1.8073795888129451  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  9  chunk ( 11  /  16 ) with bitrate  5
-Playing Video  7  chunk ( 3.402294671843659  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 2.024447992575732  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  9  chunk ( 12  /  16 ) with bitrate  5
-Playing Video  7  chunk ( 3.618422228704515  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 2.2405755494365884  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  9  chunk ( 13  /  16 ) with bitrate  5
-Playing Video  7  chunk ( 3.841478431730533  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 2.4636317524626064  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  9  chunk ( 14  /  16 ) with bitrate  5
-Playing Video  7  chunk ( 4.068802306815352  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 2.6909556275474253  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  9  chunk ( 15  /  16 ) with bitrate  5
-Playing Video  7  chunk ( 4.273137648119699  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 2.8952909688517723  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  10  chunk ( 1  /  17 ) with bitrate  5
-Playing Video  7  chunk ( 4.487948244296533  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 3.1101015650286055  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  10  chunk ( 2  /  17 ) with bitrate  5
-Playing Video  7  chunk ( 4.689493624644256  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 3.3116469453763284  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  10  chunk ( 3  /  17 ) with bitrate  5
-Playing Video  7  chunk ( 4.894130960679543  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 3.516284281411616  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  10  chunk ( 4  /  17 ) with bitrate  5
-Playing Video  7  chunk ( 5.095767721507748  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 3.7179210422398214  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  10  chunk ( 5  /  17 ) with bitrate  5
-Playing Video  7  chunk ( 5.3011274440345115  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 3.923280764766585  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  10  chunk ( 6  /  17 ) with bitrate  5
-Playing Video  7  chunk ( 5.490126757643766  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 4.112280078375839  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  10  chunk ( 7  /  17 ) with bitrate  5
-Playing Video  7  chunk ( 5.691246867906017  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 4.313400188638091  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  10  chunk ( 8  /  17 ) with bitrate  5
-Playing Video  7  chunk ( 5.908272343891205  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 4.530425664623278  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  10  chunk ( 9  /  17 ) with bitrate  5
-Playing Video  7  chunk ( 6.112639507616917  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 4.734792828348991  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  10  chunk ( 10  /  17 ) with bitrate  5
-Playing Video  7  chunk ( 6.323888081991417  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 4.946041402723491  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  10  chunk ( 11  /  17 ) with bitrate  5
-Playing Video  7  chunk ( 6.53539810059809  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 5.157551421330163  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  10  chunk ( 12  /  17 ) with bitrate  5
-Playing Video  7  chunk ( 6.745054032949506  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 5.36720735368158  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  10  chunk ( 13  /  17 ) with bitrate  5
-Playing Video  7  chunk ( 6.961670516772507  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 5.583823837504581  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  10  chunk ( 14  /  17 ) with bitrate  5
-Playing Video  7  chunk ( 7.182362562077293  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 5.804515882809366  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  10  chunk ( 15  /  17 ) with bitrate  5
-Playing Video  7  chunk ( 7.388439206587014  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 6.010592527319089  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  11  chunk ( 1  /  26 ) with bitrate  5
-Playing Video  7  chunk ( 7.62261455706936  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 6.244767877801435  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  11  chunk ( 2  /  26 ) with bitrate  5
-Playing Video  7  chunk ( 7.841619220990878  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 6.463772541722952  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  11  chunk ( 3  /  26 ) with bitrate  5
-Playing Video  7  chunk ( 8.064159981965041  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 6.6863133026971155  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  11  chunk ( 4  /  26 ) with bitrate  5
-Playing Video  7  chunk ( 8.288202991302377  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 6.910356312034453  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  11  chunk ( 5  /  26 ) with bitrate  5
-Playing Video  7  chunk ( 8.517992325658671  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 7.140145646390746  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  11  chunk ( 6  /  26 ) with bitrate  5
-Playing Video  7  chunk ( 8.728232998673382  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 7.350386319405457  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  11  chunk ( 7  /  26 ) with bitrate  5
-Playing Video  7  chunk ( 8.95256948586652  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 7.5747228065985945  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  11  chunk ( 8  /  26 ) with bitrate  5
-Playing Video  7  chunk ( 9.154597377804835  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 7.776750698536909  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  11  chunk ( 9  /  26 ) with bitrate  5
-Playing Video  7  chunk ( 9.344119522436136  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 7.96627284316821  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  11  chunk ( 10  /  26 ) with bitrate  5
-Playing Video  7  chunk ( 9.539701681863674  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 8.161855002595749  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  11  chunk ( 11  /  26 ) with bitrate  5
-Playing Video  7  chunk ( 9.732733986119001  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 8.354887306851074  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  11  chunk ( 12  /  26 ) with bitrate  5
-Playing Video  7  chunk ( 9.917751322006145  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 8.539904642738218  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  11  chunk ( 13  /  26 ) with bitrate  5
-Playing Video  7  chunk ( 10.10811385014054  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 8.730267170872613  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  11  chunk ( 14  /  26 ) with bitrate  5
-Playing Video  7  chunk ( 10.301768728188431  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 8.923922048920506  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  11  chunk ( 15  /  26 ) with bitrate  5
-Playing Video  7  chunk ( 10.481938273258065  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 9.10409159399014  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  7  chunk ( 10.981938273258065  /  58 ) with bitrate  0
+Playing Video  7  chunk ( 9.60409159399014  /  58 ) with bitrate  0
 Your bitrate changes from  5  to  0 .
 *****************
 
 
 *****************
 Download Video  7  chunk ( 16  /  58 ) with bitrate  5
-Playing Video  7  chunk ( 11.178337571946269  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 9.800490892678345  /  58 ) with bitrate  5
 Your bitrate changes from  0  to  5 .
 *****************
 
 
 *****************
 Download Video  7  chunk ( 17  /  58 ) with bitrate  5
-Playing Video  7  chunk ( 11.383034050258777  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 10.005187370990852  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  7  chunk ( 18  /  58 ) with bitrate  5
-Playing Video  7  chunk ( 11.575195087605923  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 10.197348408338  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  7  chunk ( 19  /  58 ) with bitrate  5
-Playing Video  7  chunk ( 11.776461875291046  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 10.398615196023124  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  7  chunk ( 20  /  58 ) with bitrate  5
-Playing Video  7  chunk ( 11.981483355735012  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 10.603636676467088  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  7  chunk ( 21  /  58 ) with bitrate  5
-Playing Video  7  chunk ( 12.179725119178462  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 10.801878439910539  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  7  chunk ( 22  /  58 ) with bitrate  5
-Playing Video  7  chunk ( 12.385890889899029  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 11.008044210631105  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  7  chunk ( 23  /  58 ) with bitrate  5
-Playing Video  7  chunk ( 12.593227520604499  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 11.215380841336577  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  7  chunk ( 24  /  58 ) with bitrate  5
-Playing Video  7  chunk ( 12.79238187105011  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 11.414535191782186  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  7  chunk ( 25  /  58 ) with bitrate  5
-Playing Video  7  chunk ( 13.011695527297006  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 11.633848848029084  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  7  chunk ( 26  /  58 ) with bitrate  5
-Playing Video  7  chunk ( 13.225813310831004  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 11.847966631563082  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  7  chunk ( 27  /  58 ) with bitrate  5
-Playing Video  7  chunk ( 13.45842884462309  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 12.080582165355166  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  7  chunk ( 28  /  58 ) with bitrate  5
-Playing Video  7  chunk ( 13.664061949390526  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 12.286215270122602  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  7  chunk ( 29  /  58 ) with bitrate  5
-Playing Video  7  chunk ( 13.881155967912918  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 12.503309288644994  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  7  chunk ( 30  /  58 ) with bitrate  5
-Playing Video  7  chunk ( 14.102135361246422  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 12.724288681978498  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  7  chunk ( 31  /  58 ) with bitrate  5
-Playing Video  7  chunk ( 14.319795894824011  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 12.94194921555609  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  7  chunk ( 32  /  58 ) with bitrate  5
-Playing Video  7  chunk ( 14.539714232792052  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 13.161867553524129  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  7  chunk ( 33  /  58 ) with bitrate  5
-Playing Video  7  chunk ( 14.761550430372159  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 13.383703751104237  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  7  chunk ( 34  /  58 ) with bitrate  5
-Playing Video  7  chunk ( 14.989054133177543  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 13.611207453909621  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  7  chunk ( 35  /  58 ) with bitrate  5
-Playing Video  7  chunk ( 15.217914083030692  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 13.840067403762768  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  7  chunk ( 36  /  58 ) with bitrate  5
-Playing Video  7  chunk ( 15.436205871556997  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 14.058359192289073  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  7  chunk ( 37  /  58 ) with bitrate  5
-Playing Video  7  chunk ( 15.638736880428404  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 14.26089020116048  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  7  chunk ( 38  /  58 ) with bitrate  5
-Playing Video  7  chunk ( 15.85569696296651  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 14.47785028369859  /  58 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  7  chunk ( 39  /  58 ) with bitrate  5
-Playing Video  8  chunk ( 0.07369964847700067  /  93 ) with bitrate  5
+Playing Video  7  chunk ( 14.69671800774875  /  58 ) with bitrate  5
+Your bitrate is stable and smooth. 
+*****************
+
+
+*****************
+Download Video  7  chunk ( 40  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 14.91319099514617  /  58 ) with bitrate  5
+Your bitrate is stable and smooth. 
+*****************
+
+
+*****************
+Download Video  7  chunk ( 41  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 15.125140019674893  /  58 ) with bitrate  5
+Your bitrate is stable and smooth. 
+*****************
+
+
+*****************
+Download Video  7  chunk ( 42  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 15.34307532952025  /  58 ) with bitrate  5
+Your bitrate is stable and smooth. 
+*****************
+
+
+*****************
+Download Video  7  chunk ( 43  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 15.558640566548917  /  58 ) with bitrate  5
+Your bitrate is stable and smooth. 
+*****************
+
+
+*****************
+Download Video  7  chunk ( 44  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 15.780414033236188  /  58 ) with bitrate  5
+Your bitrate is stable and smooth. 
+*****************
+
+
+*****************
+Download Video  7  chunk ( 45  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 15.996172339090139  /  58 ) with bitrate  5
+Your bitrate is stable and smooth. 
+*****************
+
+
+*****************
+Download Video  7  chunk ( 46  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 16.21969658608453  /  58 ) with bitrate  5
+Your bitrate is stable and smooth. 
+*****************
+
+
+*****************
+Download Video  7  chunk ( 47  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 16.424989437183342  /  58 ) with bitrate  5
+Your bitrate is stable and smooth. 
+*****************
+
+
+*****************
+Download Video  7  chunk ( 48  /  58 ) with bitrate  5
+Playing Video  7  chunk ( 16.64266833702331  /  58 ) with bitrate  5
+Your bitrate is stable and smooth. 
+*****************
+
+
+*****************
+Download Video  7  chunk ( 49  /  58 ) with bitrate  5
+Playing Video  8  chunk ( 0.1323255066761267  /  93 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  12  chunk ( 1  /  37 ) with bitrate  5
-Playing Video  8  chunk ( 0.3032300441659273  /  93 ) with bitrate  5
+Playing Video  8  chunk ( 0.36276662641650703  /  93 ) with bitrate  5
 Your bitrate changes from  0  to  5 .
 *****************
 
 
 *****************
 Download Video  12  chunk ( 2  /  37 ) with bitrate  5
-Playing Video  8  chunk ( 0.5160911072489924  /  93 ) with bitrate  5
+Playing Video  8  chunk ( 0.5784045038337732  /  93 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  12  chunk ( 3  /  37 ) with bitrate  5
-Playing Video  8  chunk ( 0.7338393499775603  /  93 ) with bitrate  5
+Playing Video  8  chunk ( 0.7977058586162022  /  93 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  12  chunk ( 4  /  37 ) with bitrate  5
-Playing Video  8  chunk ( 0.9518929515581946  /  93 ) with bitrate  5
+Playing Video  8  chunk ( 1.0167101032842232  /  93 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  12  chunk ( 5  /  37 ) with bitrate  5
-Playing Video  8  chunk ( 1.1745579081157616  /  93 ) with bitrate  5
+Playing Video  8  chunk ( 1.240357456919526  /  93 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  12  chunk ( 6  /  37 ) with bitrate  5
-Playing Video  8  chunk ( 1.3786039894841133  /  93 ) with bitrate  5
+Playing Video  8  chunk ( 1.445257724983625  /  93 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  12  chunk ( 7  /  37 ) with bitrate  5
-Playing Video  8  chunk ( 1.5964440781547198  /  93 ) with bitrate  5
+Playing Video  8  chunk ( 1.66404698648246  /  93 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  12  chunk ( 8  /  37 ) with bitrate  5
-Playing Video  8  chunk ( 1.8227580482877375  /  93 ) with bitrate  5
+Playing Video  8  chunk ( 1.890389234107153  /  93 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  12  chunk ( 9  /  37 ) with bitrate  5
-Playing Video  8  chunk ( 2.034077368354241  /  93 ) with bitrate  5
+Playing Video  8  chunk ( 2.1013774693759566  /  93 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  12  chunk ( 10  /  37 ) with bitrate  5
-Playing Video  8  chunk ( 2.252662771689236  /  93 ) with bitrate  5
+Playing Video  8  chunk ( 2.31961346852424  /  93 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  12  chunk ( 11  /  37 ) with bitrate  5
-Playing Video  8  chunk ( 2.4715242340560177  /  93 ) with bitrate  5
+Playing Video  8  chunk ( 2.530625904329554  /  93 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  12  chunk ( 12  /  37 ) with bitrate  5
-Playing Video  8  chunk ( 2.685845192977052  /  93 ) with bitrate  5
+Playing Video  8  chunk ( 2.7336357909940943  /  93 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  12  chunk ( 13  /  37 ) with bitrate  5
-Playing Video  8  chunk ( 2.9072562064835705  /  93 ) with bitrate  5
+Playing Video  8  chunk ( 2.942906658162284  /  93 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  12  chunk ( 14  /  37 ) with bitrate  5
-Playing Video  8  chunk ( 3.1336259083295075  /  93 ) with bitrate  5
+Playing Video  8  chunk ( 3.1560339513795443  /  93 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  12  chunk ( 15  /  37 ) with bitrate  5
-Playing Video  8  chunk ( 3.3426286110529873  /  93 ) with bitrate  5
+Playing Video  8  chunk ( 3.3506831309370715  /  93 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 You choose to sleep for  500.0  ms
-Playing Video  8  chunk ( 3.8426286110529873  /  93 ) with bitrate  0
+Playing Video  8  chunk ( 3.8506831309370715  /  93 ) with bitrate  0
 Your bitrate changes from  5  to  0 .
 *****************
 
 
 *****************
 Download Video  8  chunk ( 16  /  93 ) with bitrate  5
-Playing Video  8  chunk ( 4.061092889017793  /  93 ) with bitrate  5
+Playing Video  8  chunk ( 4.047442813363862  /  93 ) with bitrate  5
 Your bitrate changes from  0  to  5 .
 *****************
 
 
 *****************
 Download Video  8  chunk ( 17  /  93 ) with bitrate  5
-Playing Video  8  chunk ( 4.288383313215782  /  93 ) with bitrate  5
+Playing Video  8  chunk ( 4.2516451232060835  /  93 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  8  chunk ( 18  /  93 ) with bitrate  5
-Playing Video  8  chunk ( 4.49983311655712  /  93 ) with bitrate  5
+Playing Video  8  chunk ( 4.443361669666225  /  93 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  8  chunk ( 19  /  93 ) with bitrate  5
-Playing Video  8  chunk ( 4.721352633395149  /  93 ) with bitrate  5
+Playing Video  8  chunk ( 4.6397595111440575  /  93 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  8  chunk ( 20  /  93 ) with bitrate  5
-Playing Video  8  chunk ( 4.93879383326878  /  93 ) with bitrate  5
+Playing Video  8  chunk ( 4.830596725112918  /  93 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  8  chunk ( 21  /  93 ) with bitrate  5
-Playing Video  8  chunk ( 5.140709271815418  /  93 ) with bitrate  5
+Playing Video  8  chunk ( 5.015423412401355  /  93 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  8  chunk ( 22  /  93 ) with bitrate  5
-Playing Video  8  chunk ( 5.348049731915761  /  93 ) with bitrate  5
+Playing Video  8  chunk ( 5.207275091610745  /  93 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  8  chunk ( 23  /  93 ) with bitrate  5
-Playing Video  8  chunk ( 5.558025208780202  /  93 ) with bitrate  5
+Playing Video  8  chunk ( 5.401441283030763  /  93 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  8  chunk ( 24  /  93 ) with bitrate  5
-Playing Video  8  chunk ( 5.757619584339701  /  93 ) with bitrate  5
+Playing Video  8  chunk ( 5.581685783957736  /  93 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  8  chunk ( 25  /  93 ) with bitrate  5
-Playing Video  8  chunk ( 5.9622588006314885  /  93 ) with bitrate  5
+Playing Video  8  chunk ( 5.767314639069103  /  93 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 
 
 *****************
 Download Video  8  chunk ( 26  /  93 ) with bitrate  5
-Playing Video  9  chunk ( 0.1556994322921073  /  16 ) with bitrate  5
+Playing Video  8  chunk ( 5.949003937206995  /  93 ) with bitrate  5
+Your bitrate is stable and smooth. 
+*****************
+
+
+*****************
+Download Video  8  chunk ( 27  /  93 ) with bitrate  5
+Playing Video  8  chunk ( 6.14492917088405  /  93 ) with bitrate  5
+Your bitrate is stable and smooth. 
+*****************
+
+
+*****************
+Download Video  8  chunk ( 28  /  93 ) with bitrate  5
+Playing Video  8  chunk ( 6.320530516933042  /  93 ) with bitrate  5
+Your bitrate is stable and smooth. 
+*****************
+
+
+*****************
+Download Video  8  chunk ( 29  /  93 ) with bitrate  5
+Playing Video  9  chunk ( 0.07545246498258984  /  16 ) with bitrate  5
 Your bitrate is stable and smooth. 
 *****************
 The user leaves.
