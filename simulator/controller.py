@@ -27,16 +27,18 @@ class Environment:
         self.play_video_id = 0
         self.network = Network(all_cooked_time, all_cooked_bw)
         self.timeline = 0.0
-        
+        # for ratio
+        self.total_watched_len = 0.0
+        self.total_downloaded_len = 0.0
+
         # self.download_permit = set()
         for p in range(RECOMMEND_QUEUE):
             # self.download_permit.add(p)
             self.players.append(Player(p))
-            # print(self.players[-1].get_video_len())
             user_time, user_retent_rate = self.players[-1].get_user_model()
             self.user_models.append(Retention(user_time, user_retent_rate))
+            self.total_watched_len += self.user_models[-1].get_ret_duration()  # sum the total watch duration
             self.video_num += 1
-            # user_file.write((str(self.players[-1].get_watch_duration()) + '\n').encode())
             user_file.write((str(self.user_models[-1].get_ret_duration()) + '\n').encode())
             user_file.flush()
         
@@ -47,6 +49,7 @@ class Environment:
         if operation == NEW:
             # print('--------------ADD--------------')
             self.players.append(Player(self.video_num))
+            self.total_watched_len += self.user_models[-1].get_ret_duration()  # sum the total watch duration
             user_time, user_retent_rate = self.players[-1].get_user_model()
             self.user_models.append(Retention(user_time, user_retent_rate))
             self.video_num += 1
@@ -62,7 +65,10 @@ class Environment:
     def get_start_video_id(self):
         return self.start_video_id
 
-    def play_videos(self, time_len):  # 从当前窗口头部视频开始播放
+    def get_wasted_time_ratio(self):
+        return self.total_downloaded_len / self.total_watched_len
+
+    def play_videos(self, time_len):  # play for time_len from the start of current players queue
         # print("\n\nPlaying Video ", self.start_video_id)
         wasted_bd = 0
         play_tm, buffer = self.players[0].video_play(time_len)
@@ -72,7 +78,8 @@ class Environment:
             # 放完当前视频：输出当前视频下载了多少秒，共多少秒，用户在第几秒离开
             print("User stopped watching Video ", self.start_video_id, "( ", self.players[0].get_video_len(), " ms ) :")
             print("User watched for ", self.user_models[0].get_ret_duration(), " ms, you downloaded ", self.players[0].get_chunk_counter()*VIDEO_CHUNCK_LEN, " sec. \n")
-            wasted_bd += self.players[0].bandwidth_waste(self.user_models[0])  # 传入用户留存率
+            self.total_downloaded_len += self.players[0].get_chunk_counter()*VIDEO_CHUNCK_LEN  # sum up the total downloaded time
+            wasted_bd += self.players[0].bandwidth_waste(self.user_models[0])  # use watch duration as an arg
 
             # 窗口往前滑动
             self.player_op(DEL)
@@ -118,6 +125,7 @@ class Environment:
                 print("Extra chunk downloaded for Video ", download_video_id,
                       " which the user already finished watching.\n")
                 wasted += video_size  # 因为已经播放完，所以说明下载一定是多余的
+                self.total_downloaded_len += VIDEO_CHUNCK_LEN  # sum up the total downloaded time
                 end_of_video = True
             else:
                 end_of_video = self.players[download_video_id-self.start_video_id].video_download(VIDEO_CHUNCK_LEN)

@@ -125,6 +125,8 @@ def test(isBaseline, user_id, trace_id):  # 对user_id进行测试
     # wasted_bytes
     print("Your sum of wasted bytes is:")
     print(sum_wasted_bytes)
+    print("Your download/watch ratio (downloaded time / total watch time) is:")
+    print(net_env.get_wasted_time_ratio())
     if QoE >= baseline_QoE * (1-TOLERANCE):  # QoE在可容忍范围内
         print("Your QoE meets the standard.")
     else:  # QoE超出可容忍范围
