@@ -73,7 +73,7 @@ class Algorithm:
                 continue
 
             P.append(min(MPC_FUTURE_CHUNK_COUNT, Players[i].get_remain_video_num()))
-            all_future_chunks_size.append(Players[i].get_future_video_size(P[-1]))
+            all_future_chunks_size.append(Players[i].get_undownloaded_video_size(P[-1]))
             future_chunks_highest_size.append(all_future_chunks_size[-1][BITRATE_LEVELS-1])
         
         # update past_errors and past_bandwidth_ests
