@@ -9,7 +9,7 @@ VIDEO_BIT_RATE = [300,750,1200,1850,2850,4300]  # Kbps
 REBUF_PENALTY = 4.3  # 1 sec rebuffering -> 3 Mbps
 SMOOTH_PENALTY = 1
 MILLISECONDS_IN_SECOND = 1000.0
-# SUMMARY_DIR = './ABM_results'
+# SUMMARY_DIR = './logs'
 # LOG_FILE = './results/log_sim_mpc'
 # log in format of time_stamp bit_rate buffer_size rebuffer_time chunk_size download_time reward
 # NN_MODEL = './models/nn_model_ep_5900.ckpt'

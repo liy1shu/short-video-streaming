@@ -2,8 +2,8 @@
 import numpy as np
 import sys
 sys.path.append("..")
-from video_player import VIDEO_CHUNCK_LEN, BITRATE_LEVELS
-import mpc_module
+from simulator.video_player import BITRATE_LEVELS
+from simulator import mpc_module
 
 MPC_FUTURE_CHUNK_COUNT = 5     # MPC 
 PAST_BW_LEN = 5
@@ -56,8 +56,13 @@ class Algorithm:
             self.past_bandwidth[-1] = future_bandwidth
 
     # Define your algorithm
-    def run(self, delay, rebuf, video_size, end_of_video, play_video_id, Players):
+    def run(self, delay, rebuf, video_size, end_of_video, play_video_id, Players, first_step=False):
         DEFAULT_QUALITY = 0
+        if first_step:   # 第一步没有任何信息
+            self.sleep_time = 0
+            self.last_download_video_id = 0
+            return 0, 5, self.sleep_time
+
         # download a chunk, record the bitrate and update the network 
         if self.sleep_time == 0:
             self.past_bandwidth = np.roll(self.past_bandwidth, -1)
@@ -68,7 +73,6 @@ class Algorithm:
         future_chunks_highest_size = []
         for i in range(RECOMMEND_QUEUE):
             if Players[i].get_remain_video_num() == 0:      # download over
-                # print('no remaining chunks to be downloaded for Player: ', i+play_video_id)
                 P.append(0)
                 all_future_chunks_size.append([0])
                 future_chunks_highest_size.append([0])
@@ -76,54 +80,50 @@ class Algorithm:
             
             P.append(min(MPC_FUTURE_CHUNK_COUNT, Players[i].get_remain_video_num()))
             # P.append(Players[i].get_remain_video_num())
-            all_future_chunks_size.append(Players[i].get_future_video_size(P[-1]))
+            # print("P:", P, P[-1])
+            all_future_chunks_size.append(Players[i].get_undownloaded_video_size(P[-1]))
             future_chunks_highest_size.append(all_future_chunks_size[-1][BITRATE_LEVELS-1])
 
         download_video_id = -1
-        if rebuf > 0 and Players[0].get_remain_video_num() != 0:  # 如果正在播放的视频需要预缓冲，则必须下载当前视频
-            # print("needs rebuf of ", play_video_id)
-            # print("download ", play_video_id, " because of rebuf")
+        if rebuf > 0 and Players[0].get_remain_video_num() != 0:  # If the current video needs rebuf，download it
+            # print("lys test:::forced to download video ", play_video_id)
             download_video_id = play_video_id
         else:
             # download the playing video if downloading hasn't finished
             # otherwise preloads the videos on the recommendation queue in order
             if self.last_download_video_id == play_video_id and not end_of_video:  # the downloading video is the playing video & its not fully downloaded
-                # print("last_download_video_id == play_video_id!!!!!")
-                # print("download ", play_video_id, " because of unfinished")
+                # print("lys test:::downloading current video(not end)", play_video_id)
                 download_video_id = play_video_id
             else:
                 for seq in range(RECOMMEND_QUEUE):
                     if Players[seq].get_preload_size() > MAX_PROLOAD_SIZE or Players[seq].get_remain_video_num() <= 0:
                         continue
                     else:
-                        download_video_id = play_video_id + seq
-                        # print("download ", download_video_id, " because of fixed_preload: preload_size ",  Players[seq].get_preload_size(), " <= ",  MAX_PROLOAD_SIZE)
-                        break
-            # self.last_download_video_id = download_video_id
+                        # print("lys test:::downloading video ", play_video_id + seq, "because: ")
+                        # print(Players[seq].get_preload_size(), " <= ", MAX_PROLOAD_SIZE)
+                        # print(Players[seq].get_remain_video_num(), " > ", 0)
 
+                        download_video_id = play_video_id + seq
+                        break
+
+        self.last_download_video_id = download_video_id
         if download_video_id == -1:  # no need to download
+            # print("lys test:::choose to sleep")
             self.sleep_time = TAU
             bit_rate = 0
             download_video_id = play_video_id
         else:
             download_video_seq = download_video_id - play_video_id
             # update past_errors and past_bandwidth_ests
-            # for k in range(download_video_seq + 1):
-            #     self.estimate_bw(P[k])
             self.estimate_bw(P[download_video_seq])
-            # print("download_video_seq", download_video_seq)
             buffer_size = Players[download_video_seq].get_buffer_size()  # ms
             video_chunk_remain = Players[download_video_seq].get_remain_video_num()
-            # print("video_chunk_remain", video_chunk_remain)
             chunk_sum = Players[download_video_seq].get_chunk_sum()
             download_chunk_bitrate = Players[download_video_seq].get_downloaded_bitrate()
             last_quality = DEFAULT_QUALITY
             if len(download_chunk_bitrate) > 0:
                 last_quality = download_chunk_bitrate[-1]
-            # print("download: ", download_video_id, "last_download: ", self.last_download_video_id, "play: ", play_video_id, "P:", P)
             bit_rate = mpc_module.mpc(self.past_bandwidth, self.past_bandwidth_ests, self.past_errors, all_future_chunks_size[download_video_seq], P[download_video_seq], buffer_size, chunk_sum, video_chunk_remain, last_quality)
             self.sleep_time = 0.0
-        self.last_download_video_id = download_video_id
 
-        # print("download: ", download_video_id, "play: ",play_video_id)
         return download_video_id, bit_rate, self.sleep_time
