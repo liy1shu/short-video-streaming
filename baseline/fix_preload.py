@@ -56,8 +56,13 @@ class Algorithm:
             self.past_bandwidth[-1] = future_bandwidth
 
     # Define your algorithm
-    def run(self, delay, rebuf, video_size, end_of_video, play_video_id, Players):
+    def run(self, delay, rebuf, video_size, end_of_video, play_video_id, Players, first_step=False):
         DEFAULT_QUALITY = 0
+        if first_step:   # 第一步没有任何信息
+            self.sleep_time = 0
+            self.last_download_video_id = 0
+            return 0, 5, self.sleep_time
+
         # download a chunk, record the bitrate and update the network 
         if self.sleep_time == 0:
             self.past_bandwidth = np.roll(self.past_bandwidth, -1)
@@ -81,29 +86,29 @@ class Algorithm:
 
         download_video_id = -1
         if rebuf > 0 and Players[0].get_remain_video_num() != 0:  # If the current video needs rebuf，download it
-            print("lys test:::forced to download video ", play_video_id)
+            # print("lys test:::forced to download video ", play_video_id)
             download_video_id = play_video_id
         else:
             # download the playing video if downloading hasn't finished
             # otherwise preloads the videos on the recommendation queue in order
             if self.last_download_video_id == play_video_id and not end_of_video:  # the downloading video is the playing video & its not fully downloaded
-                print("lys test:::downloading current video(not end)", play_video_id)
+                # print("lys test:::downloading current video(not end)", play_video_id)
                 download_video_id = play_video_id
             else:
                 for seq in range(RECOMMEND_QUEUE):
                     if Players[seq].get_preload_size() > MAX_PROLOAD_SIZE or Players[seq].get_remain_video_num() <= 0:
                         continue
                     else:
-                        print("lys test:::downloading video ", play_video_id + seq, "because: ")
-                        print(Players[seq].get_preload_size(), " <= ", MAX_PROLOAD_SIZE)
-                        print(Players[seq].get_remain_video_num(), " > ", 0)
+                        # print("lys test:::downloading video ", play_video_id + seq, "because: ")
+                        # print(Players[seq].get_preload_size(), " <= ", MAX_PROLOAD_SIZE)
+                        # print(Players[seq].get_remain_video_num(), " > ", 0)
 
                         download_video_id = play_video_id + seq
                         break
 
         self.last_download_video_id = download_video_id
         if download_video_id == -1:  # no need to download
-            print("lys test:::choose to sleep")
+            # print("lys test:::choose to sleep")
             self.sleep_time = TAU
             bit_rate = 0
             download_video_id = play_video_id

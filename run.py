@@ -49,14 +49,20 @@ def test(isBaseline, user_id, trace_id):
     log_file = open(LOG_FILE, 'w')
 
     # Decision variables
-    download_video_id = 0
-    bit_rate = 0
-    sleep_time = 0.0
+    download_video_id, bit_rate, sleep_time = abm.run(0, 0, 0, False, 0, net_env.players, True)  # take the first step
+    # output the first step
+    if sleep_time != 0:
+        print("You choose to sleep for ", sleep_time, " ms", file=log_file)
+    else:
+        print("Download Video ", download_video_id, " chunk (",
+              net_env.players[download_video_id].get_chunk_counter() + 1, " / ",
+              net_env.players[download_video_id].get_chunk_sum(), ") with bitrate ", bit_rate,
+              file=log_file)
 
     # sum of wasted bytes for a user
     sum_wasted_bytes = 0
     QoE = 0
-    last_bitrate = -1  # maintain the bitrate of the last chunk of the current video, for QoE calculation
+    last_played_chunk = -1  # record the last played chunk
 
     while True:
         delay, rebuf, video_size, end_of_video, \
@@ -65,39 +71,36 @@ def test(isBaseline, user_id, trace_id):
         # Update bandwidth wastage
         sum_wasted_bytes += waste_bytes  # Sum up the bandwidth wastage
 
+        # print log info of the last operation
+        # the operation results
+        current_chunk = net_env.players[0].get_play_chunk()
+        # print(current_chunk)
+        current_bitrate = net_env.players[0].get_video_quality(max(int(current_chunk - 1e-10), 0))
+        print("Playing Video ", play_video_id, " chunk (", current_chunk, " / ", net_env.players[0].get_chunk_sum(),
+              ") with bitrate ", current_bitrate, file=log_file)
+        if rebuf != 0:
+            print("You caused rebuf for Video ", play_video_id, " of ", rebuf, " ms", file=log_file)
+        if max(int(current_chunk - 1e-10), 0) == 0 or last_played_chunk == max(int(current_chunk - 1e-10), 0):  # is the first chunk or the same chunk as last time(already calculated) of the current video
+            smooth = 0
+        else:  # needs to calc smooth
+            last_bitrate = net_env.players[0].get_video_quality(int(current_chunk - 1e-10) - 1)
+            smooth = current_bitrate - last_bitrate
+            if smooth == 0:
+                print("Your bitrate is stable and smooth. ", file=log_file)
+            else:
+                print("Your bitrate changes from ", last_bitrate, " to ", current_bitrate, ".", file=log_file)
+        print("*****************", file=log_file)
+        last_played_chunk = max(int(current_chunk - 1e-10), 0)
+
         # Update QoE:
         # qoe = alpha * VIDEO_BIT_RATE[bit_rate] \
         #           - beta * rebuf \
         #           - gamma * np.abs(VIDEO_BIT_RATE[bit_rate] - VIDEO_BIT_RATE[last_bit_rate])
-        if sleep_time != 0:  # If it chose to sleep
-            smooth = 0
-        elif last_bitrate == -1:  # If its the first chunk of a video
-            smooth = 0
-        else:
-            smooth = bit_rate - last_bitrate  # Record the change of video quality
         QoE += alpha * bit_rate - beta * rebuf - gamma * abs(smooth)
-
-        # print log info of the last operation
-        # the operation results
-        print("Playing Video ", play_video_id, " chunk (", net_env.players[0].get_play_chunk(), " / ", net_env.players[0].get_chunk_sum(), ") with bitrate ", bit_rate, file=log_file)
-        if rebuf != 0:
-            print("You caused rebuf for Video ", play_video_id, " of ", rebuf, " ms", file=log_file)
-        if last_bitrate != -1:
-            if smooth == 0:
-                print("Your bitrate is stable and smooth. ", file=log_file)
-            else:
-                print("Your bitrate changes from ", last_bitrate, " to ", bit_rate, ".",  file=log_file)
-        print("*****************", file=log_file)
 
         if QoE < MIN_QOE:  # Prevent dead loops
             print('Your QoE is too low...(Your video seems to have stuck forever) Please check for errors!')
             return
-
-        if end_of_video:  # If the playing video changes，reset last_bitrate to zero,
-            # because changing bitrate between videos is allowed
-            last_bitrate = -1
-        else:
-            last_bitrate = bit_rate  # record the current bitrate for future steps
 
         # play over all videos
         if play_video_id >= ALL_VIDEO_NUM:
@@ -106,7 +109,7 @@ def test(isBaseline, user_id, trace_id):
             break
 
         # Apply the participant's algorithm to decide the args for the next step
-        download_video_id, bit_rate, sleep_time = abm.run(delay, rebuf, video_size, end_of_video, play_video_id, net_env.players)
+        download_video_id, bit_rate, sleep_time = abm.run(delay, rebuf, video_size, end_of_video, play_video_id, net_env.players, False)
 
         # print log info of the last operation
         print("\n\n*****************", file=log_file)

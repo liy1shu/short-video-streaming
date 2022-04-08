@@ -54,8 +54,14 @@ class Algorithm:
             self.past_bandwidth[-1] = future_bandwidth
 
     # Define your algorithm
-    def run(self, delay, rebuf, video_size, end_of_video, play_video_id, Players):
+    def run(self, delay, rebuf, video_size, end_of_video, play_video_id, Players, first_step=False):
         DEFAULT_QUALITY = 0
+        if first_step:
+            self.sleep_time = 0
+            self.download_video_id = 0
+            self.bit_rate = 0
+            return self.download_video_id, self.bit_rate, self.sleep_time
+
         # download a chunk, record the bitrate and update the network 
         if self.sleep_time == 0:
             self.past_bandwidth = np.roll(self.past_bandwidth, -1)

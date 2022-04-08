@@ -65,6 +65,11 @@ class Player:
         self.preload_size += video_chunk_size
         return video_chunk_size
 
+    def get_video_quality(self, chunk_id):
+        if chunk_id >= len(self.download_chunk_bitrate):
+            return -1  # means no video downloaded
+        return self.download_chunk_bitrate[chunk_id]
+
     # get size of all preloaded chunks
     def get_preload_size(self):
         return self.preload_size
@@ -89,9 +94,6 @@ class Player:
         for i in range(BITRATE_LEVELS):
             size_in_level = []
             for k in range(P):
-                # print(chunk_playing, interval, k)
-                # print('have ', len(self.video_size[i]))
-                # print('want', int(chunk_playing+interval+k))
                 size_in_level.append(self.video_size[i][int(chunk_playing + interval + k)])
             future_videosize.append(size_in_level)
         return future_videosize
@@ -125,7 +127,7 @@ class Player:
         for i in range(waste_start_chunk, download_len):
             download_bitrate = self.download_chunk_bitrate[i]
             download_size = self.video_size[download_bitrate][i]
-            print("lys test:::: chunk ", i, "of bitrate[", download_bitrate, "] costs ", download_size)
+            # print("lys test:::: chunk ", i, "of bitrate[", download_bitrate, "] costs ", download_size)
             sum_waste_each_video += download_size
         return sum_waste_each_video
             
@@ -143,6 +145,7 @@ class Player:
         buffer = self.buffer_size - play_time
         self.play_timeline += np.minimum(self.buffer_size, play_time)   # rebuffering time is not included in timeline
         self.buffer_size = np.maximum(self.buffer_size - play_time, 0.0)
+        # print(self.buffer_size, play_time, "play_timeline", self.play_timeline)
         return self.play_timeline, buffer
 
 
