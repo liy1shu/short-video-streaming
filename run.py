@@ -20,7 +20,7 @@ alpha = 1
 beta = 4.3
 gamma = 1
 ALL_VIDEO_NUM = 9
-baseline_QoE = 600  # baseline的QoE
+baseline_QoE = 600  # baseline's QoE
 TOLERANCE = 0.1  # The tolerance of the QoE decrease
 MIN_QOE = -1e9
 
@@ -50,7 +50,7 @@ def test(isBaseline, isQuickstart, user_id, trace_id):
     solution.Initialize()
 
     all_cooked_time, all_cooked_bw = short_video_load_trace.load_trace()
-    net_env = env.Environment(all_cooked_time[trace_id], all_cooked_bw[trace_id])
+    net_env = env.Environment(all_cooked_time[trace_id], all_cooked_bw[trace_id], ALL_VIDEO_NUM)
 
     # log file
     log_file = open(LOG_FILE, 'w')
@@ -73,38 +73,42 @@ def test(isBaseline, isQuickstart, user_id, trace_id):
 
     while True:
         delay, rebuf, video_size, end_of_video, \
-        play_video_id, waste_bytes = net_env.buffer_management(download_video_id, bit_rate, sleep_time)
+        play_video_id, waste_bytes, smooth = net_env.buffer_management(download_video_id, bit_rate, sleep_time)
+        # print(delay, rebuf, video_size, end_of_video, play_video_id, waste_bytes)
 
         # Update bandwidth wastage
         sum_wasted_bytes += waste_bytes  # Sum up the bandwidth wastage
 
         # print log info of the last operation
-        # the operation results
-        current_chunk = net_env.players[0].get_play_chunk()
-        # print(current_chunk)
-        current_bitrate = net_env.players[0].get_video_quality(max(int(current_chunk - 1e-10), 0))
-        print("Playing Video ", play_video_id, " chunk (", current_chunk, " / ", net_env.players[0].get_chunk_sum(),
-              ") with bitrate ", current_bitrate, file=log_file)
+        if play_video_id < ALL_VIDEO_NUM:
+            # the operation results
+            current_chunk = net_env.players[0].get_play_chunk()
+            # print(current_chunk)
+            current_bitrate = net_env.players[0].get_video_quality(max(int(current_chunk - 1e-10), 0))
+            print("Playing Video ", play_video_id, " chunk (", current_chunk, " / ", net_env.players[0].get_chunk_sum(),
+                  ") with bitrate ", current_bitrate, file=log_file)
+            # if max(int(current_chunk - 1e-10), 0) == 0 or last_played_chunk == max(int(current_chunk - 1e-10), 0):
+            #     # is the first chunk or the same chunk as last time(already calculated) of the current video
+            #     smooth = 0
+            # else:  # needs to calc smooth
+            #     last_bitrate = net_env.players[0].get_video_quality(int(current_chunk - 1e-10) - 1)
+            #     smooth = current_bitrate - last_bitrate
+            #     if smooth == 0:
+            #         print("Your bitrate is stable and smooth. ", file=log_file)
+            #     else:
+            #         print("Your bitrate changes from ", last_bitrate, " to ", current_bitrate, ".", file=log_file)
+            # last_played_chunk = max(int(current_chunk - 1e-10), 0)
         if rebuf != 0:
             print("You caused rebuf for Video ", play_video_id, " of ", rebuf, " ms", file=log_file)
-        if max(int(current_chunk - 1e-10), 0) == 0 or last_played_chunk == max(int(current_chunk - 1e-10), 0):  # is the first chunk or the same chunk as last time(already calculated) of the current video
-            smooth = 0
-        else:  # needs to calc smooth
-            last_bitrate = net_env.players[0].get_video_quality(int(current_chunk - 1e-10) - 1)
-            smooth = current_bitrate - last_bitrate
-            if smooth == 0:
-                print("Your bitrate is stable and smooth. ", file=log_file)
-            else:
-                print("Your bitrate changes from ", last_bitrate, " to ", current_bitrate, ".", file=log_file)
         print("*****************", file=log_file)
-        last_played_chunk = max(int(current_chunk - 1e-10), 0)
+
 
         # Update QoE:
         # qoe = alpha * VIDEO_BIT_RATE[bit_rate] \
         #           - beta * rebuf \
         #           - gamma * np.abs(VIDEO_BIT_RATE[bit_rate] - VIDEO_BIT_RATE[last_bit_rate])
         QoE += alpha * bit_rate - beta * rebuf - gamma * abs(smooth)
-        print(bit_rate, rebuf, smooth, alpha * bit_rate - beta * rebuf - gamma * abs(smooth))
+        # print(bit_rate, rebuf, smooth, alpha * bit_rate - beta * rebuf - gamma * abs(smooth))
 
         if QoE < MIN_QOE:  # Prevent dead loops
             print('Your QoE is too low...(Your video seems to have stuck forever) Please check for errors!')
