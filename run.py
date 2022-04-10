@@ -11,7 +11,7 @@ parser.add_argument('--user', type=str, default='./', help='The relative path of
 parser.add_argument('--trace', type=int, default=0, help='The network trace you are testing')
 args = parser.parse_args()
 
-
+VIDEO_BIT_RATE = [900,1450,2300]  # Kbps
 SUMMARY_DIR = 'logs'
 LOG_FILE = 'logs/log.txt'
 
@@ -19,7 +19,7 @@ LOG_FILE = 'logs/log.txt'
 alpha = 1
 beta = 4.3
 gamma = 1
-ALL_VIDEO_NUM = 9
+ALL_VIDEO_NUM = 5
 baseline_QoE = 600  # baseline's QoE
 TOLERANCE = 0.1  # The tolerance of the QoE decrease
 MIN_QOE = -1e9
@@ -106,8 +106,9 @@ def test(isBaseline, isQuickstart, user_id, trace_id):
         # qoe = alpha * VIDEO_BIT_RATE[bit_rate] \
         #           - beta * rebuf \
         #           - gamma * np.abs(VIDEO_BIT_RATE[bit_rate] - VIDEO_BIT_RATE[last_bit_rate])
-        QoE += alpha * bit_rate - beta * rebuf - gamma * abs(smooth)
-        # print(bit_rate, rebuf, smooth, alpha * bit_rate - beta * rebuf - gamma * abs(smooth))
+        QoE += alpha * VIDEO_BIT_RATE[bit_rate] / 1000. - beta * rebuf / 1000. - gamma * abs(smooth) / 1000.
+        # if rebuf != 0:
+        #     print("bitrate:", VIDEO_BIT_RATE[bit_rate], "rebuf:", rebuf, "smooth:", smooth)
 
         if QoE < MIN_QOE:  # Prevent dead loops
             print('Your QoE is too low...(Your video seems to have stuck forever) Please check for errors!')

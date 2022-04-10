@@ -17,6 +17,7 @@ log_file = open(LOG_FILE, 'a')
 NEW = 0
 DEL = 1
 
+VIDEO_BIT_RATE = [900,1450,2300]  # Kbps
 RECOMMEND_QUEUE = 5
 
 class Environment:
@@ -91,7 +92,7 @@ class Environment:
             video_qualities = []
             for i in range(1, int(self.players[0].get_play_chunk())):
                 video_qualities.append(self.players[0].get_video_quality(i-1))
-                smooth += abs(self.players[0].get_video_quality(i) - self.players[0].get_video_quality(i-1))
+                smooth += abs(VIDEO_BIT_RATE[self.players[0].get_video_quality(i)] - VIDEO_BIT_RATE[self.players[0].get_video_quality(i-1)])
             video_qualities.append(self.players[0].get_video_quality(int(self.players[0].get_play_chunk())))
             print("Your downloaded bitrates are: ", video_qualities, ", therefore your smooth penalty is: ", smooth)
             total_smooth += smooth

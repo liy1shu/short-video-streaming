@@ -5,7 +5,7 @@
 import itertools
 from video_player import VIDEO_CHUNCK_LEN
 
-VIDEO_BIT_RATE = [300,750,1200,1850,2850,4300]  # Kbps
+VIDEO_BIT_RATE = [900,1450,2300]  # Kbps
 REBUF_PENALTY = 4.3  # 1 sec rebuffering -> 3 Mbps
 SMOOTH_PENALTY = 1
 MILLISECONDS_IN_SECOND = 1000.0
@@ -65,7 +65,7 @@ def mpc(past_bandwidth, past_bandwidth_ests, past_errors, all_future_chunks_size
     # video_count = 0
 
     # make chunk combination options
-    for combo in itertools.product([0,1,2,3,4,5], repeat=P):
+    for combo in itertools.product([0,1,2], repeat=P):
         CHUNK_COMBO_OPTIONS.append(combo)
 
     # while True:  # serve video forever
@@ -162,7 +162,7 @@ def mpc(past_bandwidth, past_bandwidth_ests, past_errors, all_future_chunks_size
     if ( len(copy_past_errors) < 5 ):
         error_pos = -len(copy_past_errors)
     max_error = float(max(copy_past_errors[error_pos:]))
-    future_bandwidth = harmonic_bandwidth/(1+max_error)  # robustMPC here
+    future_bandwidth = harmonic_bandwidth/(1 + max_error)  # robustMPC here
     copy_past_bandwidth_ests.append(harmonic_bandwidth)
 
     # future chunks length (try 4 if that many remaining)
@@ -210,8 +210,11 @@ def mpc(past_bandwidth, past_bandwidth_ests, past_errors, all_future_chunks_size
         
         reward = (bitrate_sum/1000.) - (REBUF_PENALTY*curr_rebuffer_time/1000.) - (smoothness_diffs/1000.)
         # reward = bitrate_sum - (8*curr_rebuffer_time) - (smoothness_diffs)
-
-
+        # if (REBUF_PENALTY*curr_rebuffer_time/1000.)>0:
+        #     print("bitrate_sum/1000.", bitrate_sum/1000.)
+        #     print("REBUF_PENALTY*curr_rebuffer_time/1000.", REBUF_PENALTY*curr_rebuffer_time/1000.)
+        #     print("smoothness_diffs/1000.", smoothness_diffs/1000.)
+        #     print(" ")
         if ( reward >= max_reward ):
             if (best_combo != ()) and best_combo[0] < combo[0]:
                 best_combo = combo

@@ -60,7 +60,7 @@ class Algorithm:
         DEFAULT_QUALITY = 0
         if first_step:   # 第一步没有任何信息
             self.sleep_time = 0
-            return 0, 5, self.sleep_time
+            return 0, 2, self.sleep_time
 
         # download a chunk, record the bitrate and update the network 
         if self.sleep_time == 0:

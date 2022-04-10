@@ -50,9 +50,11 @@ def run(self, delay, rebuf, video_size, end_of_video, play_video_id, Players):
 ```
 
 # Import package
-* Evaluating environment
-  + numpy 1.21.5
-  + torch 1.11.0
-  + tensorflow 2.8.0
+* The official submission system has provided some pre-installed libraries. The following is the pre-installed library name and version number information
+
+  | Library name | numpy  | torch  | tensorflow |
+  | :----------: | :----: | :----: | :--------: |
+  |   Version    | 1.21.5 | 1.11.0 |   2.8.0    |
+
 * If you want to add some site package ,please concact zuoxt18@mails.tsinghua.edu.cn
 

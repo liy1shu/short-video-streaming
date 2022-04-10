@@ -2,7 +2,7 @@ import os
 
 
 COOKED_TRACE_FOLDER = './data/network_traces/'
-BW_ADJUST_PARA = 10
+BW_ADJUST_PARA = 1
 
 
 def load_trace(cooked_trace_folder=COOKED_TRACE_FOLDER):
