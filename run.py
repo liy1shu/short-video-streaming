@@ -5,6 +5,7 @@ from simulator import controller as env, short_video_load_trace
 
 parser = argparse.ArgumentParser()
 
+parser.add_argument('--quickstart', type=str, default='', help='Is testing quickstart')
 parser.add_argument('--baseline', type=str, default='', help='Is testing baseline')
 parser.add_argument('--user', type=str, default='./', help='The relative path of your file dir, default is current dir')
 parser.add_argument('--trace', type=int, default=0, help='The network trace you are testing')
@@ -24,23 +25,29 @@ TOLERANCE = 0.1  # The tolerance of the QoE decrease
 MIN_QOE = -1e9
 
 
-def test(isBaseline, user_id, trace_id):
+def test(isBaseline, isQuickstart, user_id, trace_id):
     if isBaseline:  # Testing baseline algorithm
         sys.path.append('./baseline/')
+        if user_id == 'no_save':
+            import no_save as Solution
+            LOG_FILE = 'logs/log_nosave.txt'
+        sys.path.remove('./baseline/')
+    elif isQuickstart:  # Testing quickstart algorithm
+        sys.path.append('./quickstart/')
         if user_id == 'fixed_preload':
-            import fix_preload as ABM
+            import fix_preload as Solution
             LOG_FILE = 'logs/log_fixpreload.txt'
         else:
-            import no_preload as ABM
+            import no_preload as Solution
             LOG_FILE = 'logs/log_nopreload.txt'
-        sys.path.remove('./baseline/')
+        sys.path.remove('./quickstart/')        
     else:  # Testing participant's algorithm
         sys.path.append(user_id)
-        import ABM
+        import Solution
         sys.path.remove(user_id)
         LOG_FILE = 'logs/log.txt'
-    abm = ABM.Algorithm()
-    abm.Initialize()
+    solution = Solution.Algorithm()
+    solution.Initialize()
 
     all_cooked_time, all_cooked_bw = short_video_load_trace.load_trace()
     net_env = env.Environment(all_cooked_time[trace_id], all_cooked_bw[trace_id])
@@ -49,7 +56,7 @@ def test(isBaseline, user_id, trace_id):
     log_file = open(LOG_FILE, 'w')
 
     # Decision variables
-    download_video_id, bit_rate, sleep_time = abm.run(0, 0, 0, False, 0, net_env.players, True)  # take the first step
+    download_video_id, bit_rate, sleep_time = solution.run(0, 0, 0, False, 0, net_env.players, True)  # take the first step
     # output the first step
     if sleep_time != 0:
         print("You choose to sleep for ", sleep_time, " ms", file=log_file)
@@ -97,6 +104,7 @@ def test(isBaseline, user_id, trace_id):
         #           - beta * rebuf \
         #           - gamma * np.abs(VIDEO_BIT_RATE[bit_rate] - VIDEO_BIT_RATE[last_bit_rate])
         QoE += alpha * bit_rate - beta * rebuf - gamma * abs(smooth)
+        print(bit_rate, rebuf, smooth, alpha * bit_rate - beta * rebuf - gamma * abs(smooth))
 
         if QoE < MIN_QOE:  # Prevent dead loops
             print('Your QoE is too low...(Your video seems to have stuck forever) Please check for errors!')
@@ -109,7 +117,7 @@ def test(isBaseline, user_id, trace_id):
             break
 
         # Apply the participant's algorithm to decide the args for the next step
-        download_video_id, bit_rate, sleep_time = abm.run(delay, rebuf, video_size, end_of_video, play_video_id, net_env.players, False)
+        download_video_id, bit_rate, sleep_time = solution.run(delay, rebuf, video_size, end_of_video, play_video_id, net_env.players, False)
 
         # print log info of the last operation
         print("\n\n*****************", file=log_file)
@@ -135,7 +143,9 @@ def test(isBaseline, user_id, trace_id):
 
 
 if __name__ == '__main__':
-    if args.baseline == '':
-        test(False, args.user, args.trace)
+    if args.baseline == '' and args.quickstart == '':
+        test(False, False, args.user, args.trace)
+    elif args.quickstart != '':
+        test(False, True, args.quickstart, args.trace)
     else:
-        test(True, args.baseline, args.trace)
+        test(True, False, args.baseline, args.trace)

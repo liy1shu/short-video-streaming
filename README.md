@@ -102,7 +102,7 @@ For example, if you place your file under the `submit` dir under the root direct
 # Your file structure:
 # run.py
 # submit
-#   |_ABM.py
+#   |_solution.py
 python run.py --user ./submit/
 ```
 

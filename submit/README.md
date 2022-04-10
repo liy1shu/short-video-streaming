@@ -4,14 +4,14 @@
 ```
 Submit
 │   README.md
-│   ABM.py    
+│   solution.py    
 └───results
 │   │   your_model.pb
 │   │   your_other_file
 
 ```
 
-# ABM.py
+# solution.py
 * PATH
 if you want to call your model ,the path setting is 
 ```
@@ -50,5 +50,9 @@ def run(self, delay, rebuf, video_size, end_of_video, play_video_id, Players):
 ```
 
 # Import package
+* Evaluating environment
+  + numpy 1.21.5
+  + torch 1.11.0
+  + tensorflow 2.8.0
 * If you want to add some site package ,please concact zuoxt18@mails.tsinghua.edu.cn
 

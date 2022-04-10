@@ -86,12 +86,14 @@ class Environment:
             # Forward the queue to the next video
             self.player_op(DEL)
             self.start_video_id += 1
-            self.player_op(NEW)
-            self.end_video_id += 1
-            # Start to play the next video
-            self.play_video_id += 1
-
-            play_tm, buffer = self.players[0].video_play(time_len)
+            if self.play_video_id < self.video_num:
+                self.player_op(NEW)
+                self.end_video_id += 1
+                # Start to play the next video
+                self.play_video_id += 1
+                play_tm, buffer = self.players[0].video_play(time_len)
+            else:
+                break
             # print(self.start_video_id, time_len, play_tm, buffer)
         return play_tm, buffer, wasted_bd
               
