@@ -73,7 +73,7 @@ class Algorithm:
         P = []
         all_future_chunks_size = []
         future_chunks_highest_size = []
-        for i in range(RECOMMEND_QUEUE):
+        for i in range(min(len(Players), RECOMMEND_QUEUE)):
             if Players[i].get_remain_video_num() == 0:      # download over
                 # print('no remaining chunks to be downloaded')
                 P.append(0)

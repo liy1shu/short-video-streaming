@@ -71,7 +71,7 @@ class Algorithm:
         P = []
         all_future_chunks_size = []
         future_chunks_highest_size = []
-        for i in range(RECOMMEND_QUEUE):
+        for i in range(min(len(Players), RECOMMEND_QUEUE)):
             if Players[i].get_remain_video_num() == 0:      # download over
                 P.append(0)
                 all_future_chunks_size.append([0])
@@ -85,7 +85,7 @@ class Algorithm:
         download_video_id = -1
         # otherwise preloads the videos on the recommendation queue in order
         # the downloading video is the playing video & its not fully downloaded
-        for seq in range(RECOMMEND_QUEUE):
+        for seq in range(min(len(Players), RECOMMEND_QUEUE)):
             if seq == 0:
                 if Players[seq].get_remain_video_num() > 0: # download the playing video if downloading hasn't finished
                     download_video_id = play_video_id
