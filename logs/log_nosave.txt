@@ -107,2046 +107,528 @@ Playing Video  0  chunk ( 3.0897097087900085  /  16 ) with bitrate  5
 
 
 *****************
-Download Video  1  chunk ( 3  /  17 ) with bitrate  5
-Playing Video  0  chunk ( 3.2771270426705628  /  16 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  1  chunk ( 4  /  17 ) with bitrate  5
-Playing Video  0  chunk ( 3.4637452618041475  /  16 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  1  chunk ( 5  /  17 ) with bitrate  5
-Playing Video  0  chunk ( 3.653924811100829  /  16 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  1  chunk ( 6  /  17 ) with bitrate  5
-Playing Video  0  chunk ( 3.8297250809566545  /  16 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  1  chunk ( 7  /  17 ) with bitrate  5
-Playing Video  0  chunk ( 4.015692880944694  /  16 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  1  chunk ( 8  /  17 ) with bitrate  5
-Playing Video  0  chunk ( 4.208078321642537  /  16 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  1  chunk ( 9  /  17 ) with bitrate  5
-Playing Video  0  chunk ( 4.3889461994289025  /  16 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  1  chunk ( 10  /  17 ) with bitrate  5
-Playing Video  0  chunk ( 4.577752195991708  /  16 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  1  chunk ( 11  /  17 ) with bitrate  5
-Playing Video  0  chunk ( 4.768065729216171  /  16 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  1  chunk ( 12  /  17 ) with bitrate  5
-Playing Video  0  chunk ( 4.954772221515233  /  16 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  1  chunk ( 13  /  17 ) with bitrate  5
-Playing Video  0  chunk ( 5.146715501029083  /  16 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  1  chunk ( 14  /  17 ) with bitrate  5
-Playing Video  0  chunk ( 5.341095056944365  /  16 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  1  chunk ( 15  /  17 ) with bitrate  5
-Playing Video  0  chunk ( 5.521903295693895  /  16 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  1  chunk ( 16  /  17 ) with bitrate  5
-Playing Video  1  chunk ( 0.07067841623981348  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  1  chunk ( 17  /  17 ) with bitrate  5
-Playing Video  1  chunk ( 0.26577746404734365  /  17 ) with bitrate  5
-*****************
-
-
-*****************
 Download Video  2  chunk ( 1  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 0.4729041436879139  /  17 ) with bitrate  5
+Playing Video  0  chunk ( 3.2858947563913428  /  16 ) with bitrate  5
 *****************
 
 
 *****************
 Download Video  2  chunk ( 2  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 0.6676135604132535  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  2  chunk ( 3  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 0.865241034842197  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  2  chunk ( 4  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 1.061993437752707  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  2  chunk ( 5  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 1.2693443213528535  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  2  chunk ( 6  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 1.4609110371507745  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  2  chunk ( 7  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 1.664884046444056  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  2  chunk ( 8  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 1.8764784421962513  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  2  chunk ( 9  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 2.0734435429050593  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  2  chunk ( 10  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 2.276624709953629  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  2  chunk ( 11  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 2.4800512511389505  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  2  chunk ( 12  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 2.6777533966049476  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  2  chunk ( 13  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 2.876662269012972  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  2  chunk ( 14  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 3.0791184470364468  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  2  chunk ( 15  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 3.2670450037690917  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  2  chunk ( 16  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 3.462887326726046  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  2  chunk ( 17  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 3.66238972141222  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  2  chunk ( 18  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 3.8497591156219944  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  2  chunk ( 19  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 4.045533146230165  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  2  chunk ( 20  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 4.237970794665645  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  2  chunk ( 21  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 4.417828800151913  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  2  chunk ( 22  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 4.603726211673936  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  2  chunk ( 23  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 4.791814925586536  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  2  chunk ( 24  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 4.971270627210072  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  2  chunk ( 25  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 5.157958053426876  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  2  chunk ( 26  /  26 ) with bitrate  5
-Playing Video  1  chunk ( 5.340876423725298  /  17 ) with bitrate  5
+Playing Video  0  chunk ( 3.470647321856589  /  16 ) with bitrate  5
 *****************
 
 
 *****************
 Download Video  3  chunk ( 1  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 5.535994098063342  /  17 ) with bitrate  5
+Playing Video  0  chunk ( 3.6668323694579237  /  16 ) with bitrate  5
 *****************
 
 
 *****************
 Download Video  3  chunk ( 2  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 5.719846430356092  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  3  chunk ( 3  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 5.908775991608374  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  3  chunk ( 4  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 6.096895188130562  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  3  chunk ( 5  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 6.2886258514256275  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  3  chunk ( 6  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 6.465774802961229  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  3  chunk ( 7  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 6.653348672626586  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  3  chunk ( 8  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 6.847488549607277  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  3  chunk ( 9  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 7.029931064316926  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  3  chunk ( 10  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 7.217190491729623  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  3  chunk ( 11  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 7.4011044630523415  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  3  chunk ( 12  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 7.581620646847762  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  3  chunk ( 13  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 7.767252922398968  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  3  chunk ( 14  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 7.955472099824361  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  3  chunk ( 15  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 8.128485110578396  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  3  chunk ( 16  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 8.308320068323402  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  3  chunk ( 17  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 8.494518818587265  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  3  chunk ( 18  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 8.669732749298314  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  3  chunk ( 19  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 8.852390418595371  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  3  chunk ( 20  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 9.03208969371773  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  3  chunk ( 21  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 9.206382434954184  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  3  chunk ( 22  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 9.38637558532247  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  3  chunk ( 23  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 9.56779499671255  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  3  chunk ( 24  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 9.741114070951905  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  3  chunk ( 25  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 9.921402941941802  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  3  chunk ( 26  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 10.098325554742498  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  3  chunk ( 27  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 10.288615897300629  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  3  chunk ( 28  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 10.459390046238926  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  3  chunk ( 29  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 10.636934807867213  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  3  chunk ( 30  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 10.815828809513526  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  3  chunk ( 31  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 10.992394702672462  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  3  chunk ( 32  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 11.170544396880802  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  3  chunk ( 33  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 11.352460911283092  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  3  chunk ( 34  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 11.539199755249172  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  3  chunk ( 35  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 11.726920027065924  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  3  chunk ( 36  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 11.906992807318598  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  3  chunk ( 37  /  37 ) with bitrate  5
-Playing Video  1  chunk ( 12.076582616347052  /  17 ) with bitrate  5
+Playing Video  0  chunk ( 3.8515577421896445  /  16 ) with bitrate  5
 *****************
 
 
 *****************
 Download Video  4  chunk ( 1  /  40 ) with bitrate  5
-Playing Video  1  chunk ( 12.266452541577962  /  17 ) with bitrate  5
+Playing Video  0  chunk ( 4.047113293896216  /  16 ) with bitrate  5
 *****************
 
 
 *****************
 Download Video  4  chunk ( 2  /  40 ) with bitrate  5
-Playing Video  1  chunk ( 12.445511385835651  /  17 ) with bitrate  5
+Playing Video  0  chunk ( 4.231298305177102  /  16 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  1  chunk ( 3  /  17 ) with bitrate  5
+Playing Video  0  chunk ( 4.4181336470363055  /  16 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  2  chunk ( 3  /  26 ) with bitrate  5
+Playing Video  0  chunk ( 4.608338654506593  /  16 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  3  chunk ( 3  /  37 ) with bitrate  5
+Playing Video  0  chunk ( 4.7988324128939395  /  16 ) with bitrate  5
 *****************
 
 
 *****************
 Download Video  4  chunk ( 3  /  40 ) with bitrate  5
-Playing Video  1  chunk ( 12.62709015767948  /  17 ) with bitrate  5
+Playing Video  0  chunk ( 4.989326171281286  /  16 ) with bitrate  5
 *****************
 
 
 *****************
-Download Video  4  chunk ( 4  /  40 ) with bitrate  5
-Playing Video  1  chunk ( 12.807346957844388  /  17 ) with bitrate  5
+Download Video  1  chunk ( 4  /  17 ) with bitrate  5
+Playing Video  0  chunk ( 5.1784969554058975  /  16 ) with bitrate  5
 *****************
 
 
 *****************
-Download Video  4  chunk ( 5  /  40 ) with bitrate  5
-Playing Video  1  chunk ( 12.990375749459666  /  17 ) with bitrate  5
+Download Video  1  chunk ( 5  /  17 ) with bitrate  5
+Playing Video  0  chunk ( 5.370749151796277  /  16 ) with bitrate  5
 *****************
 
 
 *****************
-Download Video  4  chunk ( 6  /  40 ) with bitrate  5
-Playing Video  1  chunk ( 13.159958490564241  /  17 ) with bitrate  5
+Download Video  2  chunk ( 4  /  26 ) with bitrate  5
+Playing Video  0  chunk ( 5.559373023915675  /  16 ) with bitrate  5
 *****************
 
 
 *****************
-Download Video  4  chunk ( 7  /  40 ) with bitrate  5
-Playing Video  1  chunk ( 13.339502892459075  /  17 ) with bitrate  5
+Download Video  2  chunk ( 5  /  26 ) with bitrate  5
+Playing Video  1  chunk ( 0.11219842184817116  /  17 ) with bitrate  5
 *****************
 
 
 *****************
-Download Video  4  chunk ( 8  /  40 ) with bitrate  5
-Playing Video  1  chunk ( 13.524676263314554  /  17 ) with bitrate  5
+Download Video  1  chunk ( 6  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 0.2914966677183662  /  17 ) with bitrate  5
 *****************
 
 
 *****************
-Download Video  4  chunk ( 9  /  40 ) with bitrate  5
-Playing Video  1  chunk ( 13.698542724785666  /  17 ) with bitrate  5
+Download Video  1  chunk ( 7  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 0.4880685020307898  /  17 ) with bitrate  5
 *****************
 
 
 *****************
-Download Video  4  chunk ( 10  /  40 ) with bitrate  5
-Playing Video  1  chunk ( 13.877602950013872  /  17 ) with bitrate  5
+Download Video  1  chunk ( 8  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 0.6918067268711524  /  17 ) with bitrate  5
 *****************
 
 
 *****************
-Download Video  4  chunk ( 11  /  40 ) with bitrate  5
-Playing Video  1  chunk ( 14.05709099581166  /  17 ) with bitrate  5
+Download Video  1  chunk ( 9  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 0.8828639248782869  /  17 ) with bitrate  5
 *****************
 
 
 *****************
-Download Video  4  chunk ( 12  /  40 ) with bitrate  5
-Playing Video  1  chunk ( 14.233473574562463  /  17 ) with bitrate  5
+Download Video  1  chunk ( 10  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 1.0802519115352196  /  17 ) with bitrate  5
 *****************
 
 
 *****************
-Download Video  4  chunk ( 13  /  40 ) with bitrate  5
-Playing Video  1  chunk ( 14.414761852056785  /  17 ) with bitrate  5
+Download Video  1  chunk ( 11  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 1.2851435416154506  /  17 ) with bitrate  5
 *****************
 
 
 *****************
-Download Video  4  chunk ( 14  /  40 ) with bitrate  5
-Playing Video  1  chunk ( 14.599071775188296  /  17 ) with bitrate  5
+Download Video  1  chunk ( 12  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 1.485951454967808  /  17 ) with bitrate  5
 *****************
 
 
 *****************
-Download Video  4  chunk ( 15  /  40 ) with bitrate  5
-Playing Video  1  chunk ( 14.7768320556532  /  17 ) with bitrate  5
+Download Video  1  chunk ( 13  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 1.6929082723692226  /  17 ) with bitrate  5
 *****************
 
 
 *****************
-Download Video  4  chunk ( 16  /  40 ) with bitrate  5
-Playing Video  1  chunk ( 14.996974449634523  /  17 ) with bitrate  5
+Download Video  1  chunk ( 14  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 1.9035760745261268  /  17 ) with bitrate  5
 *****************
 
 
 *****************
-Download Video  4  chunk ( 17  /  40 ) with bitrate  5
-Playing Video  1  chunk ( 15.226049958213546  /  17 ) with bitrate  5
+Download Video  1  chunk ( 15  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 2.0974555118018956  /  17 ) with bitrate  5
 *****************
 
 
 *****************
-Download Video  4  chunk ( 18  /  40 ) with bitrate  5
-Playing Video  1  chunk ( 15.440139259784457  /  17 ) with bitrate  5
+Download Video  1  chunk ( 16  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 2.299687323419264  /  17 ) with bitrate  5
 *****************
 
 
 *****************
-Download Video  4  chunk ( 19  /  40 ) with bitrate  5
-Playing Video  1  chunk ( 15.66465600164253  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  4  chunk ( 20  /  40 ) with bitrate  5
-Playing Video  1  chunk ( 15.883801803016075  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  4  chunk ( 21  /  40 ) with bitrate  5
-Playing Video  1  chunk ( 16.095401947821063  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  4  chunk ( 22  /  40 ) with bitrate  5
-Playing Video  1  chunk ( 16.315821315840722  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  4  chunk ( 23  /  40 ) with bitrate  5
-Playing Video  1  chunk ( 16.53802168217511  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  4  chunk ( 24  /  40 ) with bitrate  5
-Playing Video  1  chunk ( 16.74783962367991  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  4  chunk ( 25  /  40 ) with bitrate  5
-Playing Video  1  chunk ( 16.96672130674109  /  17 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  4  chunk ( 26  /  40 ) with bitrate  5
-Playing Video  2  chunk ( 0.0  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  4  chunk ( 27  /  40 ) with bitrate  5
-Playing Video  2  chunk ( 0.23128288684288512  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  4  chunk ( 28  /  40 ) with bitrate  5
-Playing Video  2  chunk ( 0.4358189566648821  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  4  chunk ( 29  /  40 ) with bitrate  5
-Playing Video  2  chunk ( 0.6506211714928235  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  4  chunk ( 30  /  40 ) with bitrate  5
-Playing Video  2  chunk ( 0.857566836488721  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  4  chunk ( 31  /  40 ) with bitrate  5
-Playing Video  2  chunk ( 1.0389375094081554  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  4  chunk ( 32  /  40 ) with bitrate  5
-Playing Video  2  chunk ( 1.221970787755828  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  4  chunk ( 33  /  40 ) with bitrate  5
-Playing Video  2  chunk ( 1.4070774419025511  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  4  chunk ( 34  /  40 ) with bitrate  5
-Playing Video  2  chunk ( 1.5971504945350683  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  4  chunk ( 35  /  40 ) with bitrate  5
-Playing Video  2  chunk ( 1.7888991647851378  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  4  chunk ( 36  /  40 ) with bitrate  5
-Playing Video  2  chunk ( 1.9727143514056085  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  4  chunk ( 37  /  40 ) with bitrate  5
-Playing Video  2  chunk ( 2.145674825626734  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  4  chunk ( 38  /  40 ) with bitrate  5
-Playing Video  2  chunk ( 2.3296604108024486  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  4  chunk ( 39  /  40 ) with bitrate  5
-Playing Video  2  chunk ( 2.5142032561134102  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  4  chunk ( 40  /  40 ) with bitrate  5
-Playing Video  2  chunk ( 2.6997828165105426  /  26 ) with bitrate  5
+Download Video  1  chunk ( 17  /  17 ) with bitrate  5
+Playing Video  1  chunk ( 2.5097105730850497  /  17 ) with bitrate  5
 *****************
 
 
 *****************
 Download Video  5  chunk ( 1  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 2.8956271274509726  /  26 ) with bitrate  5
+Playing Video  1  chunk ( 2.719441677924533  /  17 ) with bitrate  5
 *****************
 
 
 *****************
 Download Video  5  chunk ( 2  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 3.0800724843716187  /  26 ) with bitrate  5
+Playing Video  1  chunk ( 2.9137007830550297  /  17 ) with bitrate  5
 *****************
 
 
 *****************
 Download Video  5  chunk ( 3  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 3.267670365789026  /  26 ) with bitrate  5
+Playing Video  1  chunk ( 3.11086649055045  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  3  chunk ( 4  /  37 ) with bitrate  5
+Playing Video  1  chunk ( 3.307160561771572  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  3  chunk ( 5  /  37 ) with bitrate  5
+Playing Video  1  chunk ( 3.506080842512309  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  4  chunk ( 4  /  40 ) with bitrate  5
+Playing Video  1  chunk ( 3.698734740354048  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  4  chunk ( 5  /  40 ) with bitrate  5
+Playing Video  1  chunk ( 3.8951515759716613  /  17 ) with bitrate  5
 *****************
 
 
 *****************
 Download Video  5  chunk ( 4  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 3.454501005773395  /  26 ) with bitrate  5
+Playing Video  1  chunk ( 4.0878054738133995  /  17 ) with bitrate  5
 *****************
 
 
 *****************
 Download Video  5  chunk ( 5  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 3.644900071338411  /  26 ) with bitrate  5
+Playing Video  1  chunk ( 4.2817484981452925  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  2  chunk ( 6  /  26 ) with bitrate  5
+Playing Video  1  chunk ( 4.4562194332454235  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  3  chunk ( 6  /  37 ) with bitrate  5
+Playing Video  1  chunk ( 4.6306903683455545  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  4  chunk ( 6  /  40 ) with bitrate  5
+Playing Video  1  chunk ( 4.8051613034456855  /  17 ) with bitrate  5
 *****************
 
 
 *****************
 Download Video  5  chunk ( 6  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 3.821230585127152  /  26 ) with bitrate  5
+Playing Video  1  chunk ( 4.979632238545817  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  2  chunk ( 7  /  26 ) with bitrate  5
+Playing Video  1  chunk ( 5.164929237951433  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  2  chunk ( 8  /  26 ) with bitrate  5
+Playing Video  1  chunk ( 5.356888813856917  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  3  chunk ( 7  /  37 ) with bitrate  5
+Playing Video  1  chunk ( 5.542364168372314  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  3  chunk ( 8  /  37 ) with bitrate  5
+Playing Video  1  chunk ( 5.734727250559403  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  4  chunk ( 7  /  40 ) with bitrate  5
+Playing Video  1  chunk ( 5.922679230551091  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  4  chunk ( 8  /  40 ) with bitrate  5
+Playing Video  1  chunk ( 6.11726768539494  /  17 ) with bitrate  5
 *****************
 
 
 *****************
 Download Video  5  chunk ( 7  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 4.0168477451776825  /  26 ) with bitrate  5
+Playing Video  1  chunk ( 6.305219665386628  /  17 ) with bitrate  5
 *****************
 
 
 *****************
 Download Video  5  chunk ( 8  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 4.219572606033818  /  26 ) with bitrate  5
+Playing Video  1  chunk ( 6.499719378286123  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  2  chunk ( 9  /  26 ) with bitrate  5
+Playing Video  1  chunk ( 6.682161892995772  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  3  chunk ( 9  /  37 ) with bitrate  5
+Playing Video  1  chunk ( 6.864604407705421  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  4  chunk ( 9  /  40 ) with bitrate  5
+Playing Video  1  chunk ( 7.0470469224150705  /  17 ) with bitrate  5
 *****************
 
 
 *****************
 Download Video  5  chunk ( 9  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 4.409720292329477  /  26 ) with bitrate  5
+Playing Video  1  chunk ( 7.2281717948804936  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  2  chunk ( 10  /  26 ) with bitrate  5
+Playing Video  1  chunk ( 7.411879183398858  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  2  chunk ( 11  /  26 ) with bitrate  5
+Playing Video  1  chunk ( 7.5957931547215765  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  3  chunk ( 10  /  37 ) with bitrate  5
+Playing Video  1  chunk ( 7.779500543239942  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  3  chunk ( 11  /  37 ) with bitrate  5
+Playing Video  1  chunk ( 7.96262984742053  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  4  chunk ( 10  /  40 ) with bitrate  5
+Playing Video  1  chunk ( 8.143240207723224  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  4  chunk ( 11  /  40 ) with bitrate  5
+Playing Video  1  chunk ( 8.324050981619159  /  17 ) with bitrate  5
 *****************
 
 
 *****************
 Download Video  5  chunk ( 10  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 4.606796929124313  /  26 ) with bitrate  5
+Playing Video  1  chunk ( 8.504636330082054  /  17 ) with bitrate  5
 *****************
 
 
 *****************
 Download Video  5  chunk ( 11  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 4.813931731010111  /  26 ) with bitrate  5
+Playing Video  1  chunk ( 8.68511189648956  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  2  chunk ( 12  /  26 ) with bitrate  5
+Playing Video  1  chunk ( 8.862302104614713  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  3  chunk ( 12  /  37 ) with bitrate  5
+Playing Video  1  chunk ( 9.039492312739865  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  4  chunk ( 12  /  40 ) with bitrate  5
+Playing Video  1  chunk ( 9.216682520865017  /  17 ) with bitrate  5
 *****************
 
 
 *****************
 Download Video  5  chunk ( 12  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 5.016909468753002  /  26 ) with bitrate  5
+Playing Video  1  chunk ( 9.393168727261326  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  2  chunk ( 13  /  26 ) with bitrate  5
+Playing Video  1  chunk ( 9.5740383341623  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  2  chunk ( 14  /  26 ) with bitrate  5
+Playing Video  1  chunk ( 9.757917096862519  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  3  chunk ( 13  /  37 ) with bitrate  5
+Playing Video  1  chunk ( 9.939391692619042  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  3  chunk ( 14  /  37 ) with bitrate  5
+Playing Video  1  chunk ( 10.12414760160195  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  4  chunk ( 13  /  40 ) with bitrate  5
+Playing Video  1  chunk ( 10.305868945647552  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  4  chunk ( 14  /  40 ) with bitrate  5
+Playing Video  1  chunk ( 10.490375910348606  /  17 ) with bitrate  5
 *****************
 
 
 *****************
 Download Video  5  chunk ( 13  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 5.2261465506776394  /  26 ) with bitrate  5
+Playing Video  1  chunk ( 10.671341022383627  /  17 ) with bitrate  5
 *****************
 
 
 *****************
 Download Video  5  chunk ( 14  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 5.438079269275694  /  26 ) with bitrate  5
+Playing Video  1  chunk ( 10.855318139340008  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  2  chunk ( 15  /  26 ) with bitrate  5
+Playing Video  1  chunk ( 11.02695820514329  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  3  chunk ( 15  /  37 ) with bitrate  5
+Playing Video  1  chunk ( 11.198844067017035  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  4  chunk ( 15  /  40 ) with bitrate  5
+Playing Video  1  chunk ( 11.372449813726345  /  17 ) with bitrate  5
 *****************
 
 
 *****************
 Download Video  5  chunk ( 15  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 5.632783470039871  /  26 ) with bitrate  5
+Playing Video  1  chunk ( 11.546055560435656  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  2  chunk ( 16  /  26 ) with bitrate  5
+Playing Video  1  chunk ( 11.726526727766496  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  2  chunk ( 17  /  26 ) with bitrate  5
+Playing Video  1  chunk ( 11.913402241605434  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  3  chunk ( 16  /  37 ) with bitrate  5
+Playing Video  1  chunk ( 12.09384702246542  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  3  chunk ( 17  /  37 ) with bitrate  5
+Playing Video  1  chunk ( 12.280680278182762  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  4  chunk ( 16  /  40 ) with bitrate  5
+Playing Video  1  chunk ( 12.461111719643256  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  4  chunk ( 17  /  40 ) with bitrate  5
+Playing Video  1  chunk ( 12.647944975360598  /  17 ) with bitrate  5
 *****************
 
 
 *****************
 Download Video  5  chunk ( 16  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 5.835900536605416  /  26 ) with bitrate  5
+Playing Video  1  chunk ( 12.827581895639891  /  17 ) with bitrate  5
 *****************
 
 
 *****************
 Download Video  5  chunk ( 17  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 6.046865470139105  /  26 ) with bitrate  5
+Playing Video  1  chunk ( 13.013223621975817  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  2  chunk ( 18  /  26 ) with bitrate  5
+Playing Video  1  chunk ( 13.188245436331195  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  3  chunk ( 18  /  37 ) with bitrate  5
+Playing Video  1  chunk ( 13.363267250686574  /  17 ) with bitrate  5
+*****************
+
+
+*****************
+Download Video  4  chunk ( 18  /  40 ) with bitrate  5
+Playing Video  1  chunk ( 13.537664371709013  /  17 ) with bitrate  5
 *****************
 
 
 *****************
 Download Video  5  chunk ( 18  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 6.242021189908127  /  26 ) with bitrate  5
+Playing Video  1  chunk ( 13.711715463599619  /  17 ) with bitrate  5
 *****************
 
 
 *****************
-Download Video  5  chunk ( 19  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 6.442019182242905  /  26 ) with bitrate  5
+Download Video  2  chunk ( 19  /  26 ) with bitrate  5
+Playing Video  1  chunk ( 13.893128664925884  /  17 ) with bitrate  5
 *****************
-
-
-*****************
-Download Video  5  chunk ( 20  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 6.6385590660512594  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  5  chunk ( 21  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 6.82877917641998  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  5  chunk ( 22  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 7.026228934806324  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  5  chunk ( 23  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 7.22607999583025  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  5  chunk ( 24  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 7.416358589524114  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  5  chunk ( 25  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 7.614336709653662  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  5  chunk ( 26  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 7.804012132055361  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  5  chunk ( 27  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 8.003378231416892  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  5  chunk ( 28  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 8.181640402338482  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  5  chunk ( 29  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 8.3680028264375  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  5  chunk ( 30  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 8.556224713873148  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  5  chunk ( 31  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 8.742354290700206  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  5  chunk ( 32  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 8.93022452491315  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  5  chunk ( 33  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 9.120265470731526  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  5  chunk ( 34  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 9.320521917643726  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  5  chunk ( 35  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 9.5271860170223  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  5  chunk ( 36  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 9.724857726991416  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  5  chunk ( 37  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 9.910225913643435  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  5  chunk ( 38  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 10.10768247782057  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  5  chunk ( 39  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 10.304212472691137  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  5  chunk ( 40  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 10.501411436354163  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  5  chunk ( 41  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 10.696555491715849  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  5  chunk ( 42  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 10.910915107607323  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  5  chunk ( 43  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 11.124420226375962  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  5  chunk ( 44  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 11.344039231389196  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  5  chunk ( 45  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 11.5577344850111  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  5  chunk ( 46  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 11.78263314735987  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  5  chunk ( 47  /  47 ) with bitrate  5
-Playing Video  2  chunk ( 11.989611169622496  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 1  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 12.222075701190565  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 2  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 12.436910549820308  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 3  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 12.641547885855596  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 4  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 12.84525800158434  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 5  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 13.053100361972628  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 6  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 13.242949223814477  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 7  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 13.444069334076728  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 8  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 13.652635445476784  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 9  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 13.848025755214813  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 10  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 14.055476214596391  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 11  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 14.266986233203063  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 12  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 14.474196126472895  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 13  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 14.687880772977856  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 14  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 14.907498929676342  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 15  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 15.111497638884037  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 16  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 15.324590910393352  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 17  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 15.546716819716382  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 18  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 15.76156044127405  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 19  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 15.986959320390694  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 20  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 16.20816808687443  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 21  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 16.42306410386212  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 22  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 16.649057685195103  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 23  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 16.878072266561855  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 24  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 17.09518509921108  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 25  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 17.300272488258525  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 26  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 17.492446115817152  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 27  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 17.700090918737075  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 28  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 17.884647590242135  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 29  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 18.07127141586451  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 30  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 18.259370063199523  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 31  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 18.44492391131371  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 32  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 18.632208974145048  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 33  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 18.827504376780567  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 34  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 19.032041396193417  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 35  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 19.23772349170743  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 36  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 19.434482914181462  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 37  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 19.624328342988402  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 38  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 19.82881292289833  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 39  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 20.032509310564542  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 40  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 20.23602765398895  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 41  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 20.43670359983898  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 42  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 20.653597436361252  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 43  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 20.868778934343528  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 44  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 21.09015108859922  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 45  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 21.305525108894653  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 46  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 21.528909057146237  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 47  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 21.73666434443914  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 48  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 21.957049109004473  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  6  chunk ( 49  /  49 ) with bitrate  5
-Playing Video  2  chunk ( 22.164804396297377  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 22.664804396297377  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 23.164804396297377  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-You choose to sleep for  500.0  ms
-Playing Video  2  chunk ( 23.664804396297377  /  26 ) with bitrate  5
-*****************
-
-
-*****************
-You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 0.13979364107471337  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 1  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 0.37278512639064204  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 2  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 0.5897298918455871  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 3  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 0.8101583532272657  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 4  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 1.0295421186522458  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 5  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 1.2528443017751467  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 6  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 1.4565899296899951  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 7  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 1.6758319383204823  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 8  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 1.9036034092310796  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 9  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 2.11223432560636  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 10  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 2.3281110197351267  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 11  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 2.5469724821019084  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 12  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 2.7612934410229433  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 13  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 2.9824510935451154  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 14  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 3.2078197803098583  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 15  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 3.4159402399918313  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 16  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 3.633457567674568  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 17  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 3.859740680017178  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 18  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 4.071318298316847  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 19  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 4.293195518734185  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 20  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 4.510984113866347  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 21  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 4.722054425515389  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 22  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 4.9420616676621485  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 23  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 5.164966036377016  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 24  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 5.376456677176924  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 25  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 5.5967046942310485  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 26  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 5.810864097035556  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 27  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 6.043526990297932  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 28  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 6.246139298120392  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 29  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 6.451030913345158  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 30  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 6.657650030512255  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 31  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 6.861288349689245  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 32  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 7.066954491457145  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 33  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 7.2668920284605845  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 34  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 7.470935511334071  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 35  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 7.676119532405863  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 36  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 7.870282059609773  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 37  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 8.048942196080489  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 38  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 8.239303423369623  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 39  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 8.42896588247864  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 40  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 8.619257885619902  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 41  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 8.805466031474106  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 42  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 8.990987701885759  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 43  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 9.173483517793438  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 44  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 9.360705167459697  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 45  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 9.543718927919283  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 46  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 9.732625504994049  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 47  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 9.907698050789344  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 48  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 10.092053052360377  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 49  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 10.275260601427199  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 50  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 10.4590606385444  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 51  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 10.641040697469943  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 52  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 10.826813509617084  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 53  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 11.00991005991073  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 54  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 11.197727931652715  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 55  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 11.380971309630894  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 56  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 11.570120639303706  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 57  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 11.768121960466129  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  7  chunk ( 58  /  58 ) with bitrate  5
-Playing Video  3  chunk ( 11.978246337792084  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 12.478246337792084  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 12.978246337792084  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 13.478246337792084  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 13.978246337792084  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 14.478246337792084  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 14.978246337792084  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 15.478246337792084  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 15.978246337792084  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 16.478246337792086  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 16.978246337792086  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 17.478246337792086  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 17.978246337792086  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 18.478246337792086  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 18.978246337792086  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 19.478246337792086  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-You choose to sleep for  500.0  ms
-Playing Video  3  chunk ( 19.978246337792086  /  37 ) with bitrate  5
-*****************
-
-
-*****************
-You choose to sleep for  500.0  ms
-Playing Video  4  chunk ( 0.2032170194229657  /  40 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 1  /  93 ) with bitrate  5
-Playing Video  4  chunk ( 0.4254033461091261  /  40 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 2  /  93 ) with bitrate  5
-Playing Video  4  chunk ( 0.6335986931176489  /  40 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 3  /  93 ) with bitrate  5
-Playing Video  4  chunk ( 0.8545439345867957  /  40 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 4  /  93 ) with bitrate  5
-Playing Video  4  chunk ( 1.0746762737173927  /  40 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 5  /  93 ) with bitrate  5
-Playing Video  5  chunk ( 0.07627866500148729  /  47 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 6  /  93 ) with bitrate  5
-Playing Video  5  chunk ( 0.277301766566712  /  47 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 7  /  93 ) with bitrate  5
-Playing Video  5  chunk ( 0.48851082553480174  /  47 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 8  /  93 ) with bitrate  5
-Playing Video  5  chunk ( 0.7077861156205099  /  47 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 9  /  93 ) with bitrate  5
-Playing Video  5  chunk ( 0.9127880985445784  /  47 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 10  /  93 ) with bitrate  5
-Playing Video  5  chunk ( 1.1232778138162336  /  47 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 11  /  93 ) with bitrate  5
-Playing Video  5  chunk ( 1.331763921226456  /  47 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 12  /  93 ) with bitrate  5
-Playing Video  5  chunk ( 1.5360487793952884  /  47 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 13  /  93 ) with bitrate  5
-Playing Video  6  chunk ( 0.010188297644802105  /  49 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 14  /  93 ) with bitrate  5
-Playing Video  6  chunk ( 0.2901913831634366  /  49 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 15  /  93 ) with bitrate  5
-Playing Video  6  chunk ( 0.588834309341426  /  49 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 16  /  93 ) with bitrate  5
-Playing Video  7  chunk ( 0.22681389659062598  /  58 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 17  /  93 ) with bitrate  5
-Playing Video  7  chunk ( 0.556452149625336  /  58 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 18  /  93 ) with bitrate  5
-Playing Video  7  chunk ( 0.9810713124917125  /  58 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 19  /  93 ) with bitrate  5
-Playing Video  7  chunk ( 1.45574876405586  /  58 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 20  /  93 ) with bitrate  5
-Playing Video  7  chunk ( 1.9190523798258794  /  58 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 21  /  93 ) with bitrate  5
-Playing Video  7  chunk ( 2.455901197739712  /  58 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 22  /  93 ) with bitrate  5
-Playing Video  7  chunk ( 3.0399848291090454  /  58 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 23  /  93 ) with bitrate  5
-Playing Video  7  chunk ( 3.6344993071874194  /  58 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 24  /  93 ) with bitrate  5
-Playing Video  7  chunk ( 4.161939886991014  /  58 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 25  /  93 ) with bitrate  5
-Playing Video  7  chunk ( 4.669855244717109  /  58 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 26  /  93 ) with bitrate  5
-Playing Video  7  chunk ( 5.161810977302799  /  58 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 27  /  93 ) with bitrate  5
-Playing Video  7  chunk ( 5.772602129683733  /  58 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 28  /  93 ) with bitrate  5
-Playing Video  7  chunk ( 6.4376692154270465  /  58 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 29  /  93 ) with bitrate  5
-Playing Video  7  chunk ( 7.150966372578838  /  58 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 30  /  93 ) with bitrate  5
-Playing Video  7  chunk ( 7.873023301690369  /  58 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 31  /  93 ) with bitrate  5
-Playing Video  7  chunk ( 8.653407513685002  /  58 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 32  /  93 ) with bitrate  5
-Playing Video  7  chunk ( 9.457371305883663  /  58 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 33  /  93 ) with bitrate  5
-Playing Video  7  chunk ( 10.466198104244436  /  58 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 34  /  93 ) with bitrate  5
-Playing Video  7  chunk ( 11.830774818009731  /  58 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 35  /  93 ) with bitrate  5
-Playing Video  7  chunk ( 13.207162783577743  /  58 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 36  /  93 ) with bitrate  5
-Playing Video  7  chunk ( 14.491514998926737  /  58 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 37  /  93 ) with bitrate  5
-Playing Video  7  chunk ( 15.338050324571583  /  58 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 38  /  93 ) with bitrate  5
-Playing Video  7  chunk ( 16.247952793053642  /  58 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 39  /  93 ) with bitrate  5
-Playing Video  8  chunk ( 0.12773084739279147  /  93 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 40  /  93 ) with bitrate  5
-Playing Video  8  chunk ( 0.8341322870787473  /  93 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 41  /  93 ) with bitrate  5
-Playing Video  8  chunk ( 1.5295507156684258  /  93 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 42  /  93 ) with bitrate  5
-Playing Video  8  chunk ( 2.3319273284096034  /  93 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 43  /  93 ) with bitrate  5
-Playing Video  8  chunk ( 3.126891173084841  /  93 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 44  /  93 ) with bitrate  5
-Playing Video  8  chunk ( 3.9545968905486335  /  93 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 45  /  93 ) with bitrate  5
-Playing Video  8  chunk ( 4.693966900038338  /  93 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 46  /  93 ) with bitrate  5
-Playing Video  8  chunk ( 5.421682761415439  /  93 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 47  /  93 ) with bitrate  5
-Playing Video  8  chunk ( 6.067121484651028  /  93 ) with bitrate  5
-*****************
-
-
-*****************
-Download Video  8  chunk ( 48  /  93 ) with bitrate  5
-*****************
-The user leaves.

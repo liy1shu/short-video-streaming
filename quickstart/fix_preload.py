@@ -1,119 +1,72 @@
-# Example: Fixed preloading approach
-# Fixed preloading algorithm downloads the current playing video first.
-# When the current playing video download ends, it preloads the videos on the recommendation queue in order, with a maximum of 800KB for each video.
+# This example aims at helping you to learn what parameters you need to decide in your algorithm.
+# It only gives you basic ideas about the structure of your algorithm, you need to find a better solution to balance QoE and bandwidth waste.
+# You can run this example and get results by command: python run.py --quickstart fix_preload
 
+# Description of fixed-preload algorithm
+# Fixed-preload algorithm downloads the current playing video first.
+# When the current playing video download ends, it preloads the videos in the recommendation queue in order.
+# The maximum of preloading size is 800KB for each video.
+# It stops when all downloads end.
 
-import numpy as np
-import sys
-sys.path.append("..")
-from simulator.video_player import BITRATE_LEVELS
-from simulator import mpc_module
-
-MPC_FUTURE_CHUNK_COUNT = 5     # MPC 
-PAST_BW_LEN = 5
+# We fix bitrate in this example.
+FIXED_BITRATE = 1
+# If there is no need to download, sleep for TAU time.
 TAU = 500.0  # ms
-RECOMMEND_QUEUE = 5  
-MAX_PROLOAD_SIZE = 800000.0   # B
+# max length of recommend_queue
+RECOMMEND_QUEUE = 5
+# maximum of preloading size
+PROLOAD_SIZE = 800000.0   # B
 
 class Algorithm:
     def __init__(self):
-        # fill your self params
-        self.buffer_size = 0
-        self.past_bandwidth = []
-        self.past_bandwidth_ests = []
-        self.past_errors = []
-        self.sleep_time = 0
+        # fill the self params
+        pass
 
-    # Intial
     def Initialize(self):
-        # Initialize your session or something
-        # past bandwidth record
-        self.past_bandwidth = np.zeros(PAST_BW_LEN)
+        # Initialize the session or something
+        pass
 
-    def estimate_bw(self, P):
-        for _ in range(P):
-            # first get harmonic mean of last 5 bandwidths
-            curr_error = 0  # default assumes that this is the first request so error is 0 since we have never predicted bandwidth
-            if (len(self.past_bandwidth_ests) > 0) and self.past_bandwidth[-1] != 0:
-                curr_error = abs(self.past_bandwidth_ests[-1] - self.past_bandwidth[-1])/float(self.past_bandwidth[-1])
-            self.past_errors.append(curr_error)
-            while self.past_bandwidth[0] == 0.0 and self.past_bandwidth[0] == 0.0:
-                self.past_bandwidth = self.past_bandwidth[1:]
-            bandwidth_sum = 0
-            for past_val in self.past_bandwidth:
-                bandwidth_sum += (1/float(past_val))
-            harmonic_bandwidth = 1.0/(bandwidth_sum/len(self.past_bandwidth))
-
-            # future bandwidth prediction
-            # divide by 1 + max of last 5 (or up to 5) errors
-            max_error = 0
-            error_pos = -5
-            if ( len(self.past_errors) < 5 ):
-                error_pos = -len(self.past_errors)
-            max_error = float(max(self.past_errors[error_pos:]))
-            future_bandwidth = harmonic_bandwidth/(1+max_error)  # robustMPC here
-            self.past_bandwidth_ests.append(harmonic_bandwidth) 
-            self.past_bandwidth = np.roll(self.past_bandwidth, -1)
-            self.past_bandwidth[-1] = future_bandwidth
-
-    # Define your algorithm
+    # Define the algorithm here.
+    # The args you can get are as follows:
+    # 1. delay: the time cost of your last operation
+    # 2. rebuf: the length of rebufferment
+    # 3. video_size: the size of the last downloaded chunk
+    # 4. end_of_video: if the last video was ended
+    # 5. play_video_id: the id of the current video
+    # 6. Players: the video data of a RECOMMEND QUEUE of 5 (see specific definitions in readme)
+    # 7. first_step: is this your first step?
     def run(self, delay, rebuf, video_size, end_of_video, play_video_id, Players, first_step=False):
-        DEFAULT_QUALITY = 0
-        if first_step:   # 第一步没有任何信息
+        download_video_id = -1
+        
+        # If it is the first step, delay & rebuf & video_size & end_of_video means nothing.
+        # So we return specific download_video_id & bit_rate & sleep_time.
+        if first_step:
             self.sleep_time = 0
             return 0, 5, self.sleep_time
-
-        # download a chunk, record the bitrate and update the network 
-        if self.sleep_time == 0:
-            self.past_bandwidth = np.roll(self.past_bandwidth, -1)
-            self.past_bandwidth[-1] = float(video_size)/float(delay)  # B / ms
         
-        P = []
-        all_future_chunks_size = []
-        future_chunks_highest_size = []
-        for i in range(min(len(Players), RECOMMEND_QUEUE)):
-            if Players[i].get_remain_video_num() == 0:      # download over
-                P.append(0)
-                all_future_chunks_size.append([0])
-                future_chunks_highest_size.append([0])
-                continue
-            
-            P.append(min(MPC_FUTURE_CHUNK_COUNT, Players[i].get_remain_video_num()))
-            all_future_chunks_size.append(Players[i].get_undownloaded_video_size(P[-1]))
-            future_chunks_highest_size.append(all_future_chunks_size[-1][BITRATE_LEVELS-1])
-
+        # decide download video id
         download_video_id = -1
-        # otherwise preloads the videos on the recommendation queue in order
-        # the downloading video is the playing video & its not fully downloaded
-        for seq in range(min(len(Players), RECOMMEND_QUEUE)):
-            if seq == 0:
-                if Players[seq].get_remain_video_num() > 0: # download the playing video if downloading hasn't finished
-                    download_video_id = play_video_id
-                    break
-                else: 
-                    continue
-            if Players[seq].get_preload_size() >= MAX_PROLOAD_SIZE or Players[seq].get_remain_video_num() <= 0:
-                continue
-            else:
-                download_video_id = play_video_id + seq
-                break
-
-        if download_video_id == -1:  # no need to download
-            self.sleep_time = TAU
-            bit_rate = 0
+        if Players[0].get_remain_video_num() != 0:  # downloading of the current playing video hasn't finished yet 
             download_video_id = play_video_id
         else:
-            download_video_seq = download_video_id - play_video_id
-            # update past_errors and past_bandwidth_ests
-            self.estimate_bw(P[download_video_seq])
-            buffer_size = Players[download_video_seq].get_buffer_size()  # ms
-            video_chunk_remain = Players[download_video_seq].get_remain_video_num()
-            chunk_sum = Players[download_video_seq].get_chunk_sum()
-            download_chunk_bitrate = Players[download_video_seq].get_downloaded_bitrate()
-            last_quality = DEFAULT_QUALITY
-            if len(download_chunk_bitrate) > 0:
-                last_quality = download_chunk_bitrate[-1]
-            bit_rate = mpc_module.mpc(self.past_bandwidth, self.past_bandwidth_ests, self.past_errors, all_future_chunks_size[download_video_seq], P[download_video_seq], buffer_size, chunk_sum, video_chunk_remain, last_quality)
-            self.sleep_time = 0.0
+            # preload videos in RECOMMEND_QUEUE one by one
+            for seq in range(1, min(len(Players), RECOMMEND_QUEUE)):
+                if Players[seq].get_preload_size() < (PROLOAD_SIZE) and Players[seq].get_remain_video_num() != 0:      # preloading hasn't finished yet 
+                    start_chunk = int(Players[seq].get_play_chunk())
+                    cond_p = Players[seq].user_ret.conditional_p(start_chunk, interval)
+                    if cond_p 
+                    download_video_id = play_video_id + seq
+                    break
 
-        return download_video_id, bit_rate, self.sleep_time
+        if download_video_id == -1:  # no need to download, sleep for TAU time
+            sleep_time = TAU
+            bit_rate = 0
+            download_video_id = play_video_id  # the value of bit_rate and download_video_id doesn't matter
+        else:
+
+            
+            bit_rate = FIXED_BITRATE  # download the video at the highest bitrate
+            sleep_time = 0.0
+
+        return download_video_id, bit_rate, sleep_time
+

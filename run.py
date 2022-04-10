@@ -37,9 +37,6 @@ def test(isBaseline, isQuickstart, user_id, trace_id):
         if user_id == 'fixed_preload':
             import fix_preload as Solution
             LOG_FILE = 'logs/log_fixpreload.txt'
-        else:
-            import no_preload as Solution
-            LOG_FILE = 'logs/log_nopreload.txt'
         sys.path.remove('./quickstart/')        
     else:  # Testing participant's algorithm
         sys.path.append(user_id)
