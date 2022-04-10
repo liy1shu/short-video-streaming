@@ -111,6 +111,7 @@ class Environment:
                 # Start to play the next video
                 play_tm, buffer = self.players[0].video_play(time_len)
             else:  # if it has come to the end of the list
+                print("played out!")
                 break
             # print(self.start_video_id, time_len, play_tm, buffer)
         return play_tm, buffer, wasted_bd, total_smooth
@@ -127,7 +128,10 @@ class Environment:
             delay = sleep_time
             play_timeline, buffer, wasted, smooth = self.play_videos(sleep_time)
             # Return the end flag for the current playing video
-            end_of_video = (self.players[self.play_video_id-self.start_video_id].get_remain_video_num() == 0)
+            if self.play_video_id == self.video_num:  # if user leaves
+                end_of_video = True
+            else:
+                end_of_video = (self.players[self.play_video_id-self.start_video_id].get_remain_video_num() == 0)
         else:
             video_size = self.players[download_video_id-self.start_video_id].get_video_size(bitrate)
             self.players[download_video_id - self.start_video_id].record_download_bitrate(bitrate)
@@ -142,7 +146,10 @@ class Environment:
                 self.total_downloaded_len += VIDEO_CHUNCK_LEN  # sum up the total downloaded time
                 end_of_video = True
             else:
-                end_of_video = self.players[download_video_id-self.start_video_id].video_download(VIDEO_CHUNCK_LEN)
+                if self.play_video_id == self.video_num:  # if user leaves
+                    end_of_video = True
+                else:
+                    end_of_video = self.players[download_video_id-self.start_video_id].video_download(VIDEO_CHUNCK_LEN)
 
         # Sum up the bandwidth wastage
         wasted_bytes += wasted

@@ -95,6 +95,8 @@ def test(isBaseline, isQuickstart, user_id, trace_id):
             #     else:
             #         print("Your bitrate changes from ", last_bitrate, " to ", current_bitrate, ".", file=log_file)
             # last_played_chunk = max(int(current_chunk - 1e-10), 0)
+        else:
+            print("Finished Playing!", file=log_file)
         if rebuf != 0:
             print("You caused rebuf for Video ", play_video_id, " of ", rebuf, " ms", file=log_file)
         print("*****************", file=log_file)
