@@ -27,7 +27,7 @@ class Network:
                          * B_IN_MB / BITS_IN_BYTE      # B/s
             duration = self.cooked_time[self.mahimahi_ptr] \
                        - self.last_mahimahi_time    # s
-            print("cooked_bw: ", self.cooked_bw[self.mahimahi_ptr], ", throughput: ", self.cooked_bw[self.mahimahi_ptr] / BITS_IN_BYTE )
+            # print("cooked_bw: ", self.cooked_bw[self.mahimahi_ptr], ", throughput: ", self.cooked_bw[self.mahimahi_ptr] / BITS_IN_BYTE )
             # print("duration")
 
             packet_payload = throughput * duration * PACKET_PAYLOAD_PORTION  # B

@@ -90,10 +90,11 @@ class Environment:
             # Calc the smoothness of this video:
             smooth = 0
             video_qualities = []
-            for i in range(1, int(self.players[0].get_play_chunk())):
+            bitrate_cnt = min(math.ceil(self.players[0].get_play_chunk()), self.players[0].get_chunk_sum())
+            for i in range(1, bitrate_cnt):
                 video_qualities.append(self.players[0].get_video_quality(i-1))
                 smooth += abs(VIDEO_BIT_RATE[self.players[0].get_video_quality(i)] - VIDEO_BIT_RATE[self.players[0].get_video_quality(i-1)])
-            video_qualities.append(self.players[0].get_video_quality(int(self.players[0].get_play_chunk())))
+            video_qualities.append(self.players[0].get_video_quality(bitrate_cnt-1))
             print("Your downloaded bitrates are: ", video_qualities, ", therefore your smooth penalty is: ", smooth)
             total_smooth += smooth
 
@@ -135,11 +136,11 @@ class Environment:
                 end_of_video = (self.players[self.play_video_id-self.start_video_id].get_remain_video_num() == 0)
         else:
             video_size = self.players[download_video_id-self.start_video_id].get_video_size(bitrate)
-            print("the actual download size is:", video_size)
+            # print("the actual download size is:", video_size)
             self.players[download_video_id - self.start_video_id].record_download_bitrate(bitrate)
             delay = self.network.network_simu(video_size)  # ms
-            print("the actual download delay is:", delay)
-            print("\n\n")
+            # print("the actual download delay is:", delay)
+            # print("\n\n")
             # play_timeline, buffer = self.players[self.play_video_id - self.start_video_id].video_play(delay)
             play_timeline, buffer, wasted, smooth = self.play_videos(delay)
             if download_video_id < self.start_video_id:

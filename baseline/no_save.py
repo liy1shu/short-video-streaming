@@ -30,31 +30,31 @@ class Algorithm:
         self.past_bandwidth = np.zeros(PAST_BW_LEN)
 
     def estimate_bw(self, P):
-        for _ in range(P):
-            # first get harmonic mean of last 5 bandwidths
-            curr_error = 0  # default assumes that this is the first request so error is 0 since we have never predicted bandwidth
-            if (len(self.past_bandwidth_ests) > 0) and self.past_bandwidth[-1] != 0:
-                curr_error = abs(self.past_bandwidth_ests[-1] - self.past_bandwidth[-1])/float(self.past_bandwidth[-1])
-            self.past_errors.append(curr_error)
-            while self.past_bandwidth[0] == 0.0 and self.past_bandwidth[0] == 0.0:
-                self.past_bandwidth = self.past_bandwidth[1:]
-            bandwidth_sum = 0
-            for past_val in self.past_bandwidth:
-                bandwidth_sum += (1/float(past_val))
-            harmonic_bandwidth = 1.0/(bandwidth_sum/len(self.past_bandwidth))
+        # record the newest error
+        curr_error = 0  # default assumes that this is the first request so error is 0 since we have never predicted bandwidth
+        if (len(self.past_bandwidth_ests) > 0) and self.past_bandwidth[-1] != 0:
+            curr_error = abs(self.past_bandwidth_ests[-1] - self.past_bandwidth[-1])/float(self.past_bandwidth[-1])
+        self.past_errors.append(curr_error)
+        # first get harmonic mean of last 5 bandwidths
+        past_bandwidth = self.past_bandwidth[:]
+        while past_bandwidth[0] == 0.0:
+            past_bandwidth = past_bandwidth[1:]
+        bandwidth_sum = 0
+        for past_val in past_bandwidth:
+            bandwidth_sum += (1/float(past_val))
+        harmonic_bandwidth = 1.0/(bandwidth_sum/len(past_bandwidth))
 
-            # future bandwidth prediction
-            # divide by 1 + max of last 5 (or up to 5) errors
-            max_error = 0
-            error_pos = -5
-            if ( len(self.past_errors) < 5 ):
-                error_pos = -len(self.past_errors)
-            max_error = float(max(self.past_errors[error_pos:]))
-            print("max_error", max_error)
-            future_bandwidth = harmonic_bandwidth/(1+max_error)  # robustMPC here
-            self.past_bandwidth_ests.append(harmonic_bandwidth) 
-            self.past_bandwidth = np.roll(self.past_bandwidth, -1)
-            self.past_bandwidth[-1] = future_bandwidth
+        # future bandwidth prediction
+        # divide by 1 + max of last 5 (or up to 5) errors
+        max_error = 0
+        error_pos = -5
+        if ( len(self.past_errors) < 5 ):
+            error_pos = -len(self.past_errors)
+        max_error = float(max(self.past_errors[error_pos:]))
+        future_bandwidth = harmonic_bandwidth/(1+max_error)  # robustMPC here
+        self.past_bandwidth_ests.append(harmonic_bandwidth)
+        # self.past_bandwidth = np.roll(self.past_bandwidth, -1)
+        # self.past_bandwidth[-1] = future_bandwidth
 
     # Define your algorithm
     def run(self, delay, rebuf, video_size, end_of_video, play_video_id, Players, first_step=False):
@@ -66,7 +66,7 @@ class Algorithm:
         # download a chunk, record the bitrate and update the network 
         if self.sleep_time == 0:
             self.past_bandwidth = np.roll(self.past_bandwidth, -1)
-            self.past_bandwidth[-1] = float(video_size)/float(delay)  # B / ms
+            self.past_bandwidth[-1] = (float(video_size)/1000000.0) /(float(delay) / 1000.0)  # MB / s
         
         P = []
         all_future_chunks_size = []
@@ -127,6 +127,7 @@ class Algorithm:
             if len(download_chunk_bitrate) > 0:
                 last_quality = download_chunk_bitrate[-1]
             # print("choosing bitrate for: ", download_video_id, ", chunk: ", Players[download_video_seq].get_chunk_counter())
+            # print("past_bandwidths:", self.past_bandwidth[-5:], "past_ests:", self.past_bandwidth_ests[-5:])
             bit_rate = mpc_module.mpc(self.past_bandwidth, self.past_bandwidth_ests, self.past_errors, all_future_chunks_size[download_video_seq], P[download_video_seq], buffer_size, chunk_sum, video_chunk_remain, last_quality)
             self.sleep_time = 0.0
 

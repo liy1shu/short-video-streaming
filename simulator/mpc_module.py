@@ -136,11 +136,13 @@ def mpc(past_bandwidth, past_bandwidth_ests, past_errors, all_future_chunks_size
     # ================== MPC =========================
     # shouldn't change the value of past_bandwidth_ests and past_errors in MPC
     copy_past_bandwidth_ests = past_bandwidth_ests
+    # print("past bandwidth ests: ", copy_past_bandwidth_ests)
     copy_past_errors = past_errors
+    # print("past_errs: ", copy_past_errors)
     
     curr_error = 0 # defualt assumes that this is the first request so error is 0 since we have never predicted bandwidth
     if ( len(copy_past_bandwidth_ests) > 0 ):
-        curr_error  = abs(copy_past_bandwidth_ests[-1]-past_bandwidth[-1])/float(past_bandwidth[-1])
+        curr_error = abs(copy_past_bandwidth_ests[-1]-past_bandwidth[-1])/float(past_bandwidth[-1])
     copy_past_errors.append(curr_error)
 
     # pick bitrate according to MPC           
@@ -148,7 +150,6 @@ def mpc(past_bandwidth, past_bandwidth_ests, past_errors, all_future_chunks_size
     past_bandwidths = past_bandwidth[-5:]
     while past_bandwidths[0] == 0.0:
         past_bandwidths = past_bandwidths[1:]
-    print("past_bandwidths:", past_bandwidths)
     #if ( len(state) < 5 ):
     #    past_bandwidths = state[3,-len(state):]
     #else:
@@ -157,6 +158,7 @@ def mpc(past_bandwidth, past_bandwidth_ests, past_errors, all_future_chunks_size
     for past_val in past_bandwidths:
         bandwidth_sum += (1/float(past_val))
     harmonic_bandwidth = 1.0/(bandwidth_sum/len(past_bandwidths))
+    # print("harmonic_bandwidth:", harmonic_bandwidth)
 
     # future bandwidth prediction
     # divide by 1 + max of last 5 (or up to 5) errors
@@ -166,6 +168,7 @@ def mpc(past_bandwidth, past_bandwidth_ests, past_errors, all_future_chunks_size
         error_pos = -len(copy_past_errors)
     max_error = float(max(copy_past_errors[error_pos:]))
     future_bandwidth = harmonic_bandwidth/(1 + max_error)  # robustMPC here
+    # print("future_bd:", future_bandwidth)
     copy_past_bandwidth_ests.append(harmonic_bandwidth)
 
     # future chunks length (try 4 if that many remaining)
@@ -179,7 +182,7 @@ def mpc(past_bandwidth, past_bandwidth_ests, past_errors, all_future_chunks_size
     max_reward = float('-inf')
     best_combo = ()
     start_buffer = buffer_size
-    print("start_buffer:", start_buffer)
+    # print("start_buffer:", start_buffer)
 
     lys_rebuf = 0
     lys_combo = (0,0,0,0,0)
@@ -204,6 +207,7 @@ def mpc(past_bandwidth, past_bandwidth_ests, past_errors, all_future_chunks_size
             # print(position)
             # index = last_index + position + 1 # e.g., if last chunk is 3, then first iter is 3+0+1=4
             download_time = MILLISECONDS_IN_SECOND * (all_future_chunks_size[chunk_quality][position]/1000000.)/(future_bandwidth) # this is MB/MB/s --> seconds
+            # print("download time:", MILLISECONDS_IN_SECOND, "*",  (all_future_chunks_size[chunk_quality][position]/1000000.), "/", future_bandwidth)
             #lys test
             lys_curr_buffer.append(curr_buffer)
             lys_download_time.append(download_time)
@@ -244,7 +248,7 @@ def mpc(past_bandwidth, past_bandwidth_ests, past_errors, all_future_chunks_size
     bit_rate = send_data
     # if curr_rebuffer_time != 0:
     # print("choosing:", lys_combo, ", rebuf ", lys_rebuf)
-    # print("Your expected future_bandwidth is: (B/s)", future_bandwidth * 8 / 1000)
+    # print("Your expected future_bandwidth is: (B/s)", future_bandwidth)
     # print("\n")
     return bit_rate
         # hack

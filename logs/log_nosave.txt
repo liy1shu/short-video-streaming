@@ -5,481 +5,464 @@ You caused rebuf for Video  0  of  5104.489807440655  ms
 
 
 *****************
-Download Video  0  chunk ( 2  /  26 ) with bitrate  2
-Playing Video  0  chunk ( 1.0  /  26 ) with bitrate  2
-You caused rebuf for Video  0  of  997.7328156769427  ms
+Download Video  0  chunk ( 2  /  26 ) with bitrate  0
+Playing Video  0  chunk ( 0.8049179385945195  /  26 ) with bitrate  2
 *****************
 
 
 *****************
-Download Video  0  chunk ( 3  /  26 ) with bitrate  2
-Playing Video  0  chunk ( 2.0  /  26 ) with bitrate  2
-You caused rebuf for Video  0  of  4630.768156136336  ms
+Download Video  0  chunk ( 3  /  26 ) with bitrate  0
+Playing Video  0  chunk ( 2.0  /  26 ) with bitrate  0
+You caused rebuf for Video  0  of  1242.7990982261672  ms
 *****************
 
 
 *****************
-Download Video  0  chunk ( 4  /  26 ) with bitrate  2
-Playing Video  0  chunk ( 3.0  /  26 ) with bitrate  2
-You caused rebuf for Video  0  of  1485.3342037606594  ms
+Download Video  0  chunk ( 4  /  26 ) with bitrate  0
+Playing Video  0  chunk ( 2.9707201529088034  /  26 ) with bitrate  0
 *****************
 
 
 *****************
-Download Video  0  chunk ( 5  /  26 ) with bitrate  2
-Playing Video  0  chunk ( 4.0  /  26 ) with bitrate  2
-You caused rebuf for Video  0  of  952.7686799034595  ms
+Download Video  0  chunk ( 5  /  26 ) with bitrate  0
+Playing Video  0  chunk ( 3.4775628249028703  /  26 ) with bitrate  0
 *****************
 
 
 *****************
-Download Video  0  chunk ( 6  /  26 ) with bitrate  2
-Playing Video  0  chunk ( 5.0  /  26 ) with bitrate  2
-You caused rebuf for Video  0  of  392.8524517068613  ms
+Download Video  0  chunk ( 6  /  26 ) with bitrate  0
+Playing Video  0  chunk ( 3.965149747840185  /  26 ) with bitrate  0
 *****************
 
 
 *****************
-Download Video  0  chunk ( 7  /  26 ) with bitrate  1
-Playing Video  0  chunk ( 5.1068909063326595  /  26 ) with bitrate  2
+Download Video  0  chunk ( 7  /  26 ) with bitrate  2
+Playing Video  0  chunk ( 4.0924727271055135  /  26 ) with bitrate  0
 *****************
 
 
 *****************
 Download Video  0  chunk ( 8  /  26 ) with bitrate  0
-Playing Video  0  chunk ( 7.0  /  26 ) with bitrate  1
-You caused rebuf for Video  0  of  243.1106841586411  ms
+Playing Video  0  chunk ( 6.11709091806601  /  26 ) with bitrate  2
 *****************
 
 
 *****************
-Download Video  0  chunk ( 9  /  26 ) with bitrate  1
-Playing Video  0  chunk ( 7.387779929017499  /  26 ) with bitrate  0
+Download Video  0  chunk ( 9  /  26 ) with bitrate  0
+Playing Video  0  chunk ( 6.435865952099981  /  26 ) with bitrate  2
 *****************
 
 
 *****************
-Download Video  0  chunk ( 10  /  26 ) with bitrate  1
+Download Video  0  chunk ( 10  /  26 ) with bitrate  0
 Playing Video  1  chunk ( 0.0  /  17 ) with bitrate  -1
-You caused rebuf for Video  1  of  360.5732015421163  ms
+You caused rebuf for Video  1  of  12.74040424375562  ms
 *****************
 
 
 *****************
-Download Video  1  chunk ( 1  /  17 ) with bitrate  1
-Playing Video  1  chunk ( 0.0  /  17 ) with bitrate  1
-You caused rebuf for Video  1  of  1811.8754962399341  ms
+Download Video  1  chunk ( 1  /  17 ) with bitrate  0
+Playing Video  1  chunk ( 0.0  /  17 ) with bitrate  0
+You caused rebuf for Video  1  of  894.4585511435596  ms
 *****************
 
 
 *****************
-Download Video  1  chunk ( 2  /  17 ) with bitrate  1
-Playing Video  1  chunk ( 1.0  /  17 ) with bitrate  1
-You caused rebuf for Video  1  of  201.93981013854136  ms
+Download Video  1  chunk ( 2  /  17 ) with bitrate  0
+Playing Video  1  chunk ( 1.0  /  17 ) with bitrate  0
+You caused rebuf for Video  1  of  589.6757398183415  ms
 *****************
 
 
 *****************
-Download Video  1  chunk ( 3  /  17 ) with bitrate  1
-Playing Video  1  chunk ( 2.0  /  17 ) with bitrate  1
-You caused rebuf for Video  1  of  1029.0611119315859  ms
+Download Video  1  chunk ( 3  /  17 ) with bitrate  0
+Playing Video  1  chunk ( 2.0  /  17 ) with bitrate  0
+You caused rebuf for Video  1  of  412.75617681010453  ms
 *****************
 
 
 *****************
-Download Video  1  chunk ( 4  /  17 ) with bitrate  2
-Playing Video  1  chunk ( 3.0  /  17 ) with bitrate  1
-You caused rebuf for Video  1  of  1276.520065917432  ms
+Download Video  1  chunk ( 4  /  17 ) with bitrate  0
+Playing Video  1  chunk ( 2.5759592739579356  /  17 ) with bitrate  0
 *****************
 
 
 *****************
-Download Video  1  chunk ( 5  /  17 ) with bitrate  2
-Playing Video  1  chunk ( 4.0  /  17 ) with bitrate  2
-You caused rebuf for Video  1  of  134.8336115507998  ms
+Download Video  1  chunk ( 5  /  17 ) with bitrate  0
+Playing Video  1  chunk ( 3.1864675364181956  /  17 ) with bitrate  0
 *****************
 
 
 *****************
-Download Video  1  chunk ( 6  /  17 ) with bitrate  2
-Playing Video  1  chunk ( 5.0  /  17 ) with bitrate  2
-You caused rebuf for Video  1  of  529.9534617152108  ms
+Download Video  1  chunk ( 6  /  17 ) with bitrate  0
+Playing Video  1  chunk ( 3.8495869559918665  /  17 ) with bitrate  0
 *****************
 
 
 *****************
-Download Video  1  chunk ( 7  /  17 ) with bitrate  2
-Playing Video  1  chunk ( 6.0  /  17 ) with bitrate  2
-You caused rebuf for Video  1  of  641.4945121699022  ms
+Download Video  1  chunk ( 7  /  17 ) with bitrate  0
+Playing Video  1  chunk ( 4.55111450248141  /  17 ) with bitrate  0
 *****************
 
 
 *****************
-Download Video  1  chunk ( 8  /  17 ) with bitrate  1
-Playing Video  1  chunk ( 6.784482259806979  /  17 ) with bitrate  2
+Download Video  1  chunk ( 8  /  17 ) with bitrate  0
+Playing Video  1  chunk ( 4.911339371481677  /  17 ) with bitrate  0
 *****************
 
 
 *****************
-Download Video  1  chunk ( 9  /  17 ) with bitrate  1
-Playing Video  1  chunk ( 8.0  /  17 ) with bitrate  1
-You caused rebuf for Video  1  of  448.89188167330894  ms
+Download Video  1  chunk ( 9  /  17 ) with bitrate  0
+Playing Video  1  chunk ( 5.711685368870941  /  17 ) with bitrate  0
 *****************
 
 
 *****************
-Download Video  1  chunk ( 10  /  17 ) with bitrate  1
-Playing Video  1  chunk ( 8.626349801304853  /  17 ) with bitrate  1
+Download Video  1  chunk ( 10  /  17 ) with bitrate  0
+Playing Video  1  chunk ( 6.694471348008569  /  17 ) with bitrate  0
 *****************
 
 
 *****************
-Download Video  1  chunk ( 11  /  17 ) with bitrate  2
-Playing Video  1  chunk ( 9.346706036526607  /  17 ) with bitrate  1
+Download Video  1  chunk ( 11  /  17 ) with bitrate  0
+Playing Video  1  chunk ( 7.626847376967678  /  17 ) with bitrate  0
 *****************
 
 
 *****************
-Download Video  1  chunk ( 12  /  17 ) with bitrate  2
-Playing Video  1  chunk ( 9.665476922555845  /  17 ) with bitrate  1
+Download Video  1  chunk ( 12  /  17 ) with bitrate  0
+Playing Video  1  chunk ( 7.900580386741394  /  17 ) with bitrate  0
 *****************
 
 
 *****************
-Download Video  1  chunk ( 13  /  17 ) with bitrate  2
-Playing Video  1  chunk ( 10.862807233011258  /  17 ) with bitrate  2
+Download Video  1  chunk ( 13  /  17 ) with bitrate  0
+Playing Video  1  chunk ( 8.789434908055531  /  17 ) with bitrate  0
 *****************
 
 
 *****************
-Download Video  1  chunk ( 14  /  17 ) with bitrate  2
-Playing Video  1  chunk ( 12.63615403285605  /  17 ) with bitrate  2
+Download Video  1  chunk ( 14  /  17 ) with bitrate  0
+Playing Video  1  chunk ( 9.77477490006093  /  17 ) with bitrate  0
 *****************
 
 
 *****************
-Download Video  1  chunk ( 15  /  17 ) with bitrate  2
-Playing Video  1  chunk ( 14.0  /  17 ) with bitrate  2
-You caused rebuf for Video  1  of  1536.7041633989074  ms
+Download Video  1  chunk ( 15  /  17 ) with bitrate  0
+Playing Video  1  chunk ( 12.260234211564452  /  17 ) with bitrate  0
 *****************
 
 
 *****************
-Download Video  1  chunk ( 16  /  17 ) with bitrate  2
-Playing Video  1  chunk ( 15.0  /  17 ) with bitrate  2
-You caused rebuf for Video  1  of  1117.1976427121917  ms
+Download Video  1  chunk ( 16  /  17 ) with bitrate  1
+Playing Video  1  chunk ( 14.029249901307285  /  17 ) with bitrate  0
 *****************
 
 
 *****************
 Download Video  1  chunk ( 17  /  17 ) with bitrate  2
-Playing Video  1  chunk ( 15.66923714972088  /  17 ) with bitrate  2
+Playing Video  1  chunk ( 15.826703342481792  /  17 ) with bitrate  1
 *****************
 
 
 *****************
-Download Video  2  chunk ( 1  /  37 ) with bitrate  2
-Playing Video  1  chunk ( 16.571273850159532  /  17 ) with bitrate  2
+Download Video  2  chunk ( 1  /  37 ) with bitrate  0
+Playing Video  1  chunk ( 16.62269932197615  /  17 ) with bitrate  2
 *****************
 
 
 *****************
-Download Video  2  chunk ( 2  /  37 ) with bitrate  2
-Playing Video  2  chunk ( -3.637978807091713e-15  /  37 ) with bitrate  2
+Download Video  2  chunk ( 2  /  37 ) with bitrate  0
+Playing Video  2  chunk ( 0.0  /  37 ) with bitrate  0
 *****************
 
 
 *****************
-Download Video  2  chunk ( 3  /  37 ) with bitrate  2
-Playing Video  2  chunk ( 1.0172343332736422  /  37 ) with bitrate  2
+Download Video  2  chunk ( 3  /  37 ) with bitrate  0
+Playing Video  2  chunk ( 0.8712379753654609  /  37 ) with bitrate  0
 *****************
 
 
 *****************
-Download Video  2  chunk ( 4  /  37 ) with bitrate  2
-Playing Video  2  chunk ( 2.729831665945821  /  37 ) with bitrate  2
+Download Video  2  chunk ( 4  /  37 ) with bitrate  0
+Playing Video  2  chunk ( 1.6777484358265078  /  37 ) with bitrate  0
 *****************
 
 
 *****************
-Download Video  2  chunk ( 5  /  37 ) with bitrate  2
-Playing Video  2  chunk ( 3.7847493930940113  /  37 ) with bitrate  2
+Download Video  2  chunk ( 5  /  37 ) with bitrate  0
+Playing Video  2  chunk ( 2.7789051809728282  /  37 ) with bitrate  0
 *****************
 
 
 *****************
-Download Video  2  chunk ( 6  /  37 ) with bitrate  2
-Playing Video  2  chunk ( 5.0  /  37 ) with bitrate  2
-You caused rebuf for Video  2  of  833.9250663234479  ms
+Download Video  2  chunk ( 6  /  37 ) with bitrate  0
+Playing Video  2  chunk ( 4.411038213402891  /  37 ) with bitrate  0
 *****************
 
 
 *****************
-Download Video  2  chunk ( 7  /  37 ) with bitrate  2
-Playing Video  2  chunk ( 5.865052341377918  /  37 ) with bitrate  2
+Download Video  2  chunk ( 7  /  37 ) with bitrate  0
+Playing Video  2  chunk ( 5.176024158593807  /  37 ) with bitrate  0
 *****************
 
 
 *****************
-Download Video  2  chunk ( 8  /  37 ) with bitrate  2
-Playing Video  2  chunk ( 6.9160973244188355  /  37 ) with bitrate  2
+Download Video  2  chunk ( 8  /  37 ) with bitrate  0
+Playing Video  2  chunk ( 5.5289723724399185  /  37 ) with bitrate  0
 *****************
 
 
 *****************
-Download Video  2  chunk ( 9  /  37 ) with bitrate  2
-Playing Video  2  chunk ( 7.77328567371559  /  37 ) with bitrate  2
+Download Video  2  chunk ( 9  /  37 ) with bitrate  0
+Playing Video  2  chunk ( 5.894383373186924  /  37 ) with bitrate  0
 *****************
 
 
 *****************
-Download Video  2  chunk ( 10  /  37 ) with bitrate  2
-Playing Video  2  chunk ( 8.82530901714076  /  37 ) with bitrate  2
+Download Video  2  chunk ( 10  /  37 ) with bitrate  0
+Playing Video  2  chunk ( 6.268760586343337  /  37 ) with bitrate  0
 *****************
 
 
 *****************
-Download Video  2  chunk ( 11  /  37 ) with bitrate  2
-Playing Video  2  chunk ( 9.853433675489498  /  37 ) with bitrate  2
+Download Video  2  chunk ( 11  /  37 ) with bitrate  1
+Playing Video  2  chunk ( 6.726840708967925  /  37 ) with bitrate  0
 *****************
 
 
 *****************
 Download Video  2  chunk ( 12  /  37 ) with bitrate  2
-Playing Video  2  chunk ( 11.0  /  37 ) with bitrate  2
-You caused rebuf for Video  2  of  637.5294374713706  ms
+Playing Video  2  chunk ( 8.131658813285199  /  37 ) with bitrate  0
 *****************
 
 
 *****************
 Download Video  2  chunk ( 13  /  37 ) with bitrate  2
-Playing Video  2  chunk ( 11.792883546285818  /  37 ) with bitrate  2
+Playing Video  2  chunk ( 9.152478035902558  /  37 ) with bitrate  0
 *****************
 
 
 *****************
 Download Video  2  chunk ( 14  /  37 ) with bitrate  2
-Playing Video  2  chunk ( 12.893639855722794  /  37 ) with bitrate  2
+Playing Video  2  chunk ( 10.196911588350376  /  37 ) with bitrate  1
 *****************
 
 
 *****************
 Download Video  2  chunk ( 15  /  37 ) with bitrate  2
-Playing Video  2  chunk ( 14.0  /  37 ) with bitrate  2
-You caused rebuf for Video  2  of  42.92747487665633  ms
+Playing Video  2  chunk ( 11.106968824013041  /  37 ) with bitrate  2
 *****************
 
 
 *****************
 Download Video  2  chunk ( 16  /  37 ) with bitrate  2
-Playing Video  2  chunk ( 14.873071473271539  /  37 ) with bitrate  2
+Playing Video  2  chunk ( 11.95510747662781  /  37 ) with bitrate  2
 *****************
 
 
 *****************
 Download Video  2  chunk ( 17  /  37 ) with bitrate  2
-Playing Video  2  chunk ( 15.905023373410097  /  37 ) with bitrate  2
+Playing Video  2  chunk ( 13.001204935544752  /  37 ) with bitrate  2
 *****************
 
 
 *****************
 Download Video  2  chunk ( 18  /  37 ) with bitrate  2
-Playing Video  2  chunk ( 16.507126065843607  /  37 ) with bitrate  2
+Playing Video  2  chunk ( 14.184930310697297  /  37 ) with bitrate  2
 *****************
 
 
 *****************
 Download Video  2  chunk ( 19  /  37 ) with bitrate  2
-Playing Video  2  chunk ( 17.96680223988133  /  37 ) with bitrate  2
+Playing Video  2  chunk ( 15.44395403731699  /  37 ) with bitrate  2
 *****************
 
 
 *****************
 Download Video  2  chunk ( 20  /  37 ) with bitrate  2
-Playing Video  2  chunk ( 18.999999999999996  /  37 ) with bitrate  2
-You caused rebuf for Video  2  of  219.5373851765121  ms
+Playing Video  2  chunk ( 16.360173124907238  /  37 ) with bitrate  2
 *****************
 
 
 *****************
 Download Video  2  chunk ( 21  /  37 ) with bitrate  2
-Playing Video  2  chunk ( 19.999999999999996  /  37 ) with bitrate  2
-You caused rebuf for Video  2  of  193.86567834977905  ms
+Playing Video  2  chunk ( 17.608694021140796  /  37 ) with bitrate  2
 *****************
 
 
 *****************
 Download Video  2  chunk ( 22  /  37 ) with bitrate  2
-Playing Video  2  chunk ( 20.999999999999996  /  37 ) with bitrate  2
-You caused rebuf for Video  2  of  327.1267568649812  ms
+Playing Video  2  chunk ( 18.613698431899998  /  37 ) with bitrate  2
 *****************
 
 
 *****************
 Download Video  2  chunk ( 23  /  37 ) with bitrate  2
-Playing Video  2  chunk ( 21.918348436578782  /  37 ) with bitrate  2
+Playing Video  2  chunk ( 19.680988960662393  /  37 ) with bitrate  2
 *****************
 
 
 *****************
 Download Video  2  chunk ( 24  /  37 ) with bitrate  2
-Playing Video  2  chunk ( 22.79447850446232  /  37 ) with bitrate  2
+Playing Video  2  chunk ( 20.791066409765453  /  37 ) with bitrate  2
 *****************
 
 
 *****************
 Download Video  2  chunk ( 25  /  37 ) with bitrate  2
-Playing Video  2  chunk ( 23.999999999999993  /  37 ) with bitrate  2
-You caused rebuf for Video  2  of  101.27873821261846  ms
+Playing Video  2  chunk ( 21.78109962433537  /  37 ) with bitrate  2
 *****************
 
 
 *****************
-Download Video  2  chunk ( 26  /  37 ) with bitrate  2
-Playing Video  2  chunk ( 24.974330965096577  /  37 ) with bitrate  2
+Download Video  2  chunk ( 26  /  37 ) with bitrate  1
+Playing Video  2  chunk ( 22.427488503149682  /  37 ) with bitrate  2
 *****************
 
 
 *****************
-Download Video  2  chunk ( 27  /  37 ) with bitrate  2
-Playing Video  2  chunk ( 25.999999999999993  /  37 ) with bitrate  2
-You caused rebuf for Video  2  of  1116.124096125962  ms
+Download Video  2  chunk ( 27  /  37 ) with bitrate  1
+Playing Video  2  chunk ( 23.548630346562845  /  37 ) with bitrate  2
 *****************
 
 
 *****************
-Download Video  2  chunk ( 28  /  37 ) with bitrate  2
-Playing Video  2  chunk ( 26.999999999999993  /  37 ) with bitrate  2
-You caused rebuf for Video  2  of  809.3619248787227  ms
+Download Video  2  chunk ( 28  /  37 ) with bitrate  1
+Playing Video  2  chunk ( 24.240355508334616  /  37 ) with bitrate  2
 *****************
 
 
 *****************
 Download Video  2  chunk ( 29  /  37 ) with bitrate  2
-Playing Video  2  chunk ( 27.999999999999993  /  37 ) with bitrate  2
-You caused rebuf for Video  2  of  483.61017691073175  ms
+Playing Video  2  chunk ( 25.494187254232056  /  37 ) with bitrate  1
 *****************
 
 
 *****************
 Download Video  2  chunk ( 30  /  37 ) with bitrate  2
-Playing Video  2  chunk ( 28.999999999999993  /  37 ) with bitrate  2
-You caused rebuf for Video  2  of  330.4586530074348  ms
+Playing Video  2  chunk ( 26.34967451031749  /  37 ) with bitrate  1
 *****************
 
 
 *****************
 Download Video  2  chunk ( 31  /  37 ) with bitrate  2
-Playing Video  2  chunk ( 29.999999999999993  /  37 ) with bitrate  2
-You caused rebuf for Video  2  of  647.6323289264208  ms
+Playing Video  2  chunk ( 27.28644331704149  /  37 ) with bitrate  1
 *****************
 
 
 *****************
 Download Video  2  chunk ( 32  /  37 ) with bitrate  2
-Playing Video  2  chunk ( 30.99300359420366  /  37 ) with bitrate  2
+Playing Video  2  chunk ( 28.032425852450956  /  37 ) with bitrate  2
 *****************
 
 
 *****************
 Download Video  2  chunk ( 33  /  37 ) with bitrate  2
-Playing Video  2  chunk ( 31.999999999999993  /  37 ) with bitrate  2
-You caused rebuf for Video  2  of  943.8860692113237  ms
+Playing Video  2  chunk ( 29.19663571394713  /  37 ) with bitrate  2
 *****************
 
 
 *****************
 Download Video  2  chunk ( 34  /  37 ) with bitrate  2
-Playing Video  2  chunk ( 32.99999999999999  /  37 ) with bitrate  2
-You caused rebuf for Video  2  of  322.7232752931918  ms
+Playing Video  2  chunk ( 30.42329401403621  /  37 ) with bitrate  2
 *****************
 
 
 *****************
 Download Video  2  chunk ( 35  /  37 ) with bitrate  2
-Playing Video  2  chunk ( 33.99999999999999  /  37 ) with bitrate  2
-You caused rebuf for Video  2  of  346.7731552055934  ms
+Playing Video  2  chunk ( 31.132325340158854  /  37 ) with bitrate  2
 *****************
 
 
 *****************
 Download Video  2  chunk ( 36  /  37 ) with bitrate  2
-Playing Video  2  chunk ( 34.99999999999999  /  37 ) with bitrate  2
-You caused rebuf for Video  2  of  447.5960670528964  ms
+Playing Video  2  chunk ( 32.203473850502554  /  37 ) with bitrate  2
 *****************
 
 
 *****************
 Download Video  2  chunk ( 37  /  37 ) with bitrate  2
-Playing Video  2  chunk ( 35.99999999999999  /  37 ) with bitrate  2
-You caused rebuf for Video  2  of  993.7074879435029  ms
+Playing Video  2  chunk ( 33.51246372410524  /  37 ) with bitrate  2
 *****************
 
 
 *****************
-Download Video  3  chunk ( 1  /  47 ) with bitrate  1
-Playing Video  2  chunk ( 36.65072363021319  /  37 ) with bitrate  2
+Download Video  3  chunk ( 1  /  47 ) with bitrate  0
+Playing Video  2  chunk ( 33.89535529627188  /  37 ) with bitrate  2
 *****************
 
 
 *****************
-Download Video  3  chunk ( 2  /  47 ) with bitrate  2
-Playing Video  3  chunk ( -7.275957614183426e-15  /  47 ) with bitrate  1
+Download Video  3  chunk ( 2  /  47 ) with bitrate  1
+Playing Video  2  chunk ( 34.62660081583247  /  37 ) with bitrate  2
 *****************
 
 
 *****************
-Download Video  3  chunk ( 3  /  47 ) with bitrate  2
-Playing Video  3  chunk ( 2.0  /  47 ) with bitrate  2
-You caused rebuf for Video  3  of  1159.8375856679672  ms
+Download Video  3  chunk ( 3  /  47 ) with bitrate  1
+Playing Video  2  chunk ( 35.36219376355576  /  37 ) with bitrate  2
 *****************
 
 
 *****************
-Download Video  3  chunk ( 4  /  47 ) with bitrate  1
-Playing Video  3  chunk ( 3.0  /  47 ) with bitrate  2
-You caused rebuf for Video  3  of  908.4021549977481  ms
+Download Video  3  chunk ( 4  /  47 ) with bitrate  2
+Playing Video  2  chunk ( 36.08893797185534  /  37 ) with bitrate  2
 *****************
 
 
 *****************
-Download Video  3  chunk ( 5  /  47 ) with bitrate  1
-Playing Video  3  chunk ( 4.0  /  47 ) with bitrate  1
-You caused rebuf for Video  3  of  1102.3901569808581  ms
+Download Video  3  chunk ( 5  /  47 ) with bitrate  2
+Playing Video  3  chunk ( 7.275957614183426e-15  /  47 ) with bitrate  0
 *****************
 
 
 *****************
-Download Video  3  chunk ( 6  /  47 ) with bitrate  0
-Playing Video  3  chunk ( 5.0  /  47 ) with bitrate  1
-You caused rebuf for Video  3  of  239.7828915374239  ms
+Download Video  3  chunk ( 6  /  47 ) with bitrate  2
+Playing Video  3  chunk ( 1.23253572025155  /  47 ) with bitrate  1
 *****************
 
 
 *****************
-Download Video  3  chunk ( 7  /  47 ) with bitrate  1
+Download Video  3  chunk ( 7  /  47 ) with bitrate  2
+Playing Video  3  chunk ( 2.2989244404924616  /  47 ) with bitrate  1
+*****************
+
+
+*****************
+Download Video  3  chunk ( 8  /  47 ) with bitrate  2
+Playing Video  3  chunk ( 3.2780088443221977  /  47 ) with bitrate  2
+*****************
+
+
+*****************
+Download Video  3  chunk ( 9  /  47 ) with bitrate  2
+Playing Video  3  chunk ( 4.651505950875945  /  47 ) with bitrate  2
+*****************
+
+
+*****************
+Download Video  3  chunk ( 10  /  47 ) with bitrate  2
 Playing Video  4  chunk ( 0.0  /  40 ) with bitrate  -1
-You caused rebuf for Video  4  of  974.9892447773327  ms
+You caused rebuf for Video  4  of  537.7435635790898  ms
 *****************
 
 
 *****************
 Download Video  4  chunk ( 1  /  40 ) with bitrate  0
 Playing Video  4  chunk ( 0.0  /  40 ) with bitrate  0
-You caused rebuf for Video  4  of  1208.3246394903497  ms
+You caused rebuf for Video  4  of  651.1488067662016  ms
 *****************
 
 
 *****************
 Download Video  4  chunk ( 2  /  40 ) with bitrate  0
-Playing Video  4  chunk ( 1.0  /  40 ) with bitrate  0
-You caused rebuf for Video  4  of  38.70435195632899  ms
+Playing Video  4  chunk ( 0.670700158371573  /  40 ) with bitrate  0
 *****************
 
 
 *****************
-Download Video  4  chunk ( 3  /  40 ) with bitrate  1
+Download Video  4  chunk ( 3  /  40 ) with bitrate  0
 Finished Playing!
-You caused rebuf for Video  5  of  193.720242827736  ms
 *****************
 The user leaves.
