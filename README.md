@@ -82,25 +82,25 @@ The data files are placed under `/data`:
 
 - /short_video_size：currently there are five different videos
 
-  | Video Name (directory name) | Time (s) |
-  | :-------------------------: | :------: |
-  |            1_tj             |    17    |
-  |            2_EDG            |    26    |
-  |            3_gy             |    37    |
-  |            4_dx             |    40    |
-  |            5_ss             |    47    |
+  | Video Name<br /> (directory name) | Time (s) |  Video Type   |
+  | :-------------------------------: | :------: | :-----------: |
+  |               1_tj                |    17    |     Study     |
+  |               2_EDG               |    26    | Entertainment |
+  |               3_gy                |    37    |     Life      |
+  |               4_dx                |    40    |     Life      |
+  |               5_ss                |    47    |     Life      |
 
-  In each directory,  there are data of three bit rate levels of this video, ranging from *0* to *2*. *0* is the lowest and *2* is the highest. The video size of each chunk is 1000 ms. For example, a video of 3 chunks( 3s ) can be described as follows:
+  In each directory,  there are data of three bit rate levels of this video, ranging from *0* to *2*. *0* is the lowest and *2* is the highest. The video size of each chunk is 1000 ms. For example, a video of 3 chunks( 1s/chunk, with a total time length of 3 seconds ) can be described as follows:
 
   ```
-  181801
-  155580
-  139857
+  157651
+  82492
+  179006
   ```
 
-- /network_traces：the network condition (pesented in (time, bandwidth) groups)
+- /network_traces：the network condition, pesented in [time (*s*), bandwidth (*Mbps*) ] groups
 
-  For example, the following data means the bandwidth from 0.0 to 0.5499999 (s) is 4.03768755221, other rows can be translated likewise.
+  For example, the following data means the bandwidth from 0.0 to 0.5499999 (*s*) is 4.03768755221(*Mbps*), other rows can be translated likewise.
 
   ```
   0.0	4.03768755221
@@ -110,19 +110,31 @@ The data files are placed under `/data`:
 
 - /user_ret：describes a user retention model of each video
 
-  For example, a video of 4 seconds can take the following form: 
+  For example, a video of 3 seconds can take the following form: 
 
   ```
   0	1
   1	0.929794029
   2	0.832466432
   3	0.729774475
-  4   0
+  4 0
   ```
 
-  It means that 92.98% of users are still watching when the clock tick 1 second, 83.24% of users are still watching at 2sec. 
+  It means that 92.98% of users are still watching when the clock tick 1 second(at the end of the first second), 83.24% of users are still watching at time 2.0sec. Specifically, 72.97% of users still exist at 3.0 sec, which means that they watched the whole video. 
 
+  *Cautious:* The last (4 0) is only an end mark, the actual length is 3 seconds.
+  
   The leave ratio can be deducted from subtracting one retention rate with its former retention rate. For instance, (92.97 - 83.24) % = 9.73% of users leave within the 1s-2s period.
+
+The video data structure may seem confusing at first, we provide a detailed illustration below:
+
+  ```python
+  time stamp            0              1                2              3
+  second id      				[the first sec] [the second sec] [the third sec]
+  video size                157651B          82492B         179006B
+  user retention				100%.        92.97%.           83.24%.        72.97%
+  leave rate              7.03% leaves    9.73% leaves    10.27% leaves
+  ```
 
 #### 1. Simulator
 
