@@ -50,6 +50,7 @@ class Algorithm:
             if ( len(self.past_errors) < 5 ):
                 error_pos = -len(self.past_errors)
             max_error = float(max(self.past_errors[error_pos:]))
+            print("max_error", max_error)
             future_bandwidth = harmonic_bandwidth/(1+max_error)  # robustMPC here
             self.past_bandwidth_ests.append(harmonic_bandwidth) 
             self.past_bandwidth = np.roll(self.past_bandwidth, -1)

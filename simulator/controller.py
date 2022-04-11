@@ -135,8 +135,11 @@ class Environment:
                 end_of_video = (self.players[self.play_video_id-self.start_video_id].get_remain_video_num() == 0)
         else:
             video_size = self.players[download_video_id-self.start_video_id].get_video_size(bitrate)
+            print("the actual download size is:", video_size)
             self.players[download_video_id - self.start_video_id].record_download_bitrate(bitrate)
             delay = self.network.network_simu(video_size)  # ms
+            print("the actual download delay is:", delay)
+            print("\n\n")
             # play_timeline, buffer = self.players[self.play_video_id - self.start_video_id].video_play(delay)
             play_timeline, buffer, wasted, smooth = self.play_videos(delay)
             if download_video_id < self.start_video_id:
