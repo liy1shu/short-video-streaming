@@ -6,6 +6,7 @@ import itertools
 from video_player import VIDEO_CHUNCK_LEN
 
 VIDEO_BIT_RATE = [900,1450,2300]  # Kbps
+BITS_IN_BYTE = 8
 REBUF_PENALTY = 4.3  # 1 sec rebuffering -> 3 Mbps
 SMOOTH_PENALTY = 1
 MILLISECONDS_IN_SECOND = 1000.0
@@ -35,6 +36,7 @@ MILLISECONDS_IN_SECOND = 1000.0
 
 
 def mpc(past_bandwidth, past_bandwidth_ests, past_errors, all_future_chunks_size, P, buffer_size, chunk_sum, video_chunk_remain, last_quality):
+    # print("MPC:::", buffer_size, "\n")
 
     CHUNK_COMBO_OPTIONS = []
     # np.random.seed(RANDOM_SEED)
@@ -176,6 +178,8 @@ def mpc(past_bandwidth, past_bandwidth_ests, past_errors, all_future_chunks_size
     max_reward = float('-inf')
     best_combo = ()
     start_buffer = buffer_size
+
+    # lys_rebuf = 0
     #start = time.time()
     for combo in CHUNK_COMBO_OPTIONS:
         # combo = full_combo[0:future_chunk_length]
@@ -193,7 +197,7 @@ def mpc(past_bandwidth, past_bandwidth_ests, past_errors, all_future_chunks_size
             # print(chunk_quality)
             # print(position)
             # index = last_index + position + 1 # e.g., if last chunk is 3, then first iter is 3+0+1=4
-            download_time = MILLISECONDS_IN_SECOND * (all_future_chunks_size[chunk_quality][position]/1000000.)/future_bandwidth # this is MB/MB/s --> seconds
+            download_time = MILLISECONDS_IN_SECOND * (all_future_chunks_size[chunk_quality][position]/1000000.)/(future_bandwidth/BITS_IN_BYTE) # this is MB/MB/s --> seconds
             if ( curr_buffer < download_time ):
                 curr_rebuffer_time += (download_time - curr_buffer)
                 curr_buffer = 0
@@ -210,24 +214,21 @@ def mpc(past_bandwidth, past_bandwidth_ests, past_errors, all_future_chunks_size
         
         reward = (bitrate_sum/1000.) - (REBUF_PENALTY*curr_rebuffer_time/1000.) - (smoothness_diffs/1000.)
         # reward = bitrate_sum - (8*curr_rebuffer_time) - (smoothness_diffs)
-        # if (REBUF_PENALTY*curr_rebuffer_time/1000.)>0:
-        #     print("bitrate_sum/1000.", bitrate_sum/1000.)
-        #     print("REBUF_PENALTY*curr_rebuffer_time/1000.", REBUF_PENALTY*curr_rebuffer_time/1000.)
-        #     print("smoothness_diffs/1000.", smoothness_diffs/1000.)
-        #     print(" ")
         if ( reward >= max_reward ):
             if (best_combo != ()) and best_combo[0] < combo[0]:
                 best_combo = combo
             else:
                 best_combo = combo
             max_reward = reward
+            # lys_rebuf = curr_rebuffer_time
             # send data to html side (first chunk of best combo)
             send_data = 0 # no combo had reward better than -1000000 (ERROR) so send 0
             if ( best_combo != () ): # some combo was good
                 send_data = best_combo[0]
 
     bit_rate = send_data
-    
+    # if curr_rebuffer_time != 0:
+        # print("choosing to rebuf ", curr_rebuffer_time)
     return bit_rate
         # hack
         # if bit_rate == 1 or bit_rate == 2:

@@ -118,12 +118,14 @@ class Algorithm:
             # update past_errors and past_bandwidth_ests
             self.estimate_bw(P[download_video_seq])
             buffer_size = Players[download_video_seq].get_buffer_size()  # ms
+            # print("no_save:::", buffer_size)
             video_chunk_remain = Players[download_video_seq].get_remain_video_num()
             chunk_sum = Players[download_video_seq].get_chunk_sum()
             download_chunk_bitrate = Players[download_video_seq].get_downloaded_bitrate()
             last_quality = DEFAULT_QUALITY
             if len(download_chunk_bitrate) > 0:
                 last_quality = download_chunk_bitrate[-1]
+            # print("choosing bitrate for: ", download_video_id, ", chunk: ", Players[download_video_seq].get_chunk_counter())
             bit_rate = mpc_module.mpc(self.past_bandwidth, self.past_bandwidth_ests, self.past_errors, all_future_chunks_size[download_video_seq], P[download_video_seq], buffer_size, chunk_sum, video_chunk_remain, last_quality)
             self.sleep_time = 0.0
 

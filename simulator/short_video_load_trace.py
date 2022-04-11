@@ -1,7 +1,7 @@
 import os
 
 
-COOKED_TRACE_FOLDER = './data/network_traces/'
+COOKED_TRACE_FOLDER = './data/network_traces/middle/'
 BW_ADJUST_PARA = 1
 
 
