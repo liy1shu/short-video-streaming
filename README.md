@@ -128,13 +128,7 @@ The data files are placed under `/data`:
 
 The video data structure may seem confusing at first, we provide a detailed illustration below:
 
-  ```python
-  time stamp            0              1                2              3
-  second id      				[the first sec] [the second sec] [the third sec]
-  video size                157651B          82492B         179006B
-  user retention				100%.        92.97%.           83.24%.        72.97%
-  leave rate              7.03% leaves    9.73% leaves    10.27% leaves
-  ```
+#### ![video_data_illustration](./video_data_illustration.jpeg)
 
 #### 1. Simulator
 

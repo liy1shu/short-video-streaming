@@ -13,6 +13,7 @@ USER_FILE = 'logs/sample_user/user.txt'
 user_file = open(USER_FILE, 'wb')
 LOG_FILE = 'logs/log.txt'
 log_file = open(LOG_FILE, 'a')
+BEHAVIOR_FOLDER = './data/user_behavior/'
 
 NEW = 0
 DEL = 1
@@ -21,7 +22,7 @@ VIDEO_BIT_RATE = [900,1450,2300]  # Kbps
 RECOMMEND_QUEUE = 5
 
 class Environment:
-    def __init__(self, all_cooked_time, all_cooked_bw, video_num):
+    def __init__(self, all_cooked_time, all_cooked_bw, video_num, behavior):
         self.players = []
         self.user_models = []  # Record the user action(Retention class) for the current video, update synchronized with players
         self.video_num = video_num
@@ -33,12 +34,18 @@ class Environment:
         self.total_watched_len = 0.0
         self.total_downloaded_len = 0.0
 
+        self.watch_ratio = []
+        with open(BEHAVIOR_FOLDER + behavior, 'r') as f:
+            for line in f:
+                self.watch_ratio.append(float(line.split()[0]))
+        # print(self.watch_ratio)
+
         # self.download_permit = set()
         for p in range(RECOMMEND_QUEUE):
             # self.download_permit.add(p)
             self.players.append(Player(p))
             user_time, user_retent_rate = self.players[-1].get_user_model()
-            self.user_models.append(Retention(user_time, user_retent_rate))
+            self.user_models.append(Retention(user_time, user_retent_rate, self.watch_ratio[self.video_cnt]))
             self.total_watched_len += self.user_models[-1].get_ret_duration()  # sum the total watch duration
             self.video_cnt += 1
             user_file.write((str(self.user_models[-1].get_ret_duration()) + '\n').encode())
@@ -56,7 +63,7 @@ class Environment:
             # print("adding: ", self.video_num)
             self.total_watched_len += self.user_models[-1].get_ret_duration()  # sum the total watch duration
             user_time, user_retent_rate = self.players[-1].get_user_model()
-            self.user_models.append(Retention(user_time, user_retent_rate))
+            self.user_models.append(Retention(user_time, user_retent_rate, self.watch_ratio[self.video_cnt]))
             self.video_cnt += 1
             # record the user retention rate
             # user_file.write((str(self.players[-1].get_watch_duration()) + '\n').encode())

@@ -5,6 +5,7 @@ from simulator import controller as env, short_video_load_trace
 
 parser = argparse.ArgumentParser()
 
+parser.add_argument('--behavior', type=str, default='persistent', help='The user watching pattern you are testing')
 parser.add_argument('--quickstart', type=str, default='', help='Is testing quickstart')
 parser.add_argument('--baseline', type=str, default='', help='Is testing baseline')
 parser.add_argument('--user', type=str, default='./', help='The relative path of your file dir, default is current dir')
@@ -25,7 +26,7 @@ TOLERANCE = 0.1  # The tolerance of the QoE decrease
 MIN_QOE = -1e9
 
 
-def test(isBaseline, isQuickstart, user_id, trace_id):
+def test(isBaseline, isQuickstart, user_id, trace_id, behavior_id):
     if isBaseline:  # Testing baseline algorithm
         sys.path.append('./baseline/')
         if user_id == 'no_save':
@@ -47,7 +48,7 @@ def test(isBaseline, isQuickstart, user_id, trace_id):
     solution.Initialize()
 
     all_cooked_time, all_cooked_bw = short_video_load_trace.load_trace()
-    net_env = env.Environment(all_cooked_time[trace_id], all_cooked_bw[trace_id], ALL_VIDEO_NUM)
+    net_env = env.Environment(all_cooked_time[trace_id], all_cooked_bw[trace_id], ALL_VIDEO_NUM, behavior_id)
 
     # log file
     log_file = open(LOG_FILE, 'w')
@@ -148,8 +149,8 @@ def test(isBaseline, isQuickstart, user_id, trace_id):
 
 if __name__ == '__main__':
     if args.baseline == '' and args.quickstart == '':
-        test(False, False, args.user, args.trace)
+        test(False, False, args.user, args.trace, args.behavior)
     elif args.quickstart != '':
-        test(False, True, args.quickstart, args.trace)
+        test(False, True, args.quickstart, args.trace, args.behavior)
     else:
-        test(True, False, args.baseline, args.trace)
+        test(True, False, args.baseline, args.trace, args.behavior)
