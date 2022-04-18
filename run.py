@@ -22,8 +22,8 @@ beta = 1.85
 gamma = 1
 theta = 0.5
 ALL_VIDEO_NUM = 5
-baseline_QoE = 600  # baseline's QoE
-TOLERANCE = 0.1  # The tolerance of the QoE decrease
+# baseline_QoE = 600  # baseline's QoE
+# TOLERANCE = 0.1  # The tolerance of the QoE decrease
 MIN_QOE = -1e9
 
 
@@ -150,10 +150,10 @@ def test(isBaseline, isQuickstart, user_id, trace_id, behavior_id):
     print(sum_wasted_bytes)
     print("Your download/watch ratio (downloaded time / total watch time) is:")
     print(net_env.get_wasted_time_ratio())
-    if QoE >= baseline_QoE * (1-TOLERANCE):  # if your QoE is in a tolerated range
-        print("Your QoE meets the standard.")
-    else:  # if your QoE is out of tolerance
-        print("Your QoE is too low!")
+    # if QoE >= baseline_QoE * (1-TOLERANCE):  # if your QoE is in a tolerated range
+    #     print("Your QoE meets the standard.")
+    # else:  # if your QoE is out of tolerance
+    #     print("Your QoE is too low!")
 
 
 if __name__ == '__main__':
