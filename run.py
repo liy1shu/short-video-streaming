@@ -1,18 +1,23 @@
-import sys
+import sys, os
 sys.path.append('./simulator/')
 import argparse
+import random
+import numpy as np
 from simulator import controller as env, short_video_load_trace
 
 parser = argparse.ArgumentParser()
-
 parser.add_argument('--behavior', type=str, default='random', help='The user watching pattern you are testing')
 parser.add_argument('--quickstart', type=str, default='', help='Is testing quickstart')
 parser.add_argument('--baseline', type=str, default='', help='Is testing baseline')
 parser.add_argument('--user', type=str, default='./', help='The relative path of your file dir, default is current dir')
-parser.add_argument('--trace', type=int, default=0, help='The network trace you are testing')
+parser.add_argument('--trace', type=str, default='fixed', help='The network trace you are testing (fixed, high, low, medium, middle)')
 args = parser.parse_args()
 
-VIDEO_BIT_RATE = [750,1200,1850]  # Kbps
+RANDOM_SEED = 42  # the random seed for user retention
+np.random.seed(RANDOM_SEED)
+seeds = np.random.randint(100, size=(7, 2))
+
+VIDEO_BIT_RATE = [750, 1200, 1850]  # Kbps
 SUMMARY_DIR = 'logs'
 LOG_FILE = 'logs/log.txt'
 
@@ -25,6 +30,8 @@ ALL_VIDEO_NUM = 7
 # baseline_QoE = 600  # baseline's QoE
 # TOLERANCE = 0.1  # The tolerance of the QoE decrease
 MIN_QOE = -1e9
+all_cooked_time = []
+all_cooked_bw = []
 
 
 def test(isBaseline, isQuickstart, user_id, trace_id, behavior_id):
@@ -48,8 +55,8 @@ def test(isBaseline, isQuickstart, user_id, trace_id, behavior_id):
     solution = Solution.Algorithm()
     solution.Initialize()
 
-    all_cooked_time, all_cooked_bw = short_video_load_trace.load_trace()
-    net_env = env.Environment(all_cooked_time[trace_id], all_cooked_bw[trace_id], ALL_VIDEO_NUM, behavior_id)
+    #all_cooked_time, all_cooked_bw = short_video_load_trace.load_trace(trace_path)
+    net_env = env.Environment(all_cooked_time[trace_id], all_cooked_bw[trace_id], ALL_VIDEO_NUM, behavior_id, seeds)
 
     # log file
     log_file = open(LOG_FILE, 'w')
@@ -154,12 +161,31 @@ def test(isBaseline, isQuickstart, user_id, trace_id, behavior_id):
     #     print("Your QoE meets the standard.")
     # else:  # if your QoE is out of tolerance
     #     print("Your QoE is too low!")
+    return np.array([S, QoE, sum_wasted_bytes, net_env.get_wasted_time_ratio()])
+
+
+def test_all_traces(isBaseline, isQuickstart, user_id, trace, behavior_id):
+    avg = np.zeros(4) * 1.0
+    cooked_trace_folder = 'data/network_traces/' + trace + '/'
+    global all_cooked_time, all_cooked_bw
+    all_cooked_time, all_cooked_bw = short_video_load_trace.load_trace(cooked_trace_folder)
+    # for i in range(len(all_cooked_time)):
+    for i in range(1):
+        avg += test(isBaseline, isQuickstart, user_id, i, behavior_id)
+    # avg /= len(all_cooked_time)
+    print(avg)
+    print("\n\nYour average indexes under [", trace, "] network is: ")
+    print("Score: ", avg[0])
+    print("QoE: ", avg[1])
+    print("Sum Wasted Bytes: ", avg[2])
+    print("Wasted time ratio: ", avg[3])
 
 
 if __name__ == '__main__':
+    assert args.trace in ["fixed", "high", "low", "medium", "middle"]
     if args.baseline == '' and args.quickstart == '':
-        test(False, False, args.user, args.trace, args.behavior)
+        test_all_traces(False, False, args.user, args.trace, args.behavior)
     elif args.quickstart != '':
-        test(False, True, args.quickstart, args.trace, args.behavior)
+        test_all_traces(False, True, args.quickstart, args.trace, args.behavior)
     else:
-        test(True, False, args.baseline, args.trace, args.behavior)
+        test_all_traces(True, False, args.baseline, args.trace, args.behavior)

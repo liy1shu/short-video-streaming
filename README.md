@@ -189,7 +189,7 @@ You can evaluate your program with our simulator by simply running the `run.py` 
 
   Without the arg(by default), we will generate user retention for each video according to the video model we collected for the specific video.
 
-- `--trace`: (optional) choose the trace_id you are evaluating (currently fixed to zero, will change if we add dataset)
+- `--trace`: (optional) choose the type of trace you are evaluating from "fixed", "medium", "low", "high", "middle" . By default, trace would be set to fixed.
 
 1）Run a baseline algorithm
 
