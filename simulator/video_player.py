@@ -1,25 +1,31 @@
 # multi-video play
 import numpy as np
 import math
+import os
 
-BITRATE_LEVELS = 6
-VIDEO_BIT_RATE = [300,750,1200,1850,2850,4300]  # Kbps
+BITRATE_LEVELS = 3
+VIDEO_BIT_RATE = [750,1200,1850]  # Kbps
 VIDEO_CHUNCK_LEN = 1000.0
 MILLISECONDS_IN_SECOND = 1000.0
-VIDEO_SIZE_FILE = 'data/short_video_size/video_size_'
-VIDEO_SIZE_SCALE = 4.0  # 4s->1s chunk size
-USER_RET = './data/user_ret/user_ret_'
+VIDEO_SIZE_FILE = 'data/short_video_size/'
+VIDEO_SIZE_SCALE = 1.0  # chunk size
+USER_RET = './data/user_ret/'
 
-DISTINCT_VIDEO_NUM = 9
+DISTINCT_VIDEO_NUM = 5
 
 class Player:
     # initialize each new video and player buffer
     def __init__(self, video_num):  
         # initialize each new video
         self.video_size = {}  # in bytes
+        videos = []
+        for root, dirs, files in os.walk(VIDEO_SIZE_FILE):
+            videos = dirs
+            break
+        video_name = videos[video_num%DISTINCT_VIDEO_NUM]
         for bitrate in range(BITRATE_LEVELS):
             self.video_size[bitrate] = []
-            file_name = VIDEO_SIZE_FILE + str(video_num%DISTINCT_VIDEO_NUM) + '_' + str(bitrate)
+            file_name = VIDEO_SIZE_FILE + video_name + '/video_size_' + str(bitrate)
             with open(file_name) as f:
                 for line in f:
                     self.video_size[bitrate].append(int(line.split()[0])/VIDEO_SIZE_SCALE)
@@ -49,7 +55,7 @@ class Player:
         # initialize corresponding user watch time
         self.user_time = []  # user_model which players have access to!!
         self.user_retent_rate = []
-        with open(USER_RET + str(video_num % DISTINCT_VIDEO_NUM)) as file:
+        with open(USER_RET + video_name) as file:
             for line in file:
                 self.user_time.append(float(line.split()[0]) * MILLISECONDS_IN_SECOND)
                 self.user_retent_rate.append(line.split()[1])

@@ -1,24 +1,106 @@
 # ACM Multimedia 2022 Grand Challenge: Short Video Streaming
 This repository contains the simulator code used for ACM Multimedia 2022 Short Video Streaming.  The simulator is a short video streaming simulator with a pluggable client module for participant defined download control algorithms.
 
+# Quick Start
+
+We provide a demo which aims at helping you to learn what parameters you need to decide in the challenge. It only gives you some clues to things you can do to improve the algorithm, so it isn't necessarily reasonable. You need to find a better solution to balance QoE and bandwidth waste.
+
+You can evaluate the demo by the following command:
+
+```bash
+python run.py --quickstart fixed_preload
+```
+Now you have successfully run the demo, which can be used directly in the submission. Please read comments in fixed_preload.py for more details.
+
+# Your Task
+
+Please design an algorithm which decides `download_video_id`, `bit_rate` and `sleep_time` according to input.
+
+**Input**:
+
+- delay
+
+  > The time cost of your last operation.
+
+- rebuf
+
+  > The length of rebufferment.
+  
+- video_size
+
+  > The size of the last downloaded chunk.
+
+- end_of_video
+
+  > If the last download video was ended.
+
+- play_video_id
+
+  > The id of the current video.
+
+- Players
+
+  > The video data of the RECOMMEND QUEUE.
+
++ first_step
+
+  > Whether it is the first operation.
+
+**Output**:
+
+- download_video_id
+
+  > The id of the next download video.
+
+- bit_rate
+
+  > Bit rate level of next download chunk, ranging from *0* to *2*. *0* is the lowest and *2* is the highest.
+
++ sleep_time
+
+  > Stop downloading for `sleep_time `. The unit is ms.
+
+**The evaluation will be based on**:
+
+- QoE
+  
+  > A reflection of user experience. It is related to bit rate, rebufferment and bit rate fluctuations between different chunks of one video.
+  
+- Bandwidth wastage
+
+  > Some chunks which have been downloaded will not be watched. Try reducing bandwidth wastage.
+
+- Downloaded/watched time ratio
+  
+  > The ratio is defined as downloaded time / total watch time.
+
 # File Structures
+
 #### 0. Data
 
 The data files are placed under `/data`:
 
-- /short_video_size：the video size of each chunk (1000 ms)
+- /short_video_size：currently there are five different videos
 
-  For example, a video of 3 chunks( 3s ) can be described as follows:
+  | Video Name<br /> (directory name) | Time (s) |  Video Type   |
+  | :-------------------------------: | :------: | :-----------: |
+  |               1_tj                |    17    |     Study     |
+  |               2_EDG               |    26    | Entertainment |
+  |               3_gy                |    37    |     Life      |
+  |               4_dx                |    40    |     Life      |
+  |               5_ss                |    47    |     Life      |
+
+  In each directory,  there are data of three bit rate levels of this video, ranging from *0* to *2*. *0* is the lowest and *2* is the highest. The video size of each chunk is 1000 ms. For example, a video of 3 chunks( 1s/chunk, with a total time length of 3 seconds ) can be described as follows:
 
   ```
-  181801
-  155580
-  139857
+  157651
+  82492
+  179006
   ```
 
-- /network_traces：the network condition (pesented in (time, bandwidth) groups)
+- /network_traces：the network condition, pesented in [time (*s*), bandwidth (*Mbps*) ] groups
 
-  For example, the following data means the bandwidth from 0.0 to 0.5499999 (s) is 4.03768755221, other rows can be translated likewise.
+  For example, the following data means the bandwidth from 0.0 to 0.5499999 (*s*) is 4.03768755221(*Mbps*), other rows can be translated likewise.
 
   ```
   0.0	4.03768755221
@@ -28,7 +110,7 @@ The data files are placed under `/data`:
 
 - /user_ret：describes a user retention model of each video
 
-  For example, a video of 4 seconds can take the following form: 
+  For example, a video of 3 seconds can take the following form: 
 
   ```
   0	1
@@ -38,9 +120,15 @@ The data files are placed under `/data`:
   4 0
   ```
 
-  It means that 92.98% of users are still watching when the clock tick 1 second, 83.24% of users are still watching at 2sec. 
+  It means that 92.98% of users are still watching when the clock tick 1 second(at the end of the first second), 83.24% of users are still watching at time 2.0sec. Specifically, 72.97% of users still exist at 3.0 sec, which means that they watched the whole video. 
 
+  *Cautious:* The last (4 0) is only an end mark, the actual length is 3 seconds.
+  
   The leave ratio can be deducted from subtracting one retention rate with its former retention rate. For instance, (92.97 - 83.24) % = 9.73% of users leave within the 1s-2s period.
+
+The video data structure may seem confusing at first, we provide a detailed illustration below:
+
+#### ![video_data_illustration](./video_data_illustration.jpeg)
 
 #### 1. Simulator
 
@@ -102,7 +190,7 @@ For example, if you place your file under the `submit` dir under the root direct
 # Your file structure:
 # run.py
 # submit
-#   |_ABM.py
+#   |_solution.py
 python run.py --user ./submit/
 ```
 

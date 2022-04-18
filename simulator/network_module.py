@@ -27,19 +27,23 @@ class Network:
                          * B_IN_MB / BITS_IN_BYTE      # B/s
             duration = self.cooked_time[self.mahimahi_ptr] \
                        - self.last_mahimahi_time    # s
+            # print("cooked_bw: ", self.cooked_bw[self.mahimahi_ptr], ", throughput: ", self.cooked_bw[self.mahimahi_ptr] / BITS_IN_BYTE )
+            # print("duration")
 
             packet_payload = throughput * duration * PACKET_PAYLOAD_PORTION  # B
 
             if video_chunk_counter_sent + packet_payload > video_chunk_size:  # B
-
                 fractional_time = (video_chunk_size - video_chunk_counter_sent) / \
                                   throughput / PACKET_PAYLOAD_PORTION
+                # print("sending packet_payload: ", packet_payload, " in duration: ", fractional_time)
                 delay += fractional_time    # s
                 self.last_mahimahi_time += fractional_time  # s
                 break
 
             video_chunk_counter_sent += packet_payload  # B
+            # print("sending packet ", video_chunk_counter_sent, ", packet_payload ", packet_payload, ', throughput ', throughput, ", duration ", duration)
             delay += duration  # s
+            # print("sending packet_payload: ", packet_payload, " in duration: ", duration)
             self.last_mahimahi_time = self.cooked_time[self.mahimahi_ptr]
             self.mahimahi_ptr += 1
 
@@ -51,5 +55,5 @@ class Network:
 
         delay *= MILLISECONDS_IN_SECOND
         delay += LINK_RTT
-
+        # print("delay: ", delay)
         return delay  # ms

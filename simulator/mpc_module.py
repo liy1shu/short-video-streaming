@@ -5,7 +5,8 @@
 import itertools
 from video_player import VIDEO_CHUNCK_LEN
 
-VIDEO_BIT_RATE = [300,750,1200,1850,2850,4300]  # Kbps
+VIDEO_BIT_RATE = [750,1200,1850]  # Kbps
+BITS_IN_BYTE = 8
 REBUF_PENALTY = 4.3  # 1 sec rebuffering -> 3 Mbps
 SMOOTH_PENALTY = 1
 MILLISECONDS_IN_SECOND = 1000.0
@@ -35,6 +36,7 @@ MILLISECONDS_IN_SECOND = 1000.0
 
 
 def mpc(past_bandwidth, past_bandwidth_ests, past_errors, all_future_chunks_size, P, buffer_size, chunk_sum, video_chunk_remain, last_quality):
+    # print("MPC:::", buffer_size, "\n")
 
     CHUNK_COMBO_OPTIONS = []
     # np.random.seed(RANDOM_SEED)
@@ -65,7 +67,7 @@ def mpc(past_bandwidth, past_bandwidth_ests, past_errors, all_future_chunks_size
     # video_count = 0
 
     # make chunk combination options
-    for combo in itertools.product([0,1,2,3,4,5], repeat=P):
+    for combo in itertools.product([0,1,2], repeat=P):
         CHUNK_COMBO_OPTIONS.append(combo)
 
     # while True:  # serve video forever
@@ -134,11 +136,13 @@ def mpc(past_bandwidth, past_bandwidth_ests, past_errors, all_future_chunks_size
     # ================== MPC =========================
     # shouldn't change the value of past_bandwidth_ests and past_errors in MPC
     copy_past_bandwidth_ests = past_bandwidth_ests
+    # print("past bandwidth ests: ", copy_past_bandwidth_ests)
     copy_past_errors = past_errors
+    # print("past_errs: ", copy_past_errors)
     
     curr_error = 0 # defualt assumes that this is the first request so error is 0 since we have never predicted bandwidth
     if ( len(copy_past_bandwidth_ests) > 0 ):
-        curr_error  = abs(copy_past_bandwidth_ests[-1]-past_bandwidth[-1])/float(past_bandwidth[-1])
+        curr_error = abs(copy_past_bandwidth_ests[-1]-past_bandwidth[-1])/float(past_bandwidth[-1])
     copy_past_errors.append(curr_error)
 
     # pick bitrate according to MPC           
@@ -154,6 +158,7 @@ def mpc(past_bandwidth, past_bandwidth_ests, past_errors, all_future_chunks_size
     for past_val in past_bandwidths:
         bandwidth_sum += (1/float(past_val))
     harmonic_bandwidth = 1.0/(bandwidth_sum/len(past_bandwidths))
+    # print("harmonic_bandwidth:", harmonic_bandwidth)
 
     # future bandwidth prediction
     # divide by 1 + max of last 5 (or up to 5) errors
@@ -162,7 +167,8 @@ def mpc(past_bandwidth, past_bandwidth_ests, past_errors, all_future_chunks_size
     if ( len(copy_past_errors) < 5 ):
         error_pos = -len(copy_past_errors)
     max_error = float(max(copy_past_errors[error_pos:]))
-    future_bandwidth = harmonic_bandwidth/(1+max_error)  # robustMPC here
+    future_bandwidth = harmonic_bandwidth/(1 + max_error)  # robustMPC here
+    # print("future_bd:", future_bandwidth)
     copy_past_bandwidth_ests.append(harmonic_bandwidth)
 
     # future chunks length (try 4 if that many remaining)
@@ -176,6 +182,10 @@ def mpc(past_bandwidth, past_bandwidth_ests, past_errors, all_future_chunks_size
     max_reward = float('-inf')
     best_combo = ()
     start_buffer = buffer_size
+    # print("start_buffer:", start_buffer)
+
+    lys_rebuf = 0
+    lys_combo = (0,0,0,0,0)
     #start = time.time()
     for combo in CHUNK_COMBO_OPTIONS:
         # combo = full_combo[0:future_chunk_length]
@@ -187,13 +197,21 @@ def mpc(past_bandwidth, past_bandwidth_ests, past_errors, all_future_chunks_size
         smoothness_diffs = 0
         # last_quality = int( bit_rate )
         # print(combo)
+        lys_curr_buffer = []
+        lys_download_time = []
+        lys_download_size = []
         for position in range(0, len(combo)):
             chunk_quality = combo[position]
             # print(len(all_future_chunks_size[0]))
             # print(chunk_quality)
             # print(position)
             # index = last_index + position + 1 # e.g., if last chunk is 3, then first iter is 3+0+1=4
-            download_time = MILLISECONDS_IN_SECOND * (all_future_chunks_size[chunk_quality][position]/1000000.)/future_bandwidth # this is MB/MB/s --> seconds
+            download_time = MILLISECONDS_IN_SECOND * (all_future_chunks_size[chunk_quality][position]/1000000.)/(future_bandwidth) # this is MB/MB/s --> seconds
+            # print("download time:", MILLISECONDS_IN_SECOND, "*",  (all_future_chunks_size[chunk_quality][position]/1000000.), "/", future_bandwidth)
+            #lys test
+            lys_curr_buffer.append(curr_buffer)
+            lys_download_time.append(download_time)
+            lys_download_size.append(all_future_chunks_size[chunk_quality][position])
             if ( curr_buffer < download_time ):
                 curr_rebuffer_time += (download_time - curr_buffer)
                 curr_buffer = 0
@@ -210,21 +228,28 @@ def mpc(past_bandwidth, past_bandwidth_ests, past_errors, all_future_chunks_size
         
         reward = (bitrate_sum/1000.) - (REBUF_PENALTY*curr_rebuffer_time/1000.) - (smoothness_diffs/1000.)
         # reward = bitrate_sum - (8*curr_rebuffer_time) - (smoothness_diffs)
-
-
         if ( reward >= max_reward ):
             if (best_combo != ()) and best_combo[0] < combo[0]:
                 best_combo = combo
             else:
                 best_combo = combo
+            # print(combo, ": bitrate_sum: ", bitrate_sum, ", curr_rebuffer: ", curr_rebuffer_time, ", reward: ", reward)
+            # print("have buffer: ", lys_curr_buffer)
+            # print("download_time: ", lys_download_time)
+            # print("download_size: ", lys_download_size)
             max_reward = reward
+            lys_rebuf = curr_rebuffer_time
+            lys_combo = combo
             # send data to html side (first chunk of best combo)
             send_data = 0 # no combo had reward better than -1000000 (ERROR) so send 0
             if ( best_combo != () ): # some combo was good
                 send_data = best_combo[0]
 
     bit_rate = send_data
-    
+    # if curr_rebuffer_time != 0:
+    # print("choosing:", lys_combo, ", rebuf ", lys_rebuf)
+    # print("Your expected future_bandwidth is: (B/s)", future_bandwidth)
+    # print("\n")
     return bit_rate
         # hack
         # if bit_rate == 1 or bit_rate == 2:
