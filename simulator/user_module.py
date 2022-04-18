@@ -1,29 +1,31 @@
 # Simulate the user watch pattern
 import numpy as np
-# import random
-# RANDOM_SEED = 42
-# np.random.seed(RANDOM_SEED)
-# random.seed(RANDOM_SEED)
+import random
+RANDOM_SEED = 42
+np.random.seed(RANDOM_SEED)
+random.seed(RANDOM_SEED)
 
 # Rt simulate
 class Retention:
-    def __init__(self, user_time, user_retent_rate, watch_ratio):
+    def __init__(self, user_time, user_retent_rate, watch_ratio=-1):
 
         assert len(user_time) == len(user_retent_rate)
 
         self.user_time = user_time
         self.user_retent_rate = user_retent_rate
         video_time_len = self.user_time[-2]
-        self.sample_playback_duration = watch_ratio * video_time_len
 
-        # self.user_churn_rate = 1.0 - np.array(user_retent_rate).astype('float64')
-        # self.prop = np.diff(self.user_churn_rate).ravel()
+        if watch_ratio != -1:  # fixed watch mode
+            self.sample_playback_duration = watch_ratio * video_time_len
+        else:  # needs randomization
+            self.user_churn_rate = 1.0 - np.array(user_retent_rate).astype('float64')
+            self.prop = np.diff(self.user_churn_rate).ravel()
 
-        # interval = np.random.choice(self.user_time[:-1], p=self.prop)  # ms
-        # if interval == self.user_time[-2]:  # if a user proceeds to the end
-        #     self.sample_playback_duration = interval
-        # else:  # uniform distribute over the second
-        #     self.sample_playback_duration = random.uniform(interval, interval+1000)
+            interval = np.random.choice(self.user_time[:-1], p=self.prop)  # ms
+            if interval == self.user_time[-2]:  # if a user proceeds to the end
+                self.sample_playback_duration = interval
+            else:  # uniform distribute over the second
+                self.sample_playback_duration = random.uniform(interval, interval+1000)
 
     def get_ret_duration(self):  # ms
         # print('sample playback duration %d' % self.sample_playback_duration)

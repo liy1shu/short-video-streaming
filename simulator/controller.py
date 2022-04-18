@@ -18,7 +18,7 @@ BEHAVIOR_FOLDER = './data/user_behavior/'
 NEW = 0
 DEL = 1
 
-VIDEO_BIT_RATE = [900,1450,2300]  # Kbps
+VIDEO_BIT_RATE = [750,1200,1850]  # Kbps
 RECOMMEND_QUEUE = 5
 
 class Environment:
@@ -35,9 +35,10 @@ class Environment:
         self.total_downloaded_len = 0.0
 
         self.watch_ratio = []
-        with open(BEHAVIOR_FOLDER + behavior, 'r') as f:
-            for line in f:
-                self.watch_ratio.append(float(line.split()[0]))
+        if behavior != 'random':  # fixed watch mode
+            with open(BEHAVIOR_FOLDER + behavior, 'r') as f:
+                for line in f:
+                    self.watch_ratio.append(float(line.split()[0]))
         # print(self.watch_ratio)
 
         # self.download_permit = set()
@@ -45,7 +46,10 @@ class Environment:
             # self.download_permit.add(p)
             self.players.append(Player(p))
             user_time, user_retent_rate = self.players[-1].get_user_model()
-            self.user_models.append(Retention(user_time, user_retent_rate, self.watch_ratio[self.video_cnt]))
+            if behavior == 'random':
+                self.user_models.append(Retention(user_time, user_retent_rate))
+            else:
+                self.user_models.append(Retention(user_time, user_retent_rate, self.watch_ratio[self.video_cnt]))
             self.total_watched_len += self.user_models[-1].get_ret_duration()  # sum the total watch duration
             self.video_cnt += 1
             user_file.write((str(self.user_models[-1].get_ret_duration()) + '\n').encode())
