@@ -55,7 +55,7 @@ def test(isBaseline, isQuickstart, user_id, trace_id, behavior_id):
     solution = Solution.Algorithm()
     solution.Initialize()
 
-    #all_cooked_time, all_cooked_bw = short_video_load_trace.load_trace(trace_path)
+    # all_cooked_time, all_cooked_bw = short_video_load_trace.load_trace(trace_path)
     net_env = env.Environment(all_cooked_time[trace_id], all_cooked_bw[trace_id], ALL_VIDEO_NUM, behavior_id, seeds)
 
     # log file
@@ -169,23 +169,38 @@ def test_all_traces(isBaseline, isQuickstart, user_id, trace, behavior_id):
     cooked_trace_folder = 'data/network_traces/' + trace + '/'
     global all_cooked_time, all_cooked_bw
     all_cooked_time, all_cooked_bw = short_video_load_trace.load_trace(cooked_trace_folder)
-    # for i in range(len(all_cooked_time)):
-    for i in range(1):
+    for i in range(len(all_cooked_time)):
         avg += test(isBaseline, isQuickstart, user_id, i, behavior_id)
-    # avg /= len(all_cooked_time)
-    print(avg)
+    avg /= len(all_cooked_time)
     print("\n\nYour average indexes under [", trace, "] network is: ")
     print("Score: ", avg[0])
     print("QoE: ", avg[1])
     print("Sum Wasted Bytes: ", avg[2])
     print("Wasted time ratio: ", avg[3])
+    return avg
+
+
+def testE(isBaseline, isQuickstart, user_id, trace, behavior_id):
+    seedsss = np.random.randint(10000, size=(1001, 1))
+    for i in range(10):
+        avgs = np.zeros(4)
+        for j in range(40):
+            global seeds
+            np.random.seed(seedsss[i*40+j])
+            seeds = np.random.randint(10000, size=(7, 2))  # reset the sample random seeds
+            avgs += test_all_traces(isBaseline, isQuickstart, user_id, trace, behavior_id)
+        avgs /= 40
+        print(avgs[0], avgs[1], avgs[2], avgs[3])
 
 
 if __name__ == '__main__':
     assert args.trace in ["fixed", "high", "low", "medium", "middle"]
     if args.baseline == '' and args.quickstart == '':
         test_all_traces(False, False, args.user, args.trace, args.behavior)
+        # testE(False, False, args.user, args.trace, args.behavior)
     elif args.quickstart != '':
         test_all_traces(False, True, args.quickstart, args.trace, args.behavior)
+        # testE(False, True, args.quickstart, args.trace, args.behavior)
     else:
         test_all_traces(True, False, args.baseline, args.trace, args.behavior)
+        # testE(True, False, args.baseline, args.trace, args.behavior)

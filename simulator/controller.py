@@ -66,13 +66,13 @@ class Environment:
                 return
             self.players.append(Player(self.video_cnt))
             # print("adding: ", self.video_num)
-            self.total_watched_len += self.user_models[-1].get_ret_duration()  # sum the total watch duration
             user_time, user_retent_rate = self.players[-1].get_user_model()
             if len(self.watch_ratio) != 0:  # has a specified behavior
                 self.user_models.append(Retention(user_time, user_retent_rate, self.seeds[self.video_cnt], self.watch_ratio[self.video_cnt]))
             else:
                 self.user_models.append(Retention(user_time, user_retent_rate, self.seeds[self.video_cnt]))
             self.video_cnt += 1
+            self.total_watched_len += self.user_models[-1].get_ret_duration()  # sum the total watch duration
             # record the user retention rate
             # user_file.write((str(self.players[-1].get_watch_duration()) + '\n').encode())
             user_file.write((str(self.user_models[-1].get_ret_duration()) + '\n').encode())
@@ -86,6 +86,7 @@ class Environment:
         return self.start_video_id
 
     def get_wasted_time_ratio(self):
+        print(self.total_downloaded_len)
         return self.total_downloaded_len / self.total_watched_len
 
     def play_videos(self, time_len):  # play for time_len from the start of current players queue
@@ -100,7 +101,7 @@ class Environment:
             # Output: the downloaded time length, the total time length, the watch duration
             print("\nUser stopped watching Video ", self.start_video_id, "( ", self.players[0].get_video_len(), " ms ) :")
             print("User watched for ", self.user_models[0].get_ret_duration(), " ms, you downloaded ", self.players[0].get_chunk_counter()*VIDEO_CHUNCK_LEN, " sec.")
-            # print("lys test:::: The bandwidth_waste is:")
+            print("lys test:::: The bandwidth_waste is:")
 
             # Calc the smoothness of this video:
             smooth = 0
