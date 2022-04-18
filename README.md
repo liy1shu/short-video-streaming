@@ -108,7 +108,7 @@ The data files are placed under `/data`:
   0.879999876022	4.49231799163
   ```
 
-- /user_ret：describes a user retention model of each video
+- /user_ret：describes a user retention model of each video which we generate 
 
   For example, a video of 3 seconds can take the following form: 
 
@@ -125,6 +125,20 @@ The data files are placed under `/data`:
   *Cautious:* The last (4 0) is only an end mark, the actual length is 3 seconds.
   
   The leave ratio can be deducted from subtracting one retention rate with its former retention rate. For instance, (92.97 - 83.24) % = 9.73% of users leave within the 1s-2s period.
+  
+- /user_behavior：specified watch ratio for each video, satisfying the need of testing extreme cases
+
+  For example, one can construct an impatient user when testing a video trace of 5 videos as we showed in `/impatient.txt`：
+
+  ```
+  0.01
+  0.01
+  0.97
+  0.01
+  0.85
+  ```
+
+  This means that the user leaves at the very start (0.01%) when watching three of the five videos.
 
 The video data structure may seem confusing at first, we provide a detailed illustration below:
 
@@ -163,6 +177,14 @@ You can evaluate your program with our simulator by simply running the `run.py` 
 ##### The args:
 
 - `--baseline`, `--user`：choose the algorithm you are evaluating
+
+- `--behavior`: (optional) input a file that specifies user watch ratio for each video, can be used to test algorithms under extreme conditions.
+
+  - Persistent: the user persists to the end of most videos (/data/user_behavior/persistent.txt)
+  - Impatient: the user leaves early in most videos (/data/user_behavior/impatient.txt)
+
+  Without the arg(by default), we will generate user retention for each video according to the video model we collected for the specific video.
+
 - `--trace`: (optional) choose the trace_id you are evaluating (currently fixed to zero, will change if we add dataset)
 
 1）Run a baseline algorithm
