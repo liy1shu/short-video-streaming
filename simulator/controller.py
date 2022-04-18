@@ -67,7 +67,10 @@ class Environment:
             # print("adding: ", self.video_num)
             self.total_watched_len += self.user_models[-1].get_ret_duration()  # sum the total watch duration
             user_time, user_retent_rate = self.players[-1].get_user_model()
-            self.user_models.append(Retention(user_time, user_retent_rate, self.watch_ratio[self.video_cnt]))
+            if len(self.watch_ratio) != 0:  # has a specified behavior
+                self.user_models.append(Retention(user_time, user_retent_rate, self.watch_ratio[self.video_cnt]))
+            else:
+                self.user_models.append(Retention(user_time, user_retent_rate))
             self.video_cnt += 1
             # record the user retention rate
             # user_file.write((str(self.players[-1].get_watch_duration()) + '\n').encode())

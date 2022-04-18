@@ -11,7 +11,7 @@ VIDEO_SIZE_FILE = 'data/short_video_size/'
 VIDEO_SIZE_SCALE = 1.0  # chunk size
 USER_RET = './data/user_ret/'
 
-DISTINCT_VIDEO_NUM = 5
+DISTINCT_VIDEO_NUM = 7
 
 class Player:
     # initialize each new video and player buffer

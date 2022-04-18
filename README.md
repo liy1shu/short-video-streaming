@@ -80,7 +80,7 @@ Please design an algorithm which decides `download_video_id`, `bit_rate` and `sl
 
 The data files are placed under `/data`:
 
-- /short_video_size：currently there are five different videos
+- /short_video_size：currently there are seven different videos
 
   | Video Name<br /> (directory name) | Time (s) |  Video Type   |
   | :-------------------------------: | :------: | :-----------: |
@@ -89,6 +89,8 @@ The data files are placed under `/data`:
   |               3_gy                |    37    |     Life      |
   |               4_dx                |    40    |     Life      |
   |               5_ss                |    47    |     Life      |
+  |               6_jt                |    6     | Entertainment |
+  |               7_yd                |   125    |     Game      |
 
   In each directory,  there are data of three bit rate levels of this video, ranging from *0* to *2*. *0* is the lowest and *2* is the highest. The video size of each chunk is 1000 ms. For example, a video of 3 chunks( 1s/chunk, with a total time length of 3 seconds ) can be described as follows:
 
@@ -128,7 +130,7 @@ The data files are placed under `/data`:
   
 - /user_behavior：specified watch ratio for each video, satisfying the need of testing extreme cases
 
-  For example, one can construct an impatient user when testing a video trace of 5 videos as we showed in `/impatient.txt`：
+  For example, one can construct an impatient user when testing a video trace of 7 videos as we showed in `/impatient.txt`：
 
   ```
   0.01
@@ -136,9 +138,11 @@ The data files are placed under `/data`:
   0.97
   0.01
   0.85
+  0.01
+  0.10
   ```
 
-  This means that the user leaves at the very start (0.01%) when watching three of the five videos.
+  This means that the user leaves at the very start (0.01%) when watching four of the seven videos.
 
 The video data structure may seem confusing at first, we provide a detailed illustration below:
 
