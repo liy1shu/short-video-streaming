@@ -75,6 +75,9 @@ def test(isBaseline, isQuickstart, user_id, trace_id, behavior_id):
     # sum of wasted bytes for a user
     sum_wasted_bytes = 0
     QoE = 0
+    total_smooth = 0
+    total_rebuf = 0
+    total_quality = 0
     last_played_chunk = -1  # record the last played chunk
     bandwidth_usage = 0  # record total bandwidth usage
 
@@ -122,6 +125,9 @@ def test(isBaseline, isQuickstart, user_id, trace_id, behavior_id):
         QoE += alpha * VIDEO_BIT_RATE[bit_rate] / 1000. - beta * rebuf / 1000. - gamma * abs(smooth) / 1000.
         # if rebuf != 0:
         #     print("bitrate:", VIDEO_BIT_RATE[bit_rate], "rebuf:", rebuf, "smooth:", smooth)
+        total_smooth += (-1) * abs(smooth) / 1000.
+        total_rebuf = (-1) * rebuf / 1000.
+        total_quality = VIDEO_BIT_RATE[bit_rate] / 1000.
 
         if QoE < MIN_QOE:  # Prevent dead loops
             print('Your QoE is too low...(Your video seems to have stuck forever) Please check for errors!')
@@ -161,11 +167,11 @@ def test(isBaseline, isQuickstart, user_id, trace_id, behavior_id):
     #     print("Your QoE meets the standard.")
     # else:  # if your QoE is out of tolerance
     #     print("Your QoE is too low!")
-    return np.array([S, QoE, sum_wasted_bytes, net_env.get_wasted_time_ratio()])
+    return np.array([S, bandwidth_usage,  QoE, total_quality, total_rebuf, total_smooth, sum_wasted_bytes, net_env.get_wasted_time_ratio()])
 
 
 def test_all_traces(isBaseline, isQuickstart, user_id, trace, behavior_id):
-    avg = np.zeros(4) * 1.0
+    avg = np.zeros(8) * 1.0
     cooked_trace_folder = 'data/network_traces/' + trace + '/'
     global all_cooked_time, all_cooked_bw
     all_cooked_time, all_cooked_bw = short_video_load_trace.load_trace(cooked_trace_folder)
@@ -174,16 +180,20 @@ def test_all_traces(isBaseline, isQuickstart, user_id, trace, behavior_id):
     avg /= len(all_cooked_time)
     print("\n\nYour average indexes under [", trace, "] network is: ")
     print("Score: ", avg[0])
-    print("QoE: ", avg[1])
-    print("Sum Wasted Bytes: ", avg[2])
-    print("Wasted time ratio: ", avg[3])
+    print("Bandwidth Usage: ", avg[1])
+    print("QoE: ", avg[2])
+    print("Total quality: ", avg[3])
+    print("Total rebuf: ", avg[4])
+    print("Total smooth: ", avg[5])
+    print("Sum Wasted Bytes: ", avg[6])
+    print("Wasted time ratio: ", avg[7])
     return avg
 
 
 def testE(isBaseline, isQuickstart, user_id, trace, behavior_id):
     seedsss = np.random.randint(10000, size=(1001, 1))
     for i in range(10):
-        avgs = np.zeros(4)
+        avgs = np.zeros(8)
         for j in range(40):
             global seeds
             np.random.seed(seedsss[i*40+j])
