@@ -126,8 +126,8 @@ def test(isBaseline, isQuickstart, user_id, trace_id, behavior_id):
         # if rebuf != 0:
         #     print("bitrate:", VIDEO_BIT_RATE[bit_rate], "rebuf:", rebuf, "smooth:", smooth)
         total_smooth += (-1) * abs(smooth) / 1000.
-        total_rebuf = (-1) * rebuf / 1000.
-        total_quality = VIDEO_BIT_RATE[bit_rate] / 1000.
+        total_rebuf += (-1) * rebuf / 1000.
+        total_quality += VIDEO_BIT_RATE[bit_rate] / 1000.
 
         if QoE < MIN_QOE:  # Prevent dead loops
             print('Your QoE is too low...(Your video seems to have stuck forever) Please check for errors!')
