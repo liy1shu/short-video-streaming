@@ -9,6 +9,11 @@
 # The maximum of preloading size is 4 chunks for each video.
 # For each preloading chunk, if possibility (using data in user_ret to esimate) > RETENTION_THRESHOLD, it is assumed that user will watch this chunk so that it should be preloaded.
 # It stops when all downloads end.
+from simulator import mpc_module
+import numpy as np
+from simulator.video_player import BITRATE_LEVELS
+PAST_BW_LEN = 5
+MPC_FUTURE_CHUNK_COUNT = 5     # MPC
 
 # We use buffer size to decide bitrate, here is the threshold.
 LOW_BITRATE_THRESHOLD = 1000
@@ -25,11 +30,45 @@ PRELOAD_CHUNK_NUM = 4
 class Algorithm:
     def __init__(self):
         # fill the self params
+        self.past_bandwidth = []
+        self.past_bandwidth_ests = []
+        self.past_errors = []
         pass
 
     def Initialize(self):
         # Initialize the session or something
+        self.past_bandwidth = np.zeros(PAST_BW_LEN)
         pass
+
+    def estimate_bw(self, P):
+        # record the newest error
+        curr_error = 0  # default assumes that this is the first request so error is 0 since we have never predicted bandwidth
+        if (len(self.past_bandwidth_ests) > 0) and self.past_bandwidth[-1] != 0:
+            curr_error = abs(self.past_bandwidth_ests[-1] - self.past_bandwidth[-1])/float(self.past_bandwidth[-1])
+        self.past_errors.append(curr_error)
+        # first get harmonic mean of last 5 bandwidths
+        past_bandwidth = self.past_bandwidth[:]
+        # print(past_bandwidth)
+        while past_bandwidth[0] == 0.0:
+            past_bandwidth = past_bandwidth[1:]
+        # print(past_bandwidth)
+        bandwidth_sum = 0
+        for past_val in past_bandwidth:
+            # print(past_val)
+            bandwidth_sum += (1/float(past_val))
+        harmonic_bandwidth = 1.0/(bandwidth_sum/len(past_bandwidth))
+
+        # future bandwidth prediction
+        # divide by 1 + max of last 5 (or up to 5) errors
+        max_error = 0
+        error_pos = -5
+        if ( len(self.past_errors) < 5 ):
+            error_pos = -len(self.past_errors)
+        max_error = float(max(self.past_errors[error_pos:]))
+        future_bandwidth = harmonic_bandwidth/(1+max_error)  # robustMPC here
+        self.past_bandwidth_ests.append(harmonic_bandwidth)
+        # self.past_bandwidth = np.roll(self.past_bandwidth, -1)
+        # self.past_bandwidth[-1] = future_bandwidth
 
     # Define the algorithm here.
     # The args you can get are as follows:
@@ -49,7 +88,29 @@ class Algorithm:
         if first_step:
             self.sleep_time = 0
             return 0, 0, 0.0
-        
+
+        if self.sleep_time == 0:
+            self.past_bandwidth = np.roll(self.past_bandwidth, -1)
+            self.past_bandwidth[-1] = (float(video_size)/1000000.0) /(float(delay) / 1000.0)  # MB / s
+            # print(self.past_bandwidth, video_size)
+
+        # mpcmpc
+        DEFAULT_QUALITY = 0
+        P = []
+        all_future_chunks_size = []
+        future_chunks_highest_size = []
+        for i in range(min(len(Players), RECOMMEND_QUEUE)):
+            if Players[i].get_remain_video_num() == 0:  # download over
+                P.append(0)
+                all_future_chunks_size.append([0])
+                future_chunks_highest_size.append([0])
+                continue
+
+            P.append(min(MPC_FUTURE_CHUNK_COUNT, Players[i].get_remain_video_num()))
+            all_future_chunks_size.append(Players[i].get_undownloaded_video_size(P[-1]))
+            future_chunks_highest_size.append(all_future_chunks_size[-1][BITRATE_LEVELS - 1])
+
+
         # decide download video id
         download_video_id = -1
         if Players[0].get_remain_video_num() != 0:  # downloading of the current playing video hasn't finished yet 
@@ -72,15 +133,35 @@ class Algorithm:
             bit_rate = 0
             download_video_id = play_video_id  # the value of bit_rate and download_video_id doesn't matter
         else:
-            seq = download_video_id - play_video_id
-            # decide bitrate according to buffer size
-            if Players[seq].get_buffer_size() > HIGH_BITRATE_THRESHOLD:
-                bit_rate = 2
-            elif Players[seq].get_buffer_size() > LOW_BITRATE_THRESHOLD:
-                bit_rate = 1
-            else:
-                bit_rate = 0
+            # seq = download_video_id - play_video_id
+            # # decide bitrate according to buffer size
+            # if Players[seq].get_buffer_size() > HIGH_BITRATE_THRESHOLD:
+            #     bit_rate = 2
+            # elif Players[seq].get_buffer_size() > LOW_BITRATE_THRESHOLD:
+            #     bit_rate = 1
+            # else:
+            #     bit_rate = 0
+            # sleep_time = 0.0
+
+            # mpcmpc
+            download_video_seq = download_video_id - play_video_id
+            # update past_errors and past_bandwidth_ests
+            self.estimate_bw(P[download_video_seq])
+            buffer_size = Players[download_video_seq].get_buffer_size()  # ms
+            # print("no_save:::", buffer_size)
+            video_chunk_remain = Players[download_video_seq].get_remain_video_num()
+            chunk_sum = Players[download_video_seq].get_chunk_sum()
+            download_chunk_bitrate = Players[download_video_seq].get_downloaded_bitrate()
+            last_quality = DEFAULT_QUALITY
+            if len(download_chunk_bitrate) > 0:
+                last_quality = download_chunk_bitrate[-1]
+            # print("choosing bitrate for: ", download_video_id, ", chunk: ", Players[download_video_seq].get_chunk_counter())
+            # print("past_bandwidths:", self.past_bandwidth[-5:], "past_ests:", self.past_bandwidth_ests[-5:])
+            bit_rate = mpc_module.mpc(self.past_bandwidth, self.past_bandwidth_ests, self.past_errors,
+                                      all_future_chunks_size[download_video_seq], P[download_video_seq], buffer_size,
+                                      chunk_sum, video_chunk_remain, last_quality)
             sleep_time = 0.0
 
+        self.sleep_time = sleep_time
         return download_video_id, bit_rate, sleep_time
 

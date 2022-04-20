@@ -1,6 +1,7 @@
 import sys, os
 sys.path.append('./simulator/')
 import argparse
+import openpyxl
 import random
 import numpy as np
 from simulator import controller as env, short_video_load_trace
@@ -206,11 +207,11 @@ def testE(isBaseline, isQuickstart, user_id, trace, behavior_id):
 if __name__ == '__main__':
     assert args.trace in ["fixed", "high", "low", "medium", "middle"]
     if args.baseline == '' and args.quickstart == '':
-        test_all_traces(False, False, args.user, args.trace, args.behavior)
-        # testE(False, False, args.user, args.trace, args.behavior)
+        # test_all_traces(False, False, args.user, args.trace, args.behavior)
+        testE(False, False, args.user, args.trace, args.behavior)
     elif args.quickstart != '':
-        test_all_traces(False, True, args.quickstart, args.trace, args.behavior)
-        # testE(False, True, args.quickstart, args.trace, args.behavior)
+        # test_all_traces(False, True, args.quickstart, args.trace, args.behavior)
+        testE(False, True, args.quickstart, args.trace, args.behavior)
     else:
-        test_all_traces(True, False, args.baseline, args.trace, args.behavior)
-        # testE(True, False, args.baseline, args.trace, args.behavior)
+        # test_all_traces(True, False, args.baseline, args.trace, args.behavior)
+        testE(True, False, args.baseline, args.trace, args.behavior)
