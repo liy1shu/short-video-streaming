@@ -1,6 +1,6 @@
 # Comparison Algorithm: No saving approach
 # No saving algorithm downloads the current playing video first.
-# When the current playing video download ends, it preloads the videos on the recommendation queue periodically, with 800KB for each video.
+# When the current playing video download ends, it preloads the videos in the following players periodically, with 800KB for each video.
 
 import numpy as np
 import sys
