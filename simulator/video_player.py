@@ -133,7 +133,6 @@ class Player:
         for i in range(waste_start_chunk, download_len):
             download_bitrate = self.download_chunk_bitrate[i]
             download_size = self.video_size[download_bitrate][i]
-            # print("lys test:::: chunk ", i, "of bitrate[", download_bitrate, "] costs ", download_size)
             sum_waste_each_video += download_size
         return sum_waste_each_video
             

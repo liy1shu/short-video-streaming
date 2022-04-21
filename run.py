@@ -36,7 +36,7 @@ all_cooked_bw = []
 log_file = open(LOG_FILE, 'w')
 
 
-def test(isBaseline, isQuickstart, user_id, trace_id):
+def test(isBaseline, isQuickstart, user_id, trace_id, user_sample_id):
     if isBaseline:  # Testing baseline algorithm
         sys.path.append('./baseline/')
         if user_id == 'no_save':
@@ -58,7 +58,7 @@ def test(isBaseline, isQuickstart, user_id, trace_id):
     solution.Initialize()
 
     # all_cooked_time, all_cooked_bw = short_video_load_trace.load_trace(trace_path)
-    net_env = env.Environment(all_cooked_time[trace_id], all_cooked_bw[trace_id], ALL_VIDEO_NUM, seeds)
+    net_env = env.Environment(user_sample_id, all_cooked_time[trace_id], all_cooked_bw[trace_id], ALL_VIDEO_NUM, seeds)
 
     # Decision variables
     download_video_id, bit_rate, sleep_time = solution.run(0, 0, 0, False, 0, net_env.players, True)  # take the first step
@@ -178,7 +178,7 @@ def test(isBaseline, isQuickstart, user_id, trace_id):
     return np.array([S, bandwidth_usage,  QoE, sum_wasted_bytes, net_env.get_wasted_time_ratio()])
 
 
-def test_all_traces(isBaseline, isQuickstart, user_id, trace):
+def test_all_traces(isBaseline, isQuickstart, user_id, trace, user_sample_id):
     avg = np.zeros(5) * 1.0
     cooked_trace_folder = 'data/network_traces/' + trace + '/'
     global all_cooked_time, all_cooked_bw
@@ -186,7 +186,7 @@ def test_all_traces(isBaseline, isQuickstart, user_id, trace):
     for i in range(len(all_cooked_time)):
         print('------------trace ', i, '--------------')
         print('------------trace ', i, '--------------', file=log_file)
-        avg += test(isBaseline, isQuickstart, user_id, i)
+        avg += test(isBaseline, isQuickstart, user_id, i, user_sample_id)
         print('------------trace ', i, '--------------\n\n', file=log_file)
         print('---------------------------------------\n\n')
     avg /= len(all_cooked_time)
@@ -206,7 +206,7 @@ def test_multiple_user_samples(isBaseline, isQuickstart, user_id, trace, sample_
         global seeds
         np.random.seed(seedsss[j])
         seeds = np.random.randint(10000, size=(7, 2))  # reset the sample random seeds
-        avgs += test_all_traces(j, isBaseline, isQuickstart, user_id, trace)
+        avgs += test_all_traces(j, isBaseline, isQuickstart, user_id, trace, j)
     avgs /= 50
     print("Score: ", avgs[0])
     print("Bandwidth Usage: ", avgs[1])
@@ -218,8 +218,8 @@ def test_multiple_user_samples(isBaseline, isQuickstart, user_id, trace, sample_
 if __name__ == '__main__':
     assert args.trace in ["fixed", "high", "low", "medium", "middle"]
     if args.baseline == '' and args.quickstart == '':
-        test_all_traces(False, False, args.user, args.trace)
+        test_all_traces(False, False, args.user, args.trace, 0)  # 0 means the first user sample.
     elif args.quickstart != '':
-        test_all_traces(False, True, args.quickstart, args.trace)
+        test_all_traces(False, True, args.quickstart, args.trace, 0)
     else:
-        test_all_traces(True, False, args.baseline, args.trace)
+        test_all_traces(True, False, args.baseline, args.trace, 0)

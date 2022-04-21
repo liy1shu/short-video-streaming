@@ -10,7 +10,7 @@ from user_module import Retention
 from network_module import Network
 
 USER_FILE = 'logs/sample_user/user.txt'
-user_file = open(USER_FILE, 'wb')
+# user_file = open(USER_FILE, 'wb')
 LOG_FILE = 'logs/log.txt'
 log_file = open(LOG_FILE, 'a')
 BEHAVIOR_FOLDER = './data/user_behavior/'
@@ -22,9 +22,12 @@ VIDEO_BIT_RATE = [750, 1200, 1850]  # Kbps
 PLAYER_NUM = 5
 
 class Environment:
-    def __init__(self, all_cooked_time, all_cooked_bw, video_num, seeds):
+    def __init__(self, user_sample_id, all_cooked_time, all_cooked_bw, video_num, seeds):
         self.players = []
         self.seeds = seeds
+        global USER_FILE
+        USER_FILE = 'logs/sample_user/user_'+str(user_sample_id)+'.txt'
+        self.user_file = open(USER_FILE, 'wb')
         self.user_models = []  # Record the user action(Retention class) for the current video, update synchronized with players
         self.video_num = video_num
         self.video_cnt = 0
@@ -45,8 +48,8 @@ class Environment:
             self.user_models.append(Retention(user_time, user_retent_rate, seeds[self.video_cnt]))
             self.total_watched_len += self.user_models[-1].get_ret_duration()  # sum the total watch duration
             self.video_cnt += 1
-            user_file.write((str(self.user_models[-1].get_ret_duration()) + '\n').encode())
-            user_file.flush()
+            self.user_file.write((str(self.user_models[-1].get_ret_duration()) + '\n').encode())
+            self.user_file.flush()
         
         self.start_video_id = 0
         self.end_video_id = PLAYER_NUM - 1
@@ -64,8 +67,8 @@ class Environment:
             self.total_watched_len += self.user_models[-1].get_ret_duration()  # sum the total watch duration
             # record the user retention rate
             # user_file.write((str(self.players[-1].get_watch_duration()) + '\n').encode())
-            user_file.write((str(self.user_models[-1].get_ret_duration()) + '\n').encode())
-            user_file.flush()
+            self.user_file.write((str(self.user_models[-1].get_ret_duration()) + '\n').encode())
+            self.user_file.flush()
         else:
             # print('--------------DEL--------------')
             self.players.remove(self.players[0])
@@ -90,7 +93,6 @@ class Environment:
             # Output: the downloaded time length, the total time length, the watch duration
             print("\nUser stopped watching Video ", self.start_video_id, "( ", self.players[0].get_video_len(), " ms ) :")
             print("User watched for ", self.user_models[0].get_ret_duration(), " ms, you downloaded ", self.players[0].get_chunk_counter()*VIDEO_CHUNCK_LEN, " sec.")
-            # print("lys test:::: The bandwidth_waste is:")
 
             # Calc the smoothness of this video:
             smooth = 0
