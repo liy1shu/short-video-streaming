@@ -199,7 +199,7 @@ def test_all_traces(isBaseline, isQuickstart, user_id, trace, user_sample_id):
     return avg
 
 
-def test_multiple_user_samples(isBaseline, isQuickstart, user_id, trace, sample_cnt):  # test 50 user sample
+def test_user_samples(isBaseline, isQuickstart, user_id, trace, sample_cnt):  # test 50 user sample
     seedsss = np.random.randint(10000, size=(1001, 1))
     avgs = np.zeros(5)
     for j in range(sample_cnt):
