@@ -2,8 +2,10 @@ import sys, os
 sys.path.append('./simulator/')
 import argparse
 import openpyxl
+from openpyxl import workbook as wb
 import random
 import numpy as np
+
 from simulator import controller as env, short_video_load_trace
 
 parser = argparse.ArgumentParser()
@@ -35,7 +37,7 @@ all_cooked_time = []
 all_cooked_bw = []
 
 
-def test(isBaseline, isQuickstart, user_id, trace_id, behavior_id):
+def test(user_sample_id, isBaseline, isQuickstart, user_id, trace_id, behavior_id):
     if isBaseline:  # Testing baseline algorithm
         sys.path.append('./baseline/')
         if user_id == 'no_save':
@@ -57,21 +59,21 @@ def test(isBaseline, isQuickstart, user_id, trace_id, behavior_id):
     solution.Initialize()
 
     # all_cooked_time, all_cooked_bw = short_video_load_trace.load_trace(trace_path)
-    net_env = env.Environment(all_cooked_time[trace_id], all_cooked_bw[trace_id], ALL_VIDEO_NUM, behavior_id, seeds)
+    net_env = env.Environment(user_sample_id, all_cooked_time[trace_id], all_cooked_bw[trace_id], ALL_VIDEO_NUM, behavior_id, seeds)
 
     # log file
     log_file = open(LOG_FILE, 'w')
 
     # Decision variables
     download_video_id, bit_rate, sleep_time = solution.run(0, 0, 0, False, 0, net_env.players, True)  # take the first step
-    # output the first step
-    if sleep_time != 0:
-        print("You choose to sleep for ", sleep_time, " ms", file=log_file)
-    else:
-        print("Download Video ", download_video_id, " chunk (",
-              net_env.players[download_video_id].get_chunk_counter() + 1, " / ",
-              net_env.players[download_video_id].get_chunk_sum(), ") with bitrate ", bit_rate,
-              file=log_file)
+    # # output the first step
+    # if sleep_time != 0:
+    #     print("You choose to sleep for ", sleep_time, " ms", file=log_file)
+    # else:
+    #     print("Download Video ", download_video_id, " chunk (",
+    #           net_env.players[download_video_id].get_chunk_counter() + 1, " / ",
+    #           net_env.players[download_video_id].get_chunk_sum(), ") with bitrate ", bit_rate,
+    #           file=log_file)
 
     # sum of wasted bytes for a user
     sum_wasted_bytes = 0
@@ -94,29 +96,16 @@ def test(isBaseline, isQuickstart, user_id, trace_id, behavior_id):
         sum_wasted_bytes += waste_bytes  # Sum up the bandwidth wastage
 
         # print log info of the last operation
-        if play_video_id < ALL_VIDEO_NUM:
-            # the operation results
-            current_chunk = net_env.players[0].get_play_chunk()
-            # print(current_chunk)
-            current_bitrate = net_env.players[0].get_video_quality(max(int(current_chunk - 1e-10), 0))
-            print("Playing Video ", play_video_id, " chunk (", current_chunk, " / ", net_env.players[0].get_chunk_sum(),
-                  ") with bitrate ", current_bitrate, file=log_file)
-            # if max(int(current_chunk - 1e-10), 0) == 0 or last_played_chunk == max(int(current_chunk - 1e-10), 0):
-            #     # is the first chunk or the same chunk as last time(already calculated) of the current video
-            #     smooth = 0
-            # else:  # needs to calc smooth
-            #     last_bitrate = net_env.players[0].get_video_quality(int(current_chunk - 1e-10) - 1)
-            #     smooth = current_bitrate - last_bitrate
-            #     if smooth == 0:
-            #         print("Your bitrate is stable and smooth. ", file=log_file)
-            #     else:
-            #         print("Your bitrate changes from ", last_bitrate, " to ", current_bitrate, ".", file=log_file)
-            # last_played_chunk = max(int(current_chunk - 1e-10), 0)
-        else:
-            print("Finished Playing!", file=log_file)
-        if rebuf != 0:
-            print("You caused rebuf for Video ", play_video_id, " of ", rebuf, " ms", file=log_file)
-        print("*****************", file=log_file)
+        # if play_video_id < ALL_VIDEO_NUM:
+        #     # the operation results
+        #     current_chunk = net_env.players[0].get_play_chunk()
+        #     print(current_chunk)
+        #     current_bitrate = net_env.players[0].get_video_quality(max(int(current_chunk - 1e-10), 0))
+        # else:
+        #     print("Finished Playing!", file=log_file)
+        # if rebuf != 0:
+        #     print("You caused rebuf for Video ", play_video_id, " of ", rebuf, " ms", file=log_file)
+        # print("*****************", file=log_file)
 
 
         # Update QoE:
@@ -131,39 +120,39 @@ def test(isBaseline, isQuickstart, user_id, trace_id, behavior_id):
         total_quality += VIDEO_BIT_RATE[bit_rate] / 1000.
 
         if QoE < MIN_QOE:  # Prevent dead loops
-            print('Your QoE is too low...(Your video seems to have stuck forever) Please check for errors!')
+            # print('Your QoE is too low...(Your video seems to have stuck forever) Please check for errors!')
             return
 
         # play over all videos
         if play_video_id >= ALL_VIDEO_NUM:
-            print("The user leaves.", file=log_file)
-            print("The user leaves.")
+            # print("The user leaves.", file=log_file)
+            # print("The user leaves.")
             break
 
         # Apply the participant's algorithm to decide the args for the next step
         download_video_id, bit_rate, sleep_time = solution.run(delay, rebuf, video_size, end_of_video, play_video_id, net_env.players, False)
 
         # print log info of the last operation
-        print("\n\n*****************", file=log_file)
+        # print("\n\n*****************", file=log_file)
         # the operation detail
-        if sleep_time != 0:
-            print("You choose to sleep for ", sleep_time, " ms", file=log_file)
-        else:
-            print("Download Video ", download_video_id, " chunk (", net_env.players[download_video_id - play_video_id].get_chunk_counter() + 1, " / ",
-                  net_env.players[download_video_id - play_video_id].get_chunk_sum(), ") with bitrate ", bit_rate, file=log_file)
+        # if sleep_time != 0:
+        #     # print("You choose to sleep for ", sleep_time, " ms", file=log_file)
+        # else:
+        #     # print("Download Video ", download_video_id, " chunk (", net_env.players[download_video_id - play_video_id].get_chunk_counter() + 1, " / ",
+        #     #       net_env.players[download_video_id - play_video_id].get_chunk_sum(), ") with bitrate ", bit_rate, file=log_file)
     # Score
     S = QoE - theta * bandwidth_usage * 8 / 1000000.
-    print("Your score is: ")
-    print(S)
-
-    # QoE
-    print("Your QoE is: ")
-    print(QoE)
-    # wasted_bytes
-    print("Your sum of wasted bytes is:")
-    print(sum_wasted_bytes)
-    print("Your download/watch ratio (downloaded time / total watch time) is:")
-    print(net_env.get_wasted_time_ratio())
+    # print("Your score is: ")
+    # print(S)
+    #
+    # # QoE
+    # print("Your QoE is: ")
+    # print(QoE)
+    # # wasted_bytes
+    # print("Your sum of wasted bytes is:")
+    # print(sum_wasted_bytes)
+    # print("Your download/watch ratio (downloaded time / total watch time) is:")
+    # print(net_env.get_wasted_time_ratio())
     # if QoE >= baseline_QoE * (1-TOLERANCE):  # if your QoE is in a tolerated range
     #     print("Your QoE meets the standard.")
     # else:  # if your QoE is out of tolerance
@@ -171,13 +160,14 @@ def test(isBaseline, isQuickstart, user_id, trace_id, behavior_id):
     return np.array([S, bandwidth_usage,  QoE, total_quality, total_rebuf, total_smooth, sum_wasted_bytes, net_env.get_wasted_time_ratio()])
 
 
-def test_all_traces(isBaseline, isQuickstart, user_id, trace, behavior_id):
+def test_all_traces(user_sample_id, isBaseline, isQuickstart, user_id, trace, behavior_id):
     avg = np.zeros(8) * 1.0
     cooked_trace_folder = 'data/network_traces/' + trace + '/'
     global all_cooked_time, all_cooked_bw
     all_cooked_time, all_cooked_bw = short_video_load_trace.load_trace(cooked_trace_folder)
     for i in range(len(all_cooked_time)):
-        avg += test(isBaseline, isQuickstart, user_id, i, behavior_id)
+        avg += test(user_sample_id, isBaseline, isQuickstart, user_id, i, behavior_id)
+        # test(user_sample_id, isBaseline, isQuickstart, user_id, i, behavior_id)
     avg /= len(all_cooked_time)
     print("\n\nYour average indexes under [", trace, "] network is: ")
     print("Score: ", avg[0])
@@ -188,19 +178,31 @@ def test_all_traces(isBaseline, isQuickstart, user_id, trace, behavior_id):
     print("Total smooth: ", avg[5])
     print("Sum Wasted Bytes: ", avg[6])
     print("Wasted time ratio: ", avg[7])
+
+    # xfile= openpyxl.load_workbook('test.xlsx')
+    # sheet = xfile.worksheets[0]
+    # old_rows = sheet.max_row  # 已经写入的行数
+    # print("old rows:::", old_rows)
+    # algo = args.quickstart if args.quickstart != '' else args.baseline
+    # insertData = [args.trace, user_sample_id, algo, avg[0], avg[1], avg[2], avg[3], avg[4], avg[5], avg[6], avg[7]]
+    #
+    # for j in range(len(insertData)):
+    #     sheet.cell(old_rows+1, j+1).value = insertData[j]
+    # xfile.save('test.xlsx')
+
     return avg
 
 
 def testE(isBaseline, isQuickstart, user_id, trace, behavior_id):
     seedsss = np.random.randint(10000, size=(1001, 1))
-    for i in range(10):
+    for i in range(1):
         avgs = np.zeros(8)
-        for j in range(40):
+        for j in range(100):
             global seeds
-            np.random.seed(seedsss[i*40+j])
+            np.random.seed(seedsss[i*51+j])
             seeds = np.random.randint(10000, size=(7, 2))  # reset the sample random seeds
-            avgs += test_all_traces(isBaseline, isQuickstart, user_id, trace, behavior_id)
-        avgs /= 40
+            avgs += test_all_traces(j, isBaseline, isQuickstart, user_id, trace, behavior_id)
+        avgs /= 51
         print(avgs[0], avgs[1], avgs[2], avgs[3])
 
 
