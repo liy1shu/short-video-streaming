@@ -22,7 +22,7 @@ VIDEO_BIT_RATE = [750,1200,1850]  # Kbps
 RECOMMEND_QUEUE = 5
 
 class Environment:
-    def __init__(self, all_cooked_time, all_cooked_bw, video_num, behavior, seeds):
+    def __init__(self, all_cooked_time, all_cooked_bw, video_num, seeds):
         self.players = []
         self.seeds = seeds
         self.user_models = []  # Record the user action(Retention class) for the current video, update synchronized with players
@@ -35,11 +35,6 @@ class Environment:
         self.total_watched_len = 0.0
         self.total_downloaded_len = 0.0
 
-        self.watch_ratio = []
-        if behavior != 'random':  # fixed watch mode
-            with open(BEHAVIOR_FOLDER + behavior, 'r') as f:
-                for line in f:
-                    self.watch_ratio.append(float(line.split()[0]))
         # print(self.watch_ratio)
 
         # self.download_permit = set()
@@ -47,10 +42,7 @@ class Environment:
             # self.download_permit.add(p)
             self.players.append(Player(p))
             user_time, user_retent_rate = self.players[-1].get_user_model()
-            if behavior == 'random':
-                self.user_models.append(Retention(user_time, user_retent_rate, seeds[self.video_cnt]))
-            else:
-                self.user_models.append(Retention(user_time, user_retent_rate, seeds[self.video_cnt], self.watch_ratio[self.video_cnt]))
+            self.user_models.append(Retention(user_time, user_retent_rate, seeds[self.video_cnt]))
             self.total_watched_len += self.user_models[-1].get_ret_duration()  # sum the total watch duration
             self.video_cnt += 1
             user_file.write((str(self.user_models[-1].get_ret_duration()) + '\n').encode())
@@ -67,10 +59,7 @@ class Environment:
             self.players.append(Player(self.video_cnt))
             # print("adding: ", self.video_num)
             user_time, user_retent_rate = self.players[-1].get_user_model()
-            if len(self.watch_ratio) != 0:  # has a specified behavior
-                self.user_models.append(Retention(user_time, user_retent_rate, self.seeds[self.video_cnt], self.watch_ratio[self.video_cnt]))
-            else:
-                self.user_models.append(Retention(user_time, user_retent_rate, self.seeds[self.video_cnt]))
+            self.user_models.append(Retention(user_time, user_retent_rate, self.seeds[self.video_cnt]))
             self.video_cnt += 1
             self.total_watched_len += self.user_models[-1].get_ret_duration()  # sum the total watch duration
             # record the user retention rate
@@ -86,7 +75,6 @@ class Environment:
         return self.start_video_id
 
     def get_wasted_time_ratio(self):
-        print(self.total_downloaded_len)
         return self.total_downloaded_len / self.total_watched_len
 
     def play_videos(self, time_len):  # play for time_len from the start of current players queue

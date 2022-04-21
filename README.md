@@ -128,21 +128,6 @@ The data files are placed under `/data`:
   
   The leave ratio can be deducted from subtracting one retention rate with its former retention rate. For instance, (92.97 - 83.24) % = 9.73% of users leave within the 1s-2s period.
   
-- /user_behavior：specified watch ratio for each video, satisfying the need of testing extreme cases
-
-  For example, one can construct an impatient user when testing a video trace of 7 videos as we showed in `/impatient.txt`：
-
-  ```
-  0.01
-  0.01
-  0.97
-  0.01
-  0.85
-  0.01
-  0.10
-  ```
-
-  This means that the user leaves at the very start (0.01%) when watching four of the seven videos.
 
 The video data structure may seem confusing at first, we provide a detailed illustration below:
 
@@ -181,13 +166,6 @@ You can evaluate your program with our simulator by simply running the `run.py` 
 ##### The args:
 
 - `--baseline`, `--user`：choose the algorithm you are evaluating
-
-- `--behavior`: (optional) input a file that specifies user watch ratio for each video, can be used to test algorithms under extreme conditions.
-
-  - Persistent: the user persists to the end of most videos (/data/user_behavior/persistent.txt)
-  - Impatient: the user leaves early in most videos (/data/user_behavior/impatient.txt)
-
-  Without the arg(by default), we will generate user retention for each video according to the video model we collected for the specific video.
 
 - `--trace`: (optional) choose the type of trace you are evaluating from "fixed", "medium", "low", "high", "middle" . By default, trace would be set to fixed.
 
@@ -246,3 +224,10 @@ The log files are placed under `/logs`:
   
   - The change of video qualities within a single video
   - The rebuffering time if you have caused a rebuffer
+
+## Update（4/21）
+
+- Expand video traces to 7 videos. Check `/data/short_video_size/` and `/user_ret` directory for details.
+- Add `test_all_traces` function, which you can test on a specific set of traces (fixed, medium, high, low, middle), each contains several distinct traces with similar patterns, and get the average indices.
+  - By default, running `run.py` will be running this new function. If you want to test a certain trace, you can change the testing logic in `run.py` by yourself.
+- Fix the QoE calculation issue. Thanks to https://github.com/AItransCompetition/Short-Video-Streaming-Challenge/issues/2.
