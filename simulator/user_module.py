@@ -1,6 +1,8 @@
 # Simulate the user watch pattern
 import numpy as np
 import random
+import math
+VIDEO_CHUNCK_LEN = 1000.0
 # RANDOM_SEED = 42
 # np.random.seed(RANDOM_SEED)
 # random.seed(RANDOM_SEED)
@@ -33,6 +35,9 @@ class Retention:
         # print('sample playback duration %d' % self.sample_playback_duration)
         # print(self.sample_playback_duration)
         return self.sample_playback_duration
+
+    def get_watch_chunk_cnt(self):  # the last chunk id that user watched
+        return math.floor(self.sample_playback_duration / VIDEO_CHUNCK_LEN)
         
     def conditional_p(self, start_chunk, interval):
         # calculate the conditional p from chunk start_chunk

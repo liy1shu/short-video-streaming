@@ -112,7 +112,16 @@ def test(user_sample_id, isBaseline, isQuickstart, user_id, trace_id, behavior_i
         # qoe = alpha * VIDEO_BIT_RATE[bit_rate] \
         #           - beta * rebuf \
         #           - gamma * np.abs(VIDEO_BIT_RATE[bit_rate] - VIDEO_BIT_RATE[last_bit_rate])
-        QoE += alpha * VIDEO_BIT_RATE[bit_rate] / 1000. - beta * rebuf / 1000. - gamma * abs(smooth) / 1000.
+        quality = 0
+        if sleep_time != 0:
+            # the last chunk id that user watched
+            watch_chunk = net_env.user_models[download_video_id - net_env.get_start_video_id()].get_watch_chunk_cnt()
+            # last downloaded chunk id
+            download_chunk = net_env.players[download_video_id - net_env.get_start_video_id()].get_chunk_counter() - \
+                             net_env.players[download_video_id - net_env.get_start_video_id()].get_remain_video_num() - 1
+            if watch_chunk >= download_chunk:  # the downloaded chunk will be played
+                quality = VIDEO_BIT_RATE[bit_rate] / 1000.0
+        QoE += alpha * quality - beta * rebuf / 1000. - gamma * abs(smooth) / 1000.
         # if rebuf != 0:
         #     print("bitrate:", VIDEO_BIT_RATE[bit_rate], "rebuf:", rebuf, "smooth:", smooth)
         total_smooth += (-1) * abs(smooth) / 1000.
