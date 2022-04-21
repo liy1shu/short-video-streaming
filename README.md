@@ -236,4 +236,5 @@ The log files are placed under `/logs`:
 - Expand video traces to 7 videos. Check `/data/short_video_size/` and `/user_ret` directory for details.
 - Add `test_all_traces` function, which you can test on a specific set of traces (fixed, medium, high, low), each contains several distinct traces with similar patterns, and get the average indices.
   - By default, running `run.py` will be running this new function. If you want to test a certain trace, you can change the testing logic in `run.py` by yourself.
+- Add `test_multiple_user_samples` function, which enables you to test several user samples at a time and get their average indices.
 - Fix the QoE calculation issue. Thanks to https://github.com/AItransCompetition/Short-Video-Streaming-Challenge/issues/2.

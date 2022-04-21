@@ -199,6 +199,22 @@ def test_all_traces(isBaseline, isQuickstart, user_id, trace):
     return avg
 
 
+def test_multiple_user_samples(isBaseline, isQuickstart, user_id, trace, sample_cnt):  # test 50 user sample
+    seedsss = np.random.randint(10000, size=(1001, 1))
+    avgs = np.zeros(5)
+    for j in range(sample_cnt):
+        global seeds
+        np.random.seed(seedsss[j])
+        seeds = np.random.randint(10000, size=(7, 2))  # reset the sample random seeds
+        avgs += test_all_traces(j, isBaseline, isQuickstart, user_id, trace)
+    avgs /= 50
+    print("Score: ", avgs[0])
+    print("Bandwidth Usage: ", avgs[1])
+    print("QoE: ", avgs[2])
+    print("Sum Wasted Bytes: ", avgs[3])
+    print("Wasted time ratio: ", avgs[4])
+
+
 if __name__ == '__main__':
     assert args.trace in ["fixed", "high", "low", "medium", "middle"]
     if args.baseline == '' and args.quickstart == '':
