@@ -92,7 +92,8 @@ class Environment:
     def play_videos(self, time_len):  # play for time_len from the start of current players queue
         # print("\n\nPlaying Video ", self.start_video_id)
         wasted_bd = 0
-        play_tm, buffer = self.players[0].video_play(time_len)
+        first_play = min(self.players[0].get_video_len(), self.user_models[0].get_ret_duration()) - self.players[0].play_timeline
+        play_tm, buffer = self.players[0].video_play(min(time_len, first_play))
         total_smooth = 0
         # print(self.start_video_id, time_len, play_tm, buffer)
         while time_len > 0 and play_tm >= min(self.players[0].get_video_len(), self.user_models[0].get_ret_duration()) - 1e-10:  # 如果时间没过完就结束播放
@@ -101,18 +102,18 @@ class Environment:
             # Output: the downloaded time length, the total time length, the watch duration
             print("\nUser stopped watching Video ", self.start_video_id, "( ", self.players[0].get_video_len(), " ms ) :")
             print("User watched for ", self.user_models[0].get_ret_duration(), " ms, you downloaded ", self.players[0].get_chunk_counter()*VIDEO_CHUNCK_LEN, " sec.")
-            print("lys test:::: The bandwidth_waste is:")
+            # print("lys test:::: The bandwidth_waste is:")
 
             # Calc the smoothness of this video:
             smooth = 0
             video_qualities = []
             bitrate_cnt = min(math.ceil(self.players[0].get_play_chunk()), self.players[0].get_chunk_sum())
+            # print(math.ceil(self.players[0].get_play_chunk()), "------")
             for i in range(1, bitrate_cnt):
                 video_qualities.append(self.players[0].get_video_quality(i-1))
                 smooth += abs(VIDEO_BIT_RATE[self.players[0].get_video_quality(i)] - VIDEO_BIT_RATE[self.players[0].get_video_quality(i-1)])
             video_qualities.append(self.players[0].get_video_quality(bitrate_cnt-1))
             print("Your downloaded bitrates are: ", video_qualities, ", therefore your smooth penalty is: ", smooth)
-            total_smooth += smooth
 
             self.total_downloaded_len += self.players[0].get_chunk_counter()*VIDEO_CHUNCK_LEN  # sum up the total downloaded time
             wasted_bd += self.players[0].bandwidth_waste(self.user_models[0])  # use watch duration as an arg
@@ -132,7 +133,7 @@ class Environment:
                 print("played out!")
                 break
             # print(self.start_video_id, time_len, play_tm, buffer)
-        return play_tm, buffer, wasted_bd, total_smooth
+        return play_tm, buffer, wasted_bd
               
     def buffer_management(self, download_video_id, bitrate, sleep_time):
         buffer = 0
@@ -144,7 +145,7 @@ class Environment:
 
         if sleep_time > 0:
             delay = sleep_time
-            play_timeline, buffer, wasted, smooth = self.play_videos(sleep_time)
+            play_timeline, buffer, wasted = self.play_videos(sleep_time)
             # Return the end flag for the current playing video
             if self.play_video_id == self.video_num:  # if user leaves
                 end_of_video = True
@@ -158,7 +159,7 @@ class Environment:
             # print("the actual download delay is:", delay)
             # print("\n\n")
             # play_timeline, buffer = self.players[self.play_video_id - self.start_video_id].video_play(delay)
-            play_timeline, buffer, wasted, smooth = self.play_videos(delay)
+            play_timeline, buffer, wasted = self.play_videos(delay)
             if download_video_id < self.start_video_id:
                 # If the video has already been ended, we only accumulate the wastage
                 print("Extra chunk downloaded for Video ", download_video_id,
@@ -177,4 +178,4 @@ class Environment:
         if buffer < 0:
             rebuf = abs(buffer)
 
-        return delay, rebuf, video_size, end_of_video, self.play_video_id, wasted_bytes, smooth
+        return delay, rebuf, video_size, end_of_video, self.play_video_id, wasted_bytes

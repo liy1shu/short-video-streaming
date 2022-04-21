@@ -75,15 +75,30 @@ def test(isBaseline, isQuickstart, user_id, trace_id, behavior_id):
     # sum of wasted bytes for a user
     sum_wasted_bytes = 0
     QoE = 0
-    total_smooth = 0
-    total_rebuf = 0
-    total_quality = 0
     last_played_chunk = -1  # record the last played chunk
+    last_bitrate = -1
     bandwidth_usage = 0  # record total bandwidth usage
 
     while True:
+        # calculate the quality and smooth for this download step taken
+        quality = 0
+        smooth = 0
+        if sleep_time == 0:
+            # the last chunk id that user watched
+            max_watch_chunk_id = net_env.user_models[
+                download_video_id - net_env.get_start_video_id()].get_watch_chunk_cnt()
+            # last downloaded chunk id
+            download_chunk = net_env.players[download_video_id - net_env.get_start_video_id()].get_chunk_counter()
+            if max_watch_chunk_id >= download_chunk:  # the downloaded chunk will be played
+                quality = VIDEO_BIT_RATE[bit_rate]
+                if last_bitrate != -1:  # is not the first chunk to play
+                    smooth = abs(quality - VIDEO_BIT_RATE[last_bitrate])
+                    print("downloading ", download_video_id, "chunk ", download_chunk, ", switching from ", last_bitrate, " to ", bit_rate)
+                last_bitrate = bit_rate
+
+
         delay, rebuf, video_size, end_of_video, \
-        play_video_id, waste_bytes, smooth = net_env.buffer_management(download_video_id, bit_rate, sleep_time)
+        play_video_id, waste_bytes = net_env.buffer_management(download_video_id, bit_rate, sleep_time)
         # print(delay, rebuf, video_size, end_of_video, play_video_id, waste_bytes)
 
         # Update bandwidth usage
@@ -122,22 +137,10 @@ def test(isBaseline, isQuickstart, user_id, trace_id, behavior_id):
         # qoe = alpha * VIDEO_BIT_RATE[bit_rate] \
         #           - beta * rebuf \
         #           - gamma * np.abs(VIDEO_BIT_RATE[bit_rate] - VIDEO_BIT_RATE[last_bit_rate])
-        quality = 0
-        if sleep_time != 0:
-            # the last chunk id that user watched
-            watch_chunk = net_env.user_models[download_video_id - net_env.get_start_video_id()].get_watch_chunk_cnt()
-            # last downloaded chunk id
-            download_chunk = net_env.players[download_video_id - net_env.get_start_video_id()].get_chunk_counter() - \
-                             net_env.players[
-                                 download_video_id - net_env.get_start_video_id()].get_remain_video_num() - 1
-            if watch_chunk >= download_chunk:  # the downloaded chunk will be played
-                quality = VIDEO_BIT_RATE[bit_rate]/1000.0
-        QoE += alpha * quality - beta * rebuf / 1000. - gamma * abs(smooth) / 1000.
+
+        QoE += alpha * quality / 1000. - beta * rebuf / 1000. - gamma * smooth / 1000.
         # if rebuf != 0:
         #     print("bitrate:", VIDEO_BIT_RATE[bit_rate], "rebuf:", rebuf, "smooth:", smooth)
-        total_smooth += (-1) * abs(smooth) / 1000.
-        total_rebuf += (-1) * rebuf / 1000.
-        total_quality += quality
 
         if QoE < MIN_QOE:  # Prevent dead loops
             print('Your QoE is too low...(Your video seems to have stuck forever) Please check for errors!')
@@ -177,26 +180,24 @@ def test(isBaseline, isQuickstart, user_id, trace_id, behavior_id):
     #     print("Your QoE meets the standard.")
     # else:  # if your QoE is out of tolerance
     #     print("Your QoE is too low!")
-    return np.array([S, bandwidth_usage,  QoE, total_quality, total_rebuf, total_smooth, sum_wasted_bytes, net_env.get_wasted_time_ratio()])
+    return np.array([S, bandwidth_usage,  QoE, sum_wasted_bytes, net_env.get_wasted_time_ratio()])
 
 
 def test_all_traces(isBaseline, isQuickstart, user_id, trace, behavior_id):
-    avg = np.zeros(8) * 1.0
+    avg = np.zeros(5) * 1.0
     cooked_trace_folder = 'data/network_traces/' + trace + '/'
     global all_cooked_time, all_cooked_bw
     all_cooked_time, all_cooked_bw = short_video_load_trace.load_trace(cooked_trace_folder)
-    for i in range(len(all_cooked_time)):
+    # for i in range(len(all_cooked_time)):
+    for i in range(1):
         avg += test(isBaseline, isQuickstart, user_id, i, behavior_id)
     avg /= len(all_cooked_time)
     print("\n\nYour average indexes under [", trace, "] network is: ")
     print("Score: ", avg[0])
     print("Bandwidth Usage: ", avg[1])
     print("QoE: ", avg[2])
-    print("Total quality: ", avg[3])
-    print("Total rebuf: ", avg[4])
-    print("Total smooth: ", avg[5])
-    print("Sum Wasted Bytes: ", avg[6])
-    print("Wasted time ratio: ", avg[7])
+    print("Sum Wasted Bytes: ", avg[3])
+    print("Wasted time ratio: ", avg[4])
     return avg
 
 
