@@ -93,7 +93,7 @@ def test(isBaseline, isQuickstart, user_id, trace_id, behavior_id):
                 quality = VIDEO_BIT_RATE[bit_rate]
                 if last_bitrate != -1:  # is not the first chunk to play
                     smooth = abs(quality - VIDEO_BIT_RATE[last_bitrate])
-                    print("downloading ", download_video_id, "chunk ", download_chunk, ", switching from ", last_bitrate, " to ", bit_rate)
+                    print("downloading ", download_video_id, "chunk ", download_chunk, ", bitrate switching from ", last_bitrate, " to ", bit_rate)
                 last_bitrate = bit_rate
 
 
