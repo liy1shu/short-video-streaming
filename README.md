@@ -1,6 +1,10 @@
 # ACM Multimedia 2022 Grand Challenge: Short Video Streaming
 This repository contains the simulator code used for ACM Multimedia 2022 Short Video Streaming.  The simulator is a short video streaming simulator with a pluggable client module for participant defined download control algorithms.
 
+***Details of the update in each version is listed at the end of README.*** 
+
+> Currently at Version 1 ：Updated at 4/21
+
 # Quick Start
 
 We provide a demo which aims at helping you to learn what parameters you need to decide in the challenge. It only gives you some clues to things you can do to improve the algorithm, so it isn't necessarily reasonable. You need to find a better solution to balance QoE and bandwidth waste.
@@ -167,7 +171,7 @@ You can evaluate your program with our simulator by simply running the `run.py` 
 
 - `--baseline`, `--user`：choose the algorithm you are evaluating
 
-- `--trace`: (optional) choose the type of trace you are evaluating from "fixed", "medium", "low", "high", "middle" . By default, trace would be set to fixed.
+- `--trace`: (optional) choose the type of trace you are evaluating from "fixed", "medium", "low", "high". By default, trace would be set to fixed.
 
 1）Run a baseline algorithm
 
@@ -225,9 +229,11 @@ The log files are placed under `/logs`:
   - The change of video qualities within a single video
   - The rebuffering time if you have caused a rebuffer
 
-## Update（4/21）
+# Update
+
+### 4/21 Version 1
 
 - Expand video traces to 7 videos. Check `/data/short_video_size/` and `/user_ret` directory for details.
-- Add `test_all_traces` function, which you can test on a specific set of traces (fixed, medium, high, low, middle), each contains several distinct traces with similar patterns, and get the average indices.
+- Add `test_all_traces` function, which you can test on a specific set of traces (fixed, medium, high, low), each contains several distinct traces with similar patterns, and get the average indices.
   - By default, running `run.py` will be running this new function. If you want to test a certain trace, you can change the testing logic in `run.py` by yourself.
 - Fix the QoE calculation issue. Thanks to https://github.com/AItransCompetition/Short-Video-Streaming-Challenge/issues/2.

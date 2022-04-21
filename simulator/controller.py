@@ -18,8 +18,8 @@ BEHAVIOR_FOLDER = './data/user_behavior/'
 NEW = 0
 DEL = 1
 
-VIDEO_BIT_RATE = [750,1200,1850]  # Kbps
-RECOMMEND_QUEUE = 5
+VIDEO_BIT_RATE = [750, 1200, 1850]  # Kbps
+PLAYER_NUM = 5
 
 class Environment:
     def __init__(self, all_cooked_time, all_cooked_bw, video_num, seeds):
@@ -38,7 +38,7 @@ class Environment:
         # print(self.watch_ratio)
 
         # self.download_permit = set()
-        for p in range(RECOMMEND_QUEUE):
+        for p in range(PLAYER_NUM):
             # self.download_permit.add(p)
             self.players.append(Player(p))
             user_time, user_retent_rate = self.players[-1].get_user_model()
@@ -49,7 +49,7 @@ class Environment:
             user_file.flush()
         
         self.start_video_id = 0
-        self.end_video_id = RECOMMEND_QUEUE - 1
+        self.end_video_id = PLAYER_NUM - 1
 
     def player_op(self, operation):
         if operation == NEW:
