@@ -1,16 +1,16 @@
 import os
 
 
-COOKED_TRACE_FOLDER = './data/network_traces/middle/'
+COOKED_TRACE_FOLDER = './data/network_traces/'
 BW_ADJUST_PARA = 1
 
 
-def load_trace(cooked_trace_folder=COOKED_TRACE_FOLDER):
-    cooked_files = os.listdir(cooked_trace_folder)
+def load_trace(cooked_trace_folder='middle'):
+    cooked_files = os.listdir(COOKED_TRACE_FOLDER + cooked_trace_folder)
     all_cooked_time = []
     all_cooked_bw = []
     for cooked_file in cooked_files:
-        file_path = cooked_trace_folder + cooked_file
+        file_path = os.path.join(COOKED_TRACE_FOLDER, cooked_trace_folder, cooked_file)
         cooked_time = []
         cooked_bw = []
         with open(file_path, 'rb') as f:

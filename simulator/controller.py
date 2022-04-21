@@ -22,7 +22,7 @@ VIDEO_BIT_RATE = [750,1200,1850]  # Kbps
 RECOMMEND_QUEUE = 5
 
 class Environment:
-    def __init__(self, all_cooked_time, all_cooked_bw, video_num, behavior):
+    def __init__(self, all_cooked_time, all_cooked_bw, video_num, behavior, video_list, seeds):
         self.players = []
         self.user_models = []  # Record the user action(Retention class) for the current video, update synchronized with players
         self.video_num = video_num
@@ -30,9 +30,12 @@ class Environment:
         self.play_video_id = 0
         self.network = Network(all_cooked_time, all_cooked_bw)
         self.timeline = 0.0
+        self.seeds = seeds
         # for ratio
         self.total_watched_len = 0.0
         self.total_downloaded_len = 0.0
+        # video sequence
+        self.video_list = video_list
 
         self.watch_ratio = []
         if behavior != 'random':  # fixed watch mode
@@ -44,12 +47,12 @@ class Environment:
         # self.download_permit = set()
         for p in range(RECOMMEND_QUEUE):
             # self.download_permit.add(p)
-            self.players.append(Player(p))
+            self.players.append(Player(self.video_list[p]))
             user_time, user_retent_rate = self.players[-1].get_user_model()
-            if behavior == 'random':
-                self.user_models.append(Retention(user_time, user_retent_rate))
+            if behavior != 'random':
+                self.user_models.append(Retention(user_time, user_retent_rate, seeds[self.video_cnt], self.watch_ratio[self.video_cnt]))
             else:
-                self.user_models.append(Retention(user_time, user_retent_rate, self.watch_ratio[self.video_cnt]))
+                self.user_models.append(Retention(user_time, user_retent_rate, seeds[self.video_cnt]))
             self.total_watched_len += self.user_models[-1].get_ret_duration()  # sum the total watch duration
             self.video_cnt += 1
             user_file.write((str(self.user_models[-1].get_ret_duration()) + '\n').encode())
@@ -63,12 +66,15 @@ class Environment:
             # print('--------------ADD--------------')
             if self.video_cnt >= self.video_num:  # If exceed video cnt, no add
                 return
-            self.players.append(Player(self.video_cnt))
+            self.players.append(Player(self.video_list[self.video_cnt]))
             # print("adding: ", self.video_num)
-            self.total_watched_len += self.user_models[-1].get_ret_duration()  # sum the total watch duration
             user_time, user_retent_rate = self.players[-1].get_user_model()
-            self.user_models.append(Retention(user_time, user_retent_rate, self.watch_ratio[self.video_cnt]))
+            if len(self.watch_ratio) != 0:  # has a specified behavior
+                self.user_models.append(Retention(user_time, user_retent_rate, self.seeds[self.video_cnt], self.watch_ratio[self.video_cnt]))
+            else:
+                self.user_models.append(Retention(user_time, user_retent_rate, self.seeds[self.video_cnt]))
             self.video_cnt += 1
+            self.total_watched_len += self.user_models[-1].get_ret_duration()  # sum the total watch duration
             # record the user retention rate
             # user_file.write((str(self.players[-1].get_watch_duration()) + '\n').encode())
             user_file.write((str(self.user_models[-1].get_ret_duration()) + '\n').encode())
@@ -94,8 +100,8 @@ class Environment:
             time_len = play_tm - min(self.players[0].get_video_len(), self.user_models[0].get_ret_duration())
             # After user ended the current video
             # Output: the downloaded time length, the total time length, the watch duration
-            print("\nUser stopped watching Video ", self.start_video_id, "( ", self.players[0].get_video_len(), " ms ) :")
-            print("User watched for ", self.user_models[0].get_ret_duration(), " ms, you downloaded ", self.players[0].get_chunk_counter()*VIDEO_CHUNCK_LEN, " sec.")
+            # print("\nUser stopped watching Video ", self.start_video_id, "( ", self.players[0].get_video_len(), " ms ) :")
+            # print("User watched for ", self.user_models[0].get_ret_duration(), " ms, you downloaded ", self.players[0].get_chunk_counter()*VIDEO_CHUNCK_LEN, " sec.")
             # print("lys test:::: The bandwidth_waste is:")
 
             # Calc the smoothness of this video:
@@ -106,7 +112,7 @@ class Environment:
                 video_qualities.append(self.players[0].get_video_quality(i-1))
                 smooth += abs(VIDEO_BIT_RATE[self.players[0].get_video_quality(i)] - VIDEO_BIT_RATE[self.players[0].get_video_quality(i-1)])
             video_qualities.append(self.players[0].get_video_quality(bitrate_cnt-1))
-            print("Your downloaded bitrates are: ", video_qualities, ", therefore your smooth penalty is: ", smooth)
+            # print("Your downloaded bitrates are: ", video_qualities, ", therefore your smooth penalty is: ", smooth)
             total_smooth += smooth
 
             self.total_downloaded_len += self.players[0].get_chunk_counter()*VIDEO_CHUNCK_LEN  # sum up the total downloaded time
@@ -124,7 +130,7 @@ class Environment:
                 # Start to play the next video
                 play_tm, buffer = self.players[0].video_play(time_len)
             else:  # if it has come to the end of the list
-                print("played out!")
+                # print("played out!")
                 break
             # print(self.start_video_id, time_len, play_tm, buffer)
         return play_tm, buffer, wasted_bd, total_smooth
@@ -156,8 +162,8 @@ class Environment:
             play_timeline, buffer, wasted, smooth = self.play_videos(delay)
             if download_video_id < self.start_video_id:
                 # If the video has already been ended, we only accumulate the wastage
-                print("Extra chunk downloaded for Video ", download_video_id,
-                      " which the user already finished watching.\n")
+                # print("Extra chunk downloaded for Video ", download_video_id,
+                    #   " which the user already finished watching.\n")
                 wasted += video_size  # Since its already fluently played, the download must be redundant
                 self.total_downloaded_len += VIDEO_CHUNCK_LEN  # sum up the total downloaded time
                 end_of_video = True

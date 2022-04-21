@@ -1,18 +1,23 @@
-import sys
+import sys, os
 sys.path.append('./simulator/')
 import argparse
+import random
+import numpy as np
 from simulator import controller as env, short_video_load_trace
 
 parser = argparse.ArgumentParser()
-
 parser.add_argument('--behavior', type=str, default='random', help='The user watching pattern you are testing')
 parser.add_argument('--quickstart', type=str, default='', help='Is testing quickstart')
 parser.add_argument('--baseline', type=str, default='', help='Is testing baseline')
 parser.add_argument('--user', type=str, default='./', help='The relative path of your file dir, default is current dir')
-parser.add_argument('--trace', type=int, default=0, help='The network trace you are testing')
+parser.add_argument('--trace', type=str, default='fixed', help='The network trace you are testing (fixed, high, low, medium, middle)')
 args = parser.parse_args()
 
-VIDEO_BIT_RATE = [750,1200,1850]  # Kbps
+RANDOM_SEED = 42  # the random seed for user retention
+np.random.seed(RANDOM_SEED)
+seeds = np.random.randint(100, size=(7, 2))
+
+VIDEO_BIT_RATE = [750, 1200, 1850]  # Kbps
 SUMMARY_DIR = 'logs'
 LOG_FILE = 'logs/log.txt'
 
@@ -21,10 +26,12 @@ alpha = 1
 beta = 1.85
 gamma = 1
 theta = 0.5
-ALL_VIDEO_NUM = 5
+ALL_VIDEO_NUM = 7
 # baseline_QoE = 600  # baseline's QoE
 # TOLERANCE = 0.1  # The tolerance of the QoE decrease
 MIN_QOE = -1e9
+all_cooked_time = []
+all_cooked_bw = []
 
 
 def test(isBaseline, isQuickstart, user_id, trace_id, behavior_id):
@@ -48,8 +55,8 @@ def test(isBaseline, isQuickstart, user_id, trace_id, behavior_id):
     solution = Solution.Algorithm()
     solution.Initialize()
 
-    all_cooked_time, all_cooked_bw = short_video_load_trace.load_trace()
-    net_env = env.Environment(all_cooked_time[trace_id], all_cooked_bw[trace_id], ALL_VIDEO_NUM, behavior_id)
+    # all_cooked_time, all_cooked_bw = short_video_load_trace.load_trace(trace_path)
+    net_env = env.Environment(all_cooked_time[trace_id], all_cooked_bw[trace_id], ALL_VIDEO_NUM, behavior_id, seeds)
 
     # log file
     log_file = open(LOG_FILE, 'w')
@@ -68,6 +75,9 @@ def test(isBaseline, isQuickstart, user_id, trace_id, behavior_id):
     # sum of wasted bytes for a user
     sum_wasted_bytes = 0
     QoE = 0
+    total_smooth = 0
+    total_rebuf = 0
+    total_quality = 0
     last_played_chunk = -1  # record the last played chunk
     bandwidth_usage = 0  # record total bandwidth usage
 
@@ -115,6 +125,9 @@ def test(isBaseline, isQuickstart, user_id, trace_id, behavior_id):
         QoE += alpha * VIDEO_BIT_RATE[bit_rate] / 1000. - beta * rebuf / 1000. - gamma * abs(smooth) / 1000.
         # if rebuf != 0:
         #     print("bitrate:", VIDEO_BIT_RATE[bit_rate], "rebuf:", rebuf, "smooth:", smooth)
+        total_smooth += (-1) * abs(smooth) / 1000.
+        total_rebuf += (-1) * rebuf / 1000.
+        total_quality += VIDEO_BIT_RATE[bit_rate] / 1000.
 
         if QoE < MIN_QOE:  # Prevent dead loops
             print('Your QoE is too low...(Your video seems to have stuck forever) Please check for errors!')
@@ -154,12 +167,38 @@ def test(isBaseline, isQuickstart, user_id, trace_id, behavior_id):
     #     print("Your QoE meets the standard.")
     # else:  # if your QoE is out of tolerance
     #     print("Your QoE is too low!")
+    return np.array([S, bandwidth_usage,  QoE, total_quality, total_rebuf, total_smooth, sum_wasted_bytes, net_env.get_wasted_time_ratio()])
+
+
+def test_all_traces(isBaseline, isQuickstart, user_id, trace, behavior_id):
+    avg = np.zeros(8) * 1.0
+    cooked_trace_folder = 'data/network_traces/' + trace + '/'
+    global all_cooked_time, all_cooked_bw
+    all_cooked_time, all_cooked_bw = short_video_load_trace.load_trace(cooked_trace_folder)
+    for i in range(len(all_cooked_time)):
+        avg += test(isBaseline, isQuickstart, user_id, i, behavior_id)
+    avg /= len(all_cooked_time)
+    print("\n\nYour average indexes under [", trace, "] network is: ")
+    print("Score: ", avg[0])
+    print("Bandwidth Usage: ", avg[1])
+    print("QoE: ", avg[2])
+    print("Total quality: ", avg[3])
+    print("Total rebuf: ", avg[4])
+    print("Total smooth: ", avg[5])
+    print("Sum Wasted Bytes: ", avg[6])
+    print("Wasted time ratio: ", avg[7])
+    return avg
+
 
 
 if __name__ == '__main__':
+    assert args.trace in ["fixed", "high", "low", "medium", "middle"]
     if args.baseline == '' and args.quickstart == '':
-        test(False, False, args.user, args.trace, args.behavior)
+        test_all_traces(False, False, args.user, args.trace, args.behavior)
+        # testE(False, False, args.user, args.trace, args.behavior)
     elif args.quickstart != '':
-        test(False, True, args.quickstart, args.trace, args.behavior)
+        test_all_traces(False, True, args.quickstart, args.trace, args.behavior)
+        # testE(False, True, args.quickstart, args.trace, args.behavior)
     else:
-        test(True, False, args.baseline, args.trace, args.behavior)
+        test_all_traces(True, False, args.baseline, args.trace, args.behavior)
+        # testE(True, False, args.baseline, args.trace, args.behavior)

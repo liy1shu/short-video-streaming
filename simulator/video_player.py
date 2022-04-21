@@ -11,18 +11,13 @@ VIDEO_SIZE_FILE = 'data/short_video_size/'
 VIDEO_SIZE_SCALE = 1.0  # chunk size
 USER_RET = './data/user_ret/'
 
-DISTINCT_VIDEO_NUM = 5
+DISTINCT_VIDEO_NUM = 7
 
 class Player:
     # initialize each new video and player buffer
-    def __init__(self, video_num):  
+    def __init__(self, video_name):  
         # initialize each new video
         self.video_size = {}  # in bytes
-        videos = []
-        for root, dirs, files in os.walk(VIDEO_SIZE_FILE):
-            videos = dirs
-            break
-        video_name = videos[video_num%DISTINCT_VIDEO_NUM]
         for bitrate in range(BITRATE_LEVELS):
             self.video_size[bitrate] = []
             file_name = VIDEO_SIZE_FILE + video_name + '/video_size_' + str(bitrate)
