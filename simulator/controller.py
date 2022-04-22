@@ -13,7 +13,6 @@ USER_FILE = 'logs/sample_user/user.txt'
 # user_file = open(USER_FILE, 'wb')
 LOG_FILE = 'logs/log.txt'
 log_file = open(LOG_FILE, 'a')
-BEHAVIOR_FOLDER = './data/user_behavior/'
 
 NEW = 0
 DEL = 1

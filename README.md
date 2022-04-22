@@ -3,7 +3,7 @@ This repository contains the simulator code used for ACM Multimedia 2022 Short V
 
 ***Details of the update in each version is listed at the end of README.*** 
 
-> Currently at Version 1 ：Updated at 4/21
+> Currently at Version 1 ：Updated at 4/22
 
 # Quick Start
 
@@ -231,7 +231,7 @@ The log files are placed under `/logs`:
 
 # Update
 
-### 4/21 Version 1
+### 4/22 Version 1
 
 - Expand video traces to 7 videos. Check `/data/short_video_size/` and `/user_ret` directory for details.
 - Add `test_all_traces` function, which you can test on a specific set of traces (fixed, medium, high, low), each contains several distinct traces with similar patterns, and get the average indices.

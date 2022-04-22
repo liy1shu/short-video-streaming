@@ -137,7 +137,8 @@ def test(isBaseline, isQuickstart, user_id, trace_id, user_sample_id):
         #           - beta * rebuf \
         #           - gamma * np.abs(VIDEO_BIT_RATE[bit_rate] - VIDEO_BIT_RATE[last_bit_rate])
 
-        QoE += alpha * quality / 1000. - beta * rebuf / 1000. - gamma * smooth / 1000.
+        one_step_QoE = alpha * quality / 1000. - beta * rebuf / 1000. - gamma * smooth / 1000.
+        QoE += one_step_QoE
         # if rebuf != 0:
         #     print("bitrate:", VIDEO_BIT_RATE[bit_rate], "rebuf:", rebuf, "smooth:", smooth)
 

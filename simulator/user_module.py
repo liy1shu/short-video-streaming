@@ -35,11 +35,3 @@ class Retention:
 
     def get_watch_chunk_cnt(self):
         return math.floor(self.sample_playback_duration / VIDEO_CHUNCK_LEN)
-        
-    def conditional_p(self, start_chunk, interval):
-        # calculate the conditional p from chunk start_chunk
-        # when user is watching the start_chunk, the p of watching chunk start_chunk+interval
-        # P(X>T+1|X>T) = R(T+1) / R(T)
-        cond_ret_p = float(self.user_retent_rate[start_chunk+interval]) / float(self.user_retent_rate[start_chunk])
-
-        return cond_ret_p
