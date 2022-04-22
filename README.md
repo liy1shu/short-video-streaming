@@ -239,7 +239,7 @@ The directory `/submit` provides a sample for the directory that you submit on o
 >
 > |__solution.py   ——Your algorithm
 >
-> |__results  ——Your supplementary files
+> |__results  ——Your supplementary files, e.g. pretrained learning models.
 >
 > ​      |__......
 

@@ -13,6 +13,7 @@ def load_trace(cooked_trace_folder=COOKED_TRACE_FOLDER):
         file_path = cooked_trace_folder + cooked_file
         cooked_time = []
         cooked_bw = []
+        print(file_path)
         with open(file_path, 'rb') as f:
             for line in f:
                 parse = line.split()
